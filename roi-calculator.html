@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<!-- SEO: Essential Meta Tags -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="author" content="Growspec Biotech"/>
+<meta name="publisher" content="Growspec Biotech"/>
+<meta name="copyright" content="Growspec Biotech 2025"/>
+<meta name="theme-color" content="#0a1a0c"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!-- SEO: Title, Description, Keywords, Canonical -->
+<title>Vertical Farming ROI Calculator | Investment & Yield Calculator | Growspec</title>
+<meta name="description" content="Calculate your vertical farming ROI with the Growspec ROI Calculator. Model CAPEX, OPEX, annual yield and payback period for BioCube, FarmCube and Pegma systems. Supports 15+ countries."/>
+<meta name="keywords" content="vertical farming ROI calculator, indoor farm investment calculator, vertical farm profitability, CAPEX OPEX vertical farm, farming yield calculator, aeroponic farm ROI, indoor agriculture investment, CEA profitability tool, BioCube ROI, FarmCube ROI, farm payback period, vertical farm revenue model, Growspec calculator, farming cost calculator, agriculture investment tool"/>
+<link rel="canonical" href="https://www.growspecbio.com/roi-calculator"/>
+<!-- SEO: Open Graph -->
+<meta property="og:title" content="Vertical Farming ROI Calculator | Investment & Yield Calculator | Growspec"/>
+<meta property="og:description" content="Calculate your vertical farming ROI with the Growspec ROI Calculator. Model CAPEX, OPEX, annual yield and payback period for BioCube, FarmCube and Pegma systems. Supports 15+ countries."/>
+<meta property="og:type" content="product"/>
+<meta property="og:url" content="https://www.growspecbio.com/roi-calculator"/>
+<meta property="og:image" content="https://www.growspecbio.com/images/og-roi-calculator.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Growspec"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="product:brand" content="Growspec"/>
+<meta property="product:availability" content="in stock"/>
+<meta property="product:condition" content="new"/>
+<!-- SEO: Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Vertical Farming ROI Calculator | Investment & Yield Calculator | Growspec"/>
+<meta name="twitter:description" content="Calculate your vertical farming ROI with the Growspec ROI Calculator. Model CAPEX, OPEX, annual yield and payback period for BioCube, FarmCube and Pegma systems. Supports 15+ countries."/>
+<meta name="twitter:image" content="https://www.growspecbio.com/images/og-roi-calculator.jpg"/>
+<meta name="twitter:site" content="@growspec"/>
+<!-- SEO: Favicon -->
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<!-- SEO: Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+<style>
+    /* ===========================================
+       GROWSPEC ROI CALCULATOR - DARK THEME
+       Matches product page design system
+       =========================================== */
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; height: -webkit-fill-available; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: #c8dccb;
+      background: #060f08;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* --- Navigation --- */
+    .pnav { position: sticky; top: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 64px; border-bottom: 1px solid rgba(255,255,255,0.07); background: rgba(6,15,8,0.96); backdrop-filter: blur(20px); }
+    .logo { font-size: 1.05rem; font-weight: 800; letter-spacing: 0.12em; color: #fff; }
+    .logo b { color: #3efa7e; }
+    .back-link { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .back-link:hover { color: #3efa7e; }
+    .nav-btn { font-size: 0.78rem; font-weight: 700; padding: 0.6rem 1.4rem; border-radius: 100px; background: #3efa7e; color: #060f08; transition: opacity .2s; white-space: nowrap; cursor: pointer; border: none; }
+    .nav-btn:hover { opacity: 0.85; }
+
+    /* --- Hero Section --- */
+    .phero { position: relative; min-height: 55vh; display: flex; align-items: flex-end; overflow: hidden; padding: 0; }
+    .phero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #05100e 0%, #071a20 60%, #060f08 100%); }
+    .phero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, #060f08 100%); }
+    .phero-inner { position: relative; z-index: 1; padding: 6rem 2.5rem 3.5rem; max-width: 960px; margin: 0 auto; width: 100%; text-align: center; }
+    .phero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3efa7e; margin-bottom: 1.25rem; }
+    .dot { width: 6px; height: 6px; background: #3efa7e; border-radius: 50%; animation: blink 2s infinite; flex-shrink: 0; }
+    @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: 0.15 } }
+    .phero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.06; color: #fff; margin-bottom: 1rem; }
+    .phero h1 i { font-style: italic; color: #3efa7e; }
+    .phero-sub { font-size: 1rem; color: #b0c8b4; line-height: 1.8; max-width: 620px; margin: 0 auto 1.75rem; }
+    .phero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn-g { background: #3efa7e; color: #060f08; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.82rem; padding: 0.85rem 1.85rem; border-radius: 100px; transition: all .2s; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; border: none; text-decoration: none; }
+    .btn-g:hover { background: #31d669; transform: translateY(-1px); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.25); color: #fff; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.82rem; padding: 0.85rem 1.85rem; border-radius: 100px; transition: all .2s; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; text-decoration: none; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+
+    /* --- Stat Strip --- */
+    .stat-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); background: #081209; }
+    .stat-cell { padding: 1.6rem 1.2rem; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    .stat-cell:last-child { border-right: none; }
+    .stat-val { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: #3efa7e; line-height: 1; }
+    .stat-lbl { font-size: 0.62rem; font-weight: 600; color: #7aab80; letter-spacing: 0.05em; margin-top: 0.4rem; text-transform: uppercase; line-height: 1.4; }
+
+    /* --- Section Layout --- */
+    section { padding: 5rem 2.5rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    .sec-eyebrow { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3efa7e; margin-bottom: 0.8rem; }
+    .sec-head { max-width: 700px; margin-bottom: 2.75rem; }
+    section h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 2.7vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.2; }
+    .sec-sub { font-size: 0.9rem; color: #8fb094; margin-top: 0.85rem; line-height: 1.75; }
+
+    /* --- Calculator Section --- */
+    .calc-section { background: #060f08; padding: 4rem 2.5rem; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2.5rem; max-width: 1180px; margin: 0 auto; }
+    @media (max-width: 1024px) { .calc-grid { grid-template-columns: 1fr; } }
+
+    /* --- Cards --- */
+    .feat-card { background: #0b1e10; border: 1px solid rgba(62,250,126,0.1); border-radius: 16px; padding: 1.8rem 1.6rem; transition: border-color .25s; }
+    .feat-card:hover { border-color: rgba(62,250,126,0.3); }
+    .feat-icon { font-size: 1.4rem; margin-bottom: 1rem; }
+    .feat-title { font-size: 0.88rem; font-weight: 800; color: #fff; margin-bottom: 0.55rem; }
+    .feat-desc { font-size: 0.8rem; color: #8fb094; line-height: 1.7; }
+
+    .calc-card { background: #0b1e10; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 2rem; }
+    .calc-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem; }
+    .calc-card .calc-desc { font-size: 0.8rem; color: #8fb094; margin-bottom: 1.5rem; line-height: 1.6; }
+
+    /* --- Inputs (Dark Theme) --- */
+    .input-group { margin-bottom: 10px; }
+    .input-group label { display: block; margin-bottom: 4px; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7aab80; }
+    .input-wrap { position: relative; }
+    .input-unit { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px; color: #7aab80; pointer-events: none; }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      color: #eafbec;
+      outline: none;
+      transition: all 0.2s;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      min-height: 44px;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="text"]:focus, input[type="number"]:focus, select:focus {
+      border-color: rgba(62,250,126,0.4);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 0 0 3px rgba(62,250,126,0.08);
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237aab80' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+    select option {
+      background: #0b1e10;
+      color: #c8dccb;
+      padding: 8px 12px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+    }
+    select option:hover, select option:focus, select option:checked {
+      background: rgba(62,250,126,0.15);
+      color: #3efa7e;
+    }
+    input::placeholder { color: #4a6b4f; }
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+
+    .grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    @media (min-width: 640px) { .grid-3-cols { gap: 12px; } }
+    .grid-4-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    @media (min-width: 640px) { .grid-4-cols { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+    .section-divider { display: flex; align-items: center; gap: 8px; padding-top: 12px; margin-bottom: 12px; border-top: 1px solid rgba(255,255,255,0.08); color: #3efa7e; }
+    .section-divider svg { flex-shrink: 0; }
+    .section-divider .divider-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* --- Results Strip --- */
+    .results-strip { display: flex; flex-direction: column; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+    @media (min-width: 640px) { .results-strip { flex-direction: row; justify-content: space-between; align-items: center; } }
+    .result-item { text-align: center; }
+    @media (min-width: 640px) { .result-item { text-align: left; } }
+    .result-item .res-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7aab80; margin-bottom: 4px; }
+    .result-item .res-value { font-family: 'Playfair Display', serif; font-size: 24px; color: #3efa7e; line-height: 1; }
+
+    /* --- Table --- */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .data-table th { background: rgba(62,250,126,0.12); color: #3efa7e; padding: 10px 16px; text-align: right; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid rgba(62,250,126,0.2); }
+    .data-table th:first-child { text-align: left; }
+    .data-table td { padding: 10px 16px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.06); color: #c8dccb; }
+    .data-table td:first-child { text-align: left; color: #8fb094; }
+    .data-table tr.revenue-row { background: rgba(62,250,126,0.04); }
+    .data-table tr.profit-row { background: rgba(62,250,126,0.06); border-top: 2px solid rgba(62,250,126,0.3); font-weight: 700; }
+    .data-table tr.profit-row td { color: #3efa7e; }
+
+    /* --- Progress Bars --- */
+    .progress-bg { background: rgba(255,255,255,0.04); border-radius: 8px; height: 20px; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 8px; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* --- Highlight Box --- */
+    .highlight-box { background: rgba(62,250,126,0.06); border: 1px solid rgba(62,250,126,0.2); border-radius: 16px; padding: 20px; }
+
+    /* --- Chart --- */
+    .chart-container { overflow-x: auto; }
+    .chart-svg { width: 100%; min-width: 600px; max-width: 900px; margin: 0 auto; display: block; }
+
+    /* --- Layout Grids --- */
+    .grid-2 { display: grid; gap: 24px; }
+    @media (min-width: 1024px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+    .grid-3 { display: grid; gap: 24px; }
+    @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .grid-4 { display: grid; gap: 20px; }
+    @media (min-width: 640px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+    /* --- Product Cards --- */
+    .product-card { background: #0b1e10; border: 1px solid rgba(62,250,126,0.1); border-radius: 16px; padding: 24px; transition: all 0.3s; display: flex; flex-direction: column; }
+    .product-card:hover { border-color: rgba(62,250,126,0.3); transform: translateY(-4px); }
+    .product-card .pc-type { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3efa7e; margin-bottom: 8px; }
+    .product-card .pc-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: 6px; }
+    .product-card .pc-desc { font-size: 0.78rem; color: #8fb094; line-height: 1.6; margin-bottom: 12px; flex-grow: 1; }
+    .product-card .pc-specs { display: flex; gap: 16px; margin-bottom: 12px; }
+    .product-card .pc-spec { text-align: center; }
+    .product-card .pc-spec-val { font-size: 0.85rem; font-weight: 700; color: #3efa7e; }
+    .product-card .pc-spec-label { font-size: 0.55rem; color: #7aab80; text-transform: uppercase; letter-spacing: 0.08em; }
+    .product-card .btn-sm { width: 100%; text-align: center; justify-content: center; font-size: 0.7rem; padding: 10px 16px; }
+
+    /* --- CTA Band --- */
+    .cta-band { background: #0b1e10; border: 1px solid rgba(62,250,126,0.15); border-radius: 20px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .cta-band h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-band p { font-size: 0.86rem; color: #8fb094; max-width: 480px; }
+
+    /* --- Footer --- */
+    .pfoot { padding: 2.5rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .pfoot-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .pfoot-links a { font-size: 0.78rem; color: #7aab80; font-weight: 600; transition: color .2s; }
+    .pfoot-links a:hover { color: #3efa7e; }
+    .pfoot-note { font-size: 0.72rem; color: #4a6b4f; }
+
+    /* --- Entrance Animations --- */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- Scrollbar --- */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #060f08; }
+    ::-webkit-scrollbar-thumb { background: rgba(62,250,126,0.3); border-radius: 4px; }
+
+    /* --- Responsive --- */
+    @media (max-width: 760px) {
+      .pnav { padding: 0 1.25rem; }
+      section { padding: 3.5rem 1.25rem; }
+      .calc-section { padding: 2.5rem 1.25rem; }
+      .phero-inner { padding: 4rem 1.25rem 2.5rem; }
+      .cta-band { padding: 2rem 1.5rem; }
+      .pfoot { padding: 1.75rem 1.25rem; }
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+
+    /* --- Mobile Menu --- */
+    .mobile-menu { position: fixed; inset: 0; z-index: 60; background: #0b1e10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; }
+    .mobile-menu-close { position: absolute; top: 12px; right: 12px; background: none; border: none; color: #fff; min-width: 44px; min-height: 44px; cursor: pointer; }
+    .mobile-menu a { color: #fff; font-family: 'Playfair Display', serif; font-size: 24px; text-decoration: none; }
+    .mobile-menu .mobile-cta { background: #3efa7e; color: #060f08; padding: 14px 32px; border-radius: 100px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 16px; }
+    .hidden { display: none !important; }
+
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; padding: 8px; min-width: 44px; min-height: 44px; cursor: pointer; color: #fff; }
+    @media (max-width: 1024px) { .hamburger { display: block; } .nav-links-desk { display: none !important; } }
+
+    /* --- Buttons override for nav --- */
+    .nav-links-desk { display: flex; gap: 32px; align-items: center; }
+    .nav-link-desk { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); text-decoration: none; transition: color .2s; }
+    .nav-link-desk:hover { color: #3efa7e; }
+
+    button, a, [role="button"] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="pnav" id="navbar">
+    <a class="logo" href="/">GROW<b>SPEC</b></a>
+    <div style="display:flex;align-items:center;gap:24px;">
+      <div class="nav-links-desk">
+        <a href="/" class="nav-link-desk">Home</a>
+        <a href="/#products" class="nav-link-desk">Products</a>
+        <a href="/roi-calculator.html" class="nav-link-desk" style="color:#3efa7e;">ROI Calculator</a>
+        <a href="/#contact" class="nav-link-desk">Contact</a>
+      </div>
+      <a class="nav-btn" href="/#contact">Get a Quote</a>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a>
+    <a href="/#products">Products</a>
+    <a href="/roi-calculator.html" style="color:#3efa7e;">ROI Calculator</a>
+    <a href="/#contact">Contact</a>
+    <a href="/#contact" class="mobile-cta" onclick="toggleMobileMenu()">Get a Quote</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="phero" id="hero" style="padding-top: 64px;">
+    <div class="phero-bg"></div>
+    <div class="phero-inner">
+      <div class="phero-tag"><span class="dot"></span>Investment Analysis Tool</div>
+      <h1>Turn Seeds Into <i>Profit</i></h1>
+      <p class="phero-sub">International ROI calculator with country-specific costs for electricity, water, nutrients &amp; labor. Compare 11 GrowSpec systems across 15+ markets and find your payback period.</p>
+      <div class="phero-btns">
+        <a href="#calculator" class="btn-g">Start Calculating</a>
+        <a href="#metrics" class="btn-ghost">View Results</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stat Strip -->
+  <div class="stat-strip">
+    <div class="stat-cell"><div class="stat-val">15+</div><div class="stat-lbl">Countries</div></div>
+    <div class="stat-cell"><div class="stat-val">11</div><div class="stat-lbl">Grow Systems</div></div>
+    <div class="stat-cell"><div class="stat-val">5</div><div class="stat-lbl">Crop Types</div></div>
+    <div class="stat-cell"><div class="stat-val">5yr</div><div class="stat-lbl">Forecast</div></div>
+    <div class="stat-cell"><div class="stat-val">Real-Time</div><div class="stat-lbl">Calculations</div></div>
+  </div>
+
+  <!-- ============================================
+       CALCULATOR
+       ============================================ -->
+  <section class="calc-section" id="calculator">
+    <div class="calc-grid">
+      <!-- Left Panel -->
+      <div>
+        <div class="sec-eyebrow">Configure Your Farm</div>
+        <h2 style="margin-bottom:1rem;">Select Your Setup</h2>
+        <p class="sec-sub" style="margin-bottom:2rem;">Choose your country, system, and crop. All cost fields are fully editable to match your local conditions.</p>
+
+        <div class="calc-card" style="margin-bottom:1.5rem;">
+          <h3>Setup</h3>
+          <div class="grid-2-cols" style="margin-bottom:8px;">
+            <div class="input-group">
+              <label>Country</label>
+              <div class="input-wrap">
+                <select id="countrySelect" onchange="onCountryChange(this.value)"></select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Currency</label>
+              <input id="currencyDisplay" type="text" readonly style="opacity:0.6;">
+            </div>
+          </div>
+          <div class="grid-2-cols" style="margin-bottom:8px;">
+            <div class="input-group">
+              <label>Grow System</label>
+              <select id="productSelect" onchange="onProductChange(this.value)"></select>
+            </div>
+            <div class="input-group">
+              <label>Crop Type</label>
+              <select id="cropSelect" onchange="onCropChange(this.value)"></select>
+            </div>
+          </div>
+          <div class="grid-3-cols">
+            <div class="input-group">
+              <label>Units</label>
+              <input id="numUnits" type="number" value="1" min="1" max="100" oninput="calcUpdate('units', this.value)">
+            </div>
+            <div class="input-group">
+              <label>Cycle (days)</label>
+              <input id="cycleDays" type="number" value="20" min="1" max="365" oninput="calcUpdate('growCycleDays', this.value)">
+            </div>
+            <div class="input-group">
+              <label>Yield (kg)</label>
+              <input id="yieldPerCycle" type="number" value="25" step="0.1" oninput="calcUpdate('yieldPerCycle', this.value)">
+            </div>
+          </div>
+          <div class="grid-2-cols" style="margin-top:8px;">
+            <div class="input-group">
+              <label>Price / kg</label>
+              <div class="input-wrap"><input id="pricePerKg" type="number" value="8" step="0.01" oninput="calcUpdate('pricePerKg', this.value)"><span class="input-unit" id="priceUnit">GBP</span></div>
+            </div>
+            <div class="input-group">
+              <label>Unit Cost</label>
+              <div class="input-wrap"><input id="unitCost" type="number" value="5120" step="100" oninput="calcUpdate('unitCost', this.value)"><span class="input-unit" id="costUnit">GBP</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-card" style="margin-bottom:1.5rem;">
+          <h3>Operating Costs</h3>
+
+          <!-- Power -->
+          <div class="section-divider">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <span class="divider-label">Power</span>
+          </div>
+          <div class="grid-3-cols" style="margin-bottom:4px;">
+            <div class="input-group">
+              <label>Power (W)</label>
+              <div class="input-wrap"><input id="powerDemand" type="number" value="988" oninput="calcUpdate('powerDemandPerUnit', this.value)"><span class="input-unit">W</span></div>
+            </div>
+            <div class="input-group">
+              <label>Hours</label>
+              <div class="input-wrap"><input id="opHours" type="number" value="18" min="1" max="24" oninput="calcUpdate('dailyOperatingHours', this.value)"><span class="input-unit">h</span></div>
+            </div>
+            <div class="input-group">
+              <label>Elec / kWh</label>
+              <div class="input-wrap"><input id="elecRate" type="number" value="0.34" step="0.001" oninput="calcUpdate('electricityRatePerKwh', this.value)"><span class="input-unit" id="elecUnit">GBP</span></div>
+            </div>
+          </div>
+
+          <!-- Water -->
+          <div class="section-divider">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            <span class="divider-label">Water</span>
+          </div>
+          <div class="grid-2-cols" style="margin-bottom:4px;">
+            <div class="input-group">
+              <label>Water (L/day)</label>
+              <div class="input-wrap"><input id="waterUse" type="number" value="8" step="0.1" oninput="calcUpdate('dailyWaterConsumption', this.value)"><span class="input-unit">L</span></div>
+            </div>
+            <div class="input-group">
+              <label>Water / m3</label>
+              <div class="input-wrap"><input id="waterRate" type="number" value="6.80" step="0.01" oninput="calcUpdate('waterCostPerM3', this.value)"><span class="input-unit" id="waterUnit">GBP</span></div>
+            </div>
+          </div>
+
+          <!-- Nutrients -->
+          <div class="section-divider">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+            <span class="divider-label">Nutrients</span>
+          </div>
+          <div class="grid-2-cols" style="margin-bottom:4px;">
+            <div class="input-group">
+              <label>Nutrients (L/day)</label>
+              <div class="input-wrap"><input id="nutrientUse" type="number" value="0.5" step="0.1" oninput="calcUpdate('dailyNutrientConsumption', this.value)"><span class="input-unit">L</span></div>
+            </div>
+            <div class="input-group">
+              <label>Nutrient / L</label>
+              <div class="input-wrap"><input id="nutrientRate" type="number" value="3.50" step="0.01" oninput="calcUpdate('nutrientCostPerLiter', this.value)"><span class="input-unit" id="nutrientUnit">GBP</span></div>
+            </div>
+          </div>
+
+          <!-- Labor -->
+          <div class="section-divider">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="divider-label">Labor</span>
+          </div>
+          <div class="grid-3-cols" style="margin-bottom:4px;">
+            <div class="input-group">
+              <label>Hours / Day</label>
+              <div class="input-wrap"><input id="laborHours" type="number" value="1" step="0.1" oninput="calcUpdate('laborHoursPerDay', this.value)"><span class="input-unit">h</span></div>
+            </div>
+            <div class="input-group">
+              <label>Rate / Hr</label>
+              <div class="input-wrap"><input id="laborRate" type="number" value="16.50" step="0.1" oninput="calcUpdate('laborRatePerHour', this.value)"><span class="input-unit" id="laborUnit">GBP</span></div>
+            </div>
+            <div class="input-group">
+              <label>Work Days</label>
+              <input id="workDays" type="number" value="22" min="1" max="31" oninput="calcUpdate('workingDaysPerMonth', this.value)">
+            </div>
+          </div>
+
+          <!-- Equipment -->
+          <div class="section-divider">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span class="divider-label">Equipment &amp; Taxes</span>
+          </div>
+          <div class="grid-4-cols" style="margin-bottom:12px;">
+            <div class="input-group">
+              <label>Shipping</label>
+              <div class="input-wrap"><input id="shippingCost" type="number" value="500" step="10" oninput="calcUpdate('shippingCost', this.value)"><span class="input-unit" id="shipUnit">GBP</span></div>
+            </div>
+            <div class="input-group">
+              <label>Duty %</label>
+              <input id="importDuty" type="number" value="0" min="0" max="100" oninput="calcUpdate('importDutyPercent', this.value)">
+            </div>
+            <div class="input-group">
+              <label>VAT/GST %</label>
+              <input id="vatRate" type="number" value="20" min="0" max="100" oninput="calcUpdate('vatPercent', this.value)">
+            </div>
+            <div class="input-group">
+              <label>Maint %</label>
+              <input id="maintRate" type="number" value="2" min="0" max="50" oninput="calcUpdate('maintenancePercent', this.value)">
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div class="results-strip">
+            <div class="result-item">
+              <div class="res-label">Monthly Net Profit</div>
+              <div class="res-value" id="resultMonthlyProfit">--</div>
+            </div>
+            <div class="result-item">
+              <div class="res-label">Monthly OpEx</div>
+              <div class="res-value" id="resultMonthlyOpex" style="color:#c8dccb;">--</div>
+            </div>
+            <div class="result-item">
+              <div class="res-label">Payback Period</div>
+              <div class="res-value" id="resultPayback">--</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div>
+        <div class="sec-eyebrow">Projected Performance</div>
+        <h2 style="margin-bottom:2rem;">Your Farm at a Glance</h2>
+
+        <!-- Key Metrics -->
+        <div class="grid-2" style="margin-bottom:2rem;">
+          <div class="feat-card fade-in">
+            <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3efa7e" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <div class="feat-title">Annual Yield</div>
+            <div class="feat-desc" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;" id="metricYield">--</div>
+            <div class="feat-desc" style="color:#7aab80;">Based on cycle time &amp; units</div>
+          </div>
+          <div class="feat-card fade-in">
+            <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3efa7e" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="feat-title">Annual Revenue</div>
+            <div class="feat-desc" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;" id="metricRevenue">--</div>
+            <div class="feat-desc" style="color:#7aab80;">Based on market price</div>
+          </div>
+          <div class="feat-card fade-in">
+            <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3efa7e" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div class="feat-title">Annual OpEx</div>
+            <div class="feat-desc" style="font-family:'Playfair Display',serif;font-size:28px;color:#c8dccb;margin-bottom:4px;" id="metricOpex">--</div>
+            <div class="feat-desc" style="color:#7aab80;">Power + water + nutrients + labor</div>
+          </div>
+          <div class="feat-card fade-in">
+            <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3efa7e" stroke-width="2"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+            <div class="feat-title">ROI Year 1</div>
+            <div class="feat-desc" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;" id="metricRoi">--</div>
+            <div class="feat-desc" style="color:#7aab80;">After equipment recovery</div>
+          </div>
+        </div>
+
+        <!-- Power & Water Metrics -->
+        <div class="grid-2" style="margin-bottom:2rem;">
+          <div class="calc-card">
+            <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">MONTHLY POWER</div>
+            <div style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;" id="metricPower">--</div>
+          </div>
+          <div class="calc-card">
+            <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">MONTHLY WATER</div>
+            <div style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;" id="metricWater">--</div>
+          </div>
+        </div>
+
+        <!-- Cost Breakdown -->
+        <div class="calc-card" style="margin-bottom:2rem;">
+          <h3>Cost Breakdown</h3>
+          <div class="calc-desc">Monthly operating costs by category</div>
+          <div style="overflow-x:auto;">
+            <table class="data-table" id="breakdownTable">
+              <thead><tr><th style="text-align:left;">Category</th><th>Monthly</th><th>Annual</th><th>% OpEx</th></tr></thead>
+              <tbody id="breakdownBody"></tbody>
+            </table>
+          </div>
+          <div class="highlight-box" style="margin-top:16px;">
+            <div class="grid-2-cols">
+              <div>
+                <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3efa7e;margin-bottom:4px;">NET PROFIT MARGIN</div>
+                <div style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;" id="metricMargin">--</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3efa7e;margin-bottom:4px;">ANNUAL NET</div>
+                <div style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;" id="metricAnnualNet">--</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annual Cost Bars -->
+        <div class="calc-card" style="margin-bottom:2rem;">
+          <h3>Annual Cost Split</h3>
+          <div class="calc-desc">Visual breakdown of annual operating costs</div>
+          <div id="costBars"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TIMELINE CHART
+       ============================================ -->
+  <section id="metrics" style="background:#081209;">
+    <div class="wrap" style="text-align:center;">
+      <div class="sec-eyebrow">Payback Forecast</div>
+      <h2 style="margin-bottom:16px;">When Will You Break Even?</h2>
+      <p style="color:#8fb094;max-width:600px;margin:0 auto 40px;font-size:15px;line-height:1.7;">Track cumulative profit over 5 years with your payback period highlighted</p>
+
+      <div class="chart-container">
+        <svg id="timelineChart" class="chart-svg" viewBox="0 0 900 360"></svg>
+      </div>
+
+      <div class="grid-4" style="margin-top:32px;max-width:900px;margin-left:auto;margin-right:auto;">
+        <div class="feat-card" style="text-align:left;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">PAYBACK PERIOD</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;" id="timelinePayback">--</div>
+        </div>
+        <div class="feat-card" style="text-align:left;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">TOTAL INVESTMENT</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;" id="timelineInvestment">--</div>
+        </div>
+        <div class="feat-card" style="text-align:left;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">ANNUAL NET PROFIT</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;" id="timelineAnnualNet">--</div>
+        </div>
+        <div class="feat-card" style="text-align:left;">
+          <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">5-YEAR PROFIT</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;" id="timeline5Year">--</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRODUCTS
+       ============================================ -->
+  <section id="products" style="background:#060f08;">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="sec-eyebrow">Our Growing Systems</div>
+        <h2>Choose Your Farm</h2>
+        <p class="sec-sub" style="max-width:560px;margin:0.85rem auto 0;">Select any system above to calculate its ROI, or explore our full range.</p>
+      </div>
+      <div class="grid-3" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA + FOOTER
+       ============================================ -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h3>Ready to Start Growing?</h3>
+          <p>Get a personalized ROI report and farm plan from our team of vertical farming experts.</p>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="/#contact" class="btn-g">Get a Quote</a>
+          <a href="/#products" class="btn-ghost">Explore Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pfoot">
+    <div class="pfoot-links">
+      <a href="/">Home</a>
+      <a href="/#products">Products</a>
+      <a href="/roi-calculator.html">ROI Calculator</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="pfoot-note">&copy; 2025 Growspec. All rights reserved.</div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT - COMPLETE APPLICATION LOGIC
+       (Preserved entirely from original calculator)
+       ============================================ -->
+  <script>
+  // ============================================
+  // DATA: Products, Countries, Crops
+  // ============================================
+
+  const PRODUCTS = [
+    { id: 'farmcube-nano', name: 'FarmCube Nano', tagline: 'Front-of-House Display', type: 'Aeroponic', power: 988, waterTank: 80, weight: 320, yield: 25, cycle: 20, elecCost: 150, price: 5120, image: 'product-nano', desc: '4-tier aeroponic growing display for restaurants and hotels.', features: ['16 trays/cycle', '80L tank', '18 cycles/yr'] },
+    { id: 'farmcube-neo-2t', name: 'FarmCube Neo-2T', tagline: 'Compact Microgreens', type: 'Microgreens', power: 120, waterTank: 18, weight: 40, yield: 4, cycle: 7, elecCost: 20, price: 600, image: 'product-neo', desc: 'Compact 2-tier microgreens cabinet for home kitchens.', features: ['24 punnets', '120W power', '7-day cycles'] },
+    { id: 'farmcube-neo-5t', name: 'FarmCube Neo-5T', tagline: 'High-Volume Microgreens', type: 'Microgreens', power: 240, waterTank: 30, weight: 70, yield: 10, cycle: 7, elecCost: 35, price: 1200, image: 'product-neo', desc: '5-tier high-volume microgreens for central kitchens.', features: ['60 punnets', '240W power', '5-tier design'] },
+    { id: 'farmcube-ultra', name: 'FarmCube Ultra', tagline: 'Research-Grade Chamber', type: 'Research', power: 4240, waterTank: 150, weight: 800, yield: 45, cycle: 20, elecCost: 350, price: 16500, image: 'product-ultra', desc: 'Research-grade sealed chamber with AI cultivation.', features: ['45+ crops', '5 LED spectra', 'Climate control'] },
+    { id: 'pegma-germin', name: 'Pegma Germin', tagline: '5-Layer Vertical Rack', type: 'Vertical Rack', power: 150, waterTank: 0, weight: 60, yield: 8, cycle: 18, elecCost: 25, price: 2500, image: 'product-ultra', desc: 'Versatile 5-layer aeroponic rack for seedlings & greens.', features: ['5 layers', '99% less water', 'Movable'] },
+    { id: 'pegma-omni-4', name: 'Pegma Omni-4', tagline: 'All-in-One Grow Kit', type: 'All-in-One', power: 900, waterTank: 60, weight: 150, yield: 12, cycle: 30, elecCost: 120, price: 1200, image: 'product-biocube', desc: 'Complete grow kit with 800W LED and touchscreen.', features: ['800W LED', '4 buckets', 'Touchscreen'] },
+    { id: 'biocube-leafy', name: 'BioCube Leafy Greens', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 1150, cycle: 30, elecCost: 2800, price: 65000, image: 'product-biocube', desc: '40ft container for leafy greens. 70m2 canopy.', features: ['70m2 canopy', '3,450 cells', '13.8t/yr'] },
+    { id: 'biocube-micro', name: 'BioCube Microgreens', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 675, cycle: 7, elecCost: 2800, price: 65000, image: 'product-biocube', desc: '40ft container for microgreens. 70m2 canopy.', features: ['70m2 canopy', '234k boxes/yr', 'Aeroponic'] },
+    { id: 'biocube-strawberry', name: 'BioCube Strawberries', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 504, cycle: 60, elecCost: 2800, price: 68000, image: 'product-biocube', desc: '40ft container for strawberries. 80m2 canopy.', features: ['80m2 canopy', '2,016 cells', '3,024kg/yr'] },
+    { id: 'biocube-cannabis-aero', name: 'BioCube Cannabis (Aero)', tagline: 'Container Farm', type: 'Container', power: 16600, waterTank: 650, weight: 8000, yield: 22, cycle: 73, elecCost: 2500, price: 65000, image: 'product-biocube', desc: 'Container farm for cannabis with aeroponics.', features: ['26.6m2 canopy', '196 buckets', '110kg/yr'] },
+    { id: 'biocube-cannabis-drip', name: 'BioCube Cannabis (Drip)', tagline: 'Container Farm', type: 'Container', power: 16600, waterTank: 650, weight: 8000, yield: 75, cycle: 73, elecCost: 2500, price: 60000, image: 'product-biocube', desc: 'Container farm for cannabis with drip irrigation.', features: ['30.4m2 canopy', '252 sites', '375kg/yr'] }
+  ];
+
+  const COUNTRIES = [
+    { id: 'uk', name: 'United Kingdom', currency: 'GBP', symbol: 'GBP', rate: 0.79, elec: 0.34, water: 6.80, nutrient: 3.50, labor: 16.50, workDays: 22, vat: 20, duty: 0, shipping: 500 },
+    { id: 'usa', name: 'United States', currency: 'USD', symbol: '$', rate: 1.0, elec: 0.14, water: 2.50, nutrient: 2.80, labor: 18.00, workDays: 22, vat: 0, duty: 0, shipping: 800 },
+    { id: 'uae', name: 'UAE', currency: 'AED', symbol: 'AED', rate: 3.67, elec: 0.08, water: 0.80, nutrient: 3.20, labor: 10.00, workDays: 26, vat: 5, duty: 5, shipping: 1200 },
+    { id: 'saudi', name: 'Saudi Arabia', currency: 'SAR', symbol: 'SAR', rate: 3.75, elec: 0.06, water: 0.60, nutrient: 3.00, labor: 8.50, workDays: 26, vat: 15, duty: 5, shipping: 1400 },
+    { id: 'singapore', name: 'Singapore', currency: 'SGD', symbol: 'S$', rate: 1.35, elec: 0.18, water: 2.00, nutrient: 3.80, labor: 14.00, workDays: 22, vat: 9, duty: 0, shipping: 1500 },
+    { id: 'australia', name: 'Australia', currency: 'AUD', symbol: 'A$', rate: 1.52, elec: 0.22, water: 3.50, nutrient: 3.60, labor: 28.00, workDays: 22, vat: 10, duty: 5, shipping: 1800 },
+    { id: 'germany', name: 'Germany', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.25, water: 4.20, nutrient: 3.20, labor: 18.50, workDays: 22, vat: 19, duty: 0, shipping: 600 },
+    { id: 'france', name: 'France', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.21, water: 4.30, nutrient: 3.10, labor: 17.00, workDays: 22, vat: 20, duty: 0, shipping: 600 },
+    { id: 'india', name: 'India', currency: 'INR', symbol: 'INR', rate: 83.5, elec: 0.09, water: 0.50, nutrient: 2.00, labor: 3.00, workDays: 26, vat: 18, duty: 15, shipping: 900 },
+    { id: 'china', name: 'China', currency: 'CNY', symbol: 'CNY', rate: 7.25, elec: 0.09, water: 0.70, nutrient: 2.20, labor: 5.50, workDays: 26, vat: 13, duty: 10, shipping: 700 },
+    { id: 'canada', name: 'Canada', currency: 'CAD', symbol: 'CAD', rate: 1.38, elec: 0.12, water: 2.00, nutrient: 3.00, labor: 20.00, workDays: 22, vat: 5, duty: 0, shipping: 700 },
+    { id: 'netherlands', name: 'Netherlands', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.23, water: 4.00, nutrient: 3.00, labor: 19.00, workDays: 22, vat: 21, duty: 0, shipping: 550 },
+    { id: 'norway', name: 'Norway', currency: 'NOK', symbol: 'NOK', rate: 10.8, elec: 0.10, water: 7.80, nutrient: 4.00, labor: 25.00, workDays: 22, vat: 25, duty: 0, shipping: 800 },
+    { id: 'south-africa', name: 'South Africa', currency: 'ZAR', symbol: 'ZAR', rate: 18.5, elec: 0.12, water: 1.50, nutrient: 2.50, labor: 4.50, workDays: 22, vat: 15, duty: 10, shipping: 1100 },
+    { id: 'nigeria', name: 'Nigeria', currency: 'NGN', symbol: 'NGN', rate: 1500, elec: 0.07, water: 0.40, nutrient: 1.80, labor: 2.50, workDays: 22, vat: 7.5, duty: 10, shipping: 1300 }
+  ];
+
+  const CROPS = [
+    { id: 'leafy-greens', name: 'Leafy Greens', price: 8, factor: 1.0 },
+    { id: 'herbs', name: 'Herbs', price: 25, factor: 0.6 },
+    { id: 'microgreens', name: 'Microgreens', price: 40, factor: 0.4 },
+    { id: 'tomatoes', name: 'Tomatoes', price: 6, factor: 1.5 },
+    { id: 'strawberries', name: 'Strawberries', price: 15, factor: 0.8 }
+  ];
+
+  const RESOURCE_DEFAULTS = {
+    'farmcube-nano': { water: 8, nutrients: 0.5, labor: 1, hours: 18 },
+    'farmcube-neo-2t': { water: 3, nutrients: 0.2, labor: 0.5, hours: 16 },
+    'farmcube-neo-5t': { water: 5, nutrients: 0.3, labor: 0.75, hours: 16 },
+    'farmcube-ultra': { water: 15, nutrients: 1.0, labor: 2, hours: 20 },
+    'pegma-germin': { water: 4, nutrients: 0.3, labor: 0.5, hours: 16 },
+    'pegma-omni-4': { water: 8, nutrients: 0.5, labor: 1, hours: 18 },
+    'biocube-leafy': { water: 80, nutrients: 5.0, labor: 4, hours: 24 },
+    'biocube-micro': { water: 70, nutrients: 4.0, labor: 4, hours: 24 },
+    'biocube-strawberry': { water: 90, nutrients: 6.0, labor: 4, hours: 24 },
+    'biocube-cannabis-aero': { water: 60, nutrients: 4.0, labor: 4, hours: 24 },
+    'biocube-cannabis-drip': { water: 70, nutrients: 5.0, labor: 4, hours: 24 }
+  };
+
+  // ============================================
+  // STATE
+  // ============================================
+  let state = {
+    country: 'uk', product: 'farmcube-nano', crop: 'leafy-greens',
+    units: 1, cycleDays: 20, yieldPerCycle: 25, pricePerKg: 8, unitCost: 5120,
+    powerDemand: 988, opHours: 18, elecRate: 0.34,
+    waterUse: 8, waterRate: 6.80,
+    nutrientUse: 0.5, nutrientRate: 3.50,
+    laborHours: 1, laborRate: 16.50, workDays: 22,
+    shipping: 500, duty: 0, vat: 20, maint: 2
+  };
+
+  function getCountry() { return COUNTRIES.find(c => c.id === state.country) || COUNTRIES[0]; }
+  function getProduct() { return PRODUCTS.find(p => p.id === state.product) || PRODUCTS[0]; }
+  function getCrop() { return CROPS.find(c => c.id === state.crop) || CROPS[0]; }
+  function curSym() { return getCountry().symbol; }
+
+  // ============================================
+  // INITIALIZATION
+  // ============================================
+  function init() {
+    populateSelects();
+    renderProducts();
+    calculate();
+    setupScrollAnimations();
+  }
+
+  function populateSelects() {
+    const countrySel = document.getElementById('countrySelect');
+    COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; countrySel.appendChild(o); });
+    countrySel.value = state.country;
+
+    const productSel = document.getElementById('productSelect');
+    PRODUCTS.forEach(p => { const o = document.createElement('option'); o.value = p.id; o.textContent = p.name; productSel.appendChild(o); });
+    productSel.value = state.product;
+
+    const cropSel = document.getElementById('cropSelect');
+    CROPS.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; cropSel.appendChild(o); });
+    cropSel.value = state.crop;
+
+    document.getElementById('currencyDisplay').value = getCountry().currency;
+  }
+
+  // ============================================
+  // EVENT HANDLERS
+  // ============================================
+  function onCountryChange(cid) {
+    state.country = cid;
+    const c = getCountry();
+    document.getElementById('currencyDisplay').value = c.currency;
+    state.elecRate = c.elec;
+    state.waterRate = c.water;
+    state.nutrientRate = c.nutrient;
+    state.laborRate = c.labor;
+    state.workDays = c.workDays;
+    state.duty = c.duty;
+    state.vat = c.vat;
+    state.shipping = c.shipping;
+    state.unitCost = Math.round(getProduct().price / c.rate);
+    syncInputs();
+    calculate();
+  }
+
+  function onProductChange(pid) {
+    state.product = pid;
+    const p = getProduct();
+    const c = getCountry();
+    const r = RESOURCE_DEFAULTS[pid] || RESOURCE_DEFAULTS['farmcube-nano'];
+    state.powerDemand = p.power;
+    state.cycleDays = p.cycle;
+    state.yieldPerCycle = p.yield;
+    state.unitCost = Math.round(p.price / c.rate);
+    state.waterUse = r.water;
+    state.nutrientUse = r.nutrients;
+    state.laborHours = r.labor;
+    state.opHours = r.hours;
+    state.elecCost = p.elecCost;
+    syncInputs();
+    calculate();
+  }
+
+  function onCropChange(cid) {
+    state.crop = cid;
+    const crop = getCrop();
+    const c = getCountry();
+    state.pricePerKg = Math.round(crop.price / c.rate * 100) / 100;
+    const p = getProduct();
+    state.yieldPerCycle = Math.round(p.yield * crop.factor * 10) / 10;
+    syncInputs();
+    calculate();
+  }
+
+  function calcUpdate(key, val) {
+    state[key] = parseFloat(val) || 0;
+    calculate();
+  }
+
+  function syncInputs() {
+    const c = getCountry();
+    const ids = {
+      numUnits: 'units', cycleDays: 'cycleDays', yieldPerCycle: 'yieldPerCycle',
+      pricePerKg: 'pricePerKg', unitCost: 'unitCost',
+      powerDemand: 'powerDemand', opHours: 'opHours', elecRate: 'elecRate',
+      waterUse: 'waterUse', waterRate: 'waterRate',
+      nutrientUse: 'nutrientUse', nutrientRate: 'nutrientRate',
+      laborHours: 'laborHours', laborRate: 'laborRate', workDays: 'workDays',
+      shipping: 'shippingCost', duty: 'importDuty', vat: 'vatRate', maint: 'maintRate'
+    };
+    for (const [k, id] of Object.entries(ids)) {
+      const el = document.getElementById(id);
+      if (el) el.value = state[k];
+    }
+    document.getElementById('currencyDisplay').value = c.currency;
+    document.getElementById('priceUnit').textContent = c.symbol;
+    document.getElementById('costUnit').textContent = c.symbol;
+    document.getElementById('elecUnit').textContent = c.symbol;
+    document.getElementById('waterUnit').textContent = c.symbol;
+    document.getElementById('nutrientUnit').textContent = c.symbol;
+    document.getElementById('laborUnit').textContent = c.symbol;
+    document.getElementById('shipUnit').textContent = c.symbol;
+  }
+
+  // ============================================
+  // CALCULATION ENGINE
+  // ============================================
+  function calculate() {
+    const units = state.units;
+
+    const monthlyKwh = (state.powerDemand * state.opHours * 30 * units) / 1000;
+    const monthlyPowerCost = monthlyKwh * state.elecRate;
+    const annualPowerCost = monthlyPowerCost * 12;
+
+    const monthlyWaterLiters = state.waterUse * 30 * units;
+    const monthlyWaterCost = (monthlyWaterLiters / 1000) * state.waterRate;
+    const annualWaterCost = monthlyWaterCost * 12;
+
+    const monthlyNutrientCost = state.nutrientUse * 30 * units * state.nutrientRate;
+    const annualNutrientCost = monthlyNutrientCost * 12;
+
+    const monthlyLaborCost = state.laborHours * state.laborRate * state.workDays * units;
+    const annualLaborCost = monthlyLaborCost * 12;
+
+    const annualMaintCost = state.unitCost * units * (state.maint / 100);
+    const monthlyMaintCost = annualMaintCost / 12;
+
+    const monthlyOpex = monthlyPowerCost + monthlyWaterCost + monthlyNutrientCost + monthlyLaborCost + monthlyMaintCost;
+    const annualOpex = annualPowerCost + annualWaterCost + annualNutrientCost + annualLaborCost + annualMaintCost;
+
+    const subtotal = state.unitCost * units;
+    const importDutyAmt = subtotal * (state.duty / 100);
+    const vatAmt = (subtotal + importDutyAmt + state.shipping) * (state.vat / 100);
+    const totalEquipment = subtotal + importDutyAmt + state.shipping + vatAmt;
+
+    const cyclesPerYear = Math.floor(365 / state.cycleDays);
+    const annualYield = state.yieldPerCycle * cyclesPerYear * units;
+    const annualRevenue = annualYield * state.pricePerKg;
+    const monthlyRevenue = annualRevenue / 12;
+
+    const monthlyNet = monthlyRevenue - monthlyOpex;
+    const annualNet = annualRevenue - annualOpex;
+
+    const payback = monthlyNet > 0 ? totalEquipment / monthlyNet : Infinity;
+    const roi1 = totalEquipment > 0 ? ((annualRevenue - annualOpex - totalEquipment) / totalEquipment) * 100 : 0;
+    const roi5 = totalEquipment > 0 ? (((annualRevenue - annualOpex) * 5 - totalEquipment) / totalEquipment) * 100 : 0;
+    const fiveYearProfit = (annualRevenue - annualOpex) * 5 - totalEquipment;
+
+    const sym = curSym();
+
+    document.getElementById('resultMonthlyProfit').textContent = sym + Math.round(monthlyNet).toLocaleString();
+    document.getElementById('resultMonthlyProfit').style.color = monthlyNet >= 0 ? '#3efa7e' : '#e74c3c';
+    document.getElementById('resultMonthlyOpex').textContent = sym + Math.round(monthlyOpex).toLocaleString();
+    document.getElementById('resultPayback').textContent = isFinite(payback) ? (payback >= 12 ? (payback/12).toFixed(1) + ' yrs' : payback.toFixed(1) + ' mo') : 'N/A';
+
+    document.getElementById('metricYield').textContent = Math.round(annualYield).toLocaleString() + ' kg';
+    document.getElementById('metricRevenue').textContent = sym + Math.round(annualRevenue).toLocaleString();
+    document.getElementById('metricOpex').textContent = sym + Math.round(annualOpex).toLocaleString();
+    document.getElementById('metricRoi').textContent = roi1.toFixed(1) + '%';
+    document.getElementById('metricPower').textContent = Math.round(monthlyKwh).toLocaleString() + ' kWh';
+    document.getElementById('metricWater').textContent = Math.round(monthlyWaterLiters).toLocaleString() + ' L';
+    document.getElementById('metricMargin').textContent = (annualRevenue > 0 ? (annualNet/annualRevenue)*100 : 0).toFixed(1) + '%';
+    document.getElementById('metricAnnualNet').textContent = sym + Math.round(annualNet).toLocaleString();
+
+    renderBreakdown(sym, monthlyRevenue, monthlyPowerCost, monthlyWaterCost, monthlyNutrientCost, monthlyLaborCost, monthlyMaintCost, monthlyNet, monthlyOpex, annualRevenue, annualNet, annualOpex);
+    renderCostBars(annualPowerCost, annualWaterCost, annualNutrientCost, annualLaborCost, annualMaintCost, annualOpex);
+    renderTimeline(totalEquipment, monthlyNet, payback, fiveYearProfit, annualNet, sym);
+  }
+
+  function renderBreakdown(sym, mRev, mPow, mWat, mNut, mLab, mMaint, mNet, mOpex, aRev, aNet, aOpex) {
+    const tbody = document.getElementById('breakdownBody');
+    tbody.innerHTML = `
+      <tr class="revenue-row"><td>Revenue</td><td>${sym}${Math.round(mRev).toLocaleString()}</td><td>${sym}${Math.round(aRev).toLocaleString()}</td><td>-</td></tr>
+      <tr><td>Power</td><td>${sym}${Math.round(mPow).toLocaleString()}</td><td>${sym}${Math.round(mPow*12).toLocaleString()}</td><td>${(mPow/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Water</td><td>${sym}${Math.round(mWat).toLocaleString()}</td><td>${sym}${Math.round(mWat*12).toLocaleString()}</td><td>${(mWat/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Nutrients</td><td>${sym}${Math.round(mNut).toLocaleString()}</td><td>${sym}${Math.round(mNut*12).toLocaleString()}</td><td>${(mNut/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Labor</td><td>${sym}${Math.round(mLab).toLocaleString()}</td><td>${sym}${Math.round(mLab*12).toLocaleString()}</td><td>${(mLab/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Maintenance</td><td>${sym}${Math.round(mMaint).toLocaleString()}</td><td>${sym}${Math.round(mMaint*12).toLocaleString()}</td><td>${(mMaint/mOpex*100).toFixed(1)}%</td></tr>
+      <tr class="profit-row"><td>Net Profit</td><td>${sym}${Math.round(mNet).toLocaleString()}</td><td>${sym}${Math.round(aNet).toLocaleString()}</td><td>${(aRev>0?(aNet/aRev*100):0).toFixed(1)}%</td></tr>
+    `;
+  }
+
+  function renderCostBars(aPow, aWat, aNut, aLab, aMaint, aOpex) {
+    const container = document.getElementById('costBars');
+    if (!aOpex) { container.innerHTML = ''; return; }
+    const colors = ['#3efa7e', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+    const labels = ['Power', 'Water', 'Nutrients', 'Labor', 'Maintenance'];
+    const values = [aPow, aWat, aNut, aLab, aMaint];
+    let html = '';
+    values.forEach((v, i) => {
+      const pct = (v / aOpex * 100).toFixed(1);
+      html += `<div style="margin-bottom:10px;"><div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:0.75rem;"><span style="color:#8fb094;">${labels[i]}</span><span style="color:#eafbec;font-weight:600;">${pct}%</span></div><div class="progress-bg"><div class="progress-fill" style="width:${pct}%;background:${colors[i]};"></div></div></div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function renderTimeline(totalEquipment, monthlyNet, payback, fiveYearProfit, annualNet, sym) {
+    const svg = document.getElementById('timelineChart');
+    if (!svg) return;
+
+    const months = 60;
+    const isProfitable = monthlyNet > 0;
+    let maxVal = totalEquipment;
+    let data = [];
+    for (let m = 0; m <= months; m++) {
+      const val = isProfitable ? (monthlyNet * m - totalEquipment) : -totalEquipment;
+      data.push(val);
+      if (Math.abs(val) > maxVal) maxVal = Math.abs(val);
+    }
+
+    const pad = { top: 40, right: 40, bottom: 60, left: 80 };
+    const W = 900 - pad.left - pad.right;
+    const H = 360 - pad.top - pad.bottom;
+
+    const xScale = m => pad.left + (m / months) * W;
+    const yScale = v => pad.top + H - ((v + maxVal) / (2 * maxVal)) * H;
+
+    let pathD = `M${xScale(0)},${yScale(data[0])}`;
+    for (let m = 1; m <= months; m++) pathD += ` L${xScale(m)},${yScale(data[m])}`;
+
+    let zeroD = `M${pad.left},${yScale(0)} L${pad.left + W},${yScale(0)}`;
+
+    const paybackMonth = isFinite(payback) ? Math.round(payback) : null;
+    const paybackX = paybackMonth ? xScale(Math.min(paybackMonth, months)) : null;
+
+    let html = `
+      <defs>
+        <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3efa7e" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#3efa7e" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="${pad.left}" y1="${yScale(0)}" x2="${pad.left + W}" y2="${yScale(0)}" stroke="#7aab80" stroke-width="1" stroke-dasharray="4"/>
+      <path d="${pathD} L${xScale(months)},${yScale(0)} L${pad.left},${yScale(0)} Z" fill="url(#areaGrad)"/>
+      <path d="${pathD}" fill="none" stroke="#3efa7e" stroke-width="2.5"/>
+      <text x="${pad.left - 10}" y="${yScale(0) + 4}" fill="#7aab80" font-size="11" text-anchor="end">Break-even</text>
+    `;
+
+    for (let y = -Math.ceil(maxVal/5000)*5000; y <= Math.ceil(maxVal/5000)*5000; y += 5000) {
+      if (y === 0) continue;
+      html += `<text x="${pad.left - 10}" y="${yScale(y) + 4}" fill="#4a6b4f" font-size="10" text-anchor="end">${sym}${(y/1000).toFixed(0)}k</text>`;
+      html += `<line x1="${pad.left}" y1="${yScale(y)}" x2="${pad.left + W}" y2="${yScale(y)}" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>`;
+    }
+
+    for (let m = 0; m <= months; m += 12) {
+      html += `<text x="${xScale(m)}" y="${pad.top + H + 25}" fill="#4a6b4f" font-size="10" text-anchor="middle">Year ${m/12}</text>`;
+      html += `<line x1="${xScale(m)}" y1="${pad.top}" x2="${xScale(m)}" y2="${pad.top + H}" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>`;
+    }
+
+    if (paybackX && paybackX <= pad.left + W) {
+      html += `<line x1="${paybackX}" y1="${pad.top}" x2="${paybackX}" y2="${pad.top + H}" stroke="#3efa7e" stroke-width="1" stroke-dasharray="4"/>
+      <text x="${paybackX}" y="${pad.top - 10}" fill="#3efa7e" font-size="11" text-anchor="middle" font-weight="bold">Payback</text>`;
+    }
+
+    html += `<text x="${pad.left + W/2}" y="${pad.top + H + 50}" fill="#4a6b4f" font-size="11" text-anchor="middle">Time (Years)</text>`;
+    html += `<text x="15" y="${pad.top + H/2}" fill="#4a6b4f" font-size="11" text-anchor="middle" transform="rotate(-90, 15, ${pad.top + H/2})">Cumulative Profit</text>`;
+
+    svg.innerHTML = html;
+
+    document.getElementById('timelinePayback').textContent = isFinite(payback) ? (payback >= 12 ? (payback/12).toFixed(1) + ' yrs' : payback.toFixed(1) + ' mo') : 'N/A';
+    document.getElementById('timelineInvestment').textContent = sym + Math.round(totalEquipment).toLocaleString();
+    document.getElementById('timelineAnnualNet').textContent = sym + Math.round(annualNet).toLocaleString();
+    document.getElementById('timeline5Year').textContent = sym + Math.round(fiveYearProfit).toLocaleString();
+  }
+
+  // ============================================
+  // RENDER PRODUCTS
+  // ============================================
+  function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    grid.innerHTML = PRODUCTS.map(p => `
+      <div class="product-card" onclick="onProductChange('${p.id}')" style="cursor:pointer;">
+        <div class="pc-type">${p.type}</div>
+        <div class="pc-name">${p.name}</div>
+        <div class="pc-desc">${p.desc}</div>
+        <div class="pc-specs">
+          <div class="pc-spec"><div class="pc-spec-val">${p.power}W</div><div class="pc-spec-label">Power</div></div>
+          <div class="pc-spec"><div class="pc-spec-val">${p.yield}kg</div><div class="pc-spec-label">Yield</div></div>
+          <div class="pc-spec"><div class="pc-spec-val">${p.cycle}d</div><div class="pc-spec-label">Cycle</div></div>
+        </div>
+        <a href="#calculator" class="btn-g btn-sm" onclick="onProductChange('${p.id}')">Calculate ROI</a>
+      </div>
+    `).join('');
+  }
+
+  // ============================================
+  // UI HELPERS
+  // ============================================
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+
+  function setupScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }
+
+  // Start
+  init();
+  </script>
+
+</body>
+</html>
