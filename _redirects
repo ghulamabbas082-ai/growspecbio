@@ -1,8 +1,0 @@
-# Netlify redirects
-/roi                    /roi-calculator.html    301
-/roi-calculator         /roi-calculator.html    301
-/products               /#products              301
-/pigma-omni.html        /products/pegma-omni.html     301
-/pigma-gemini.html      /products/pegma-germin.html   301
-/products/pigma-omni    /products/pegma-omni.html     301
-/products/pigma-gemini  /products/pegma-germin.html   301
