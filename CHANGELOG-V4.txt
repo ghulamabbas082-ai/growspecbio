@@ -1,1 +1,0 @@
-V4 fixes: removed bad white-on-light contrast override, restored dark text on light premium cards, improved nav/hero/KPI/product card readability, kept image updates and social links.
