@@ -1,0 +1,7 @@
+V10 updates
+- Contact email updated to abbas@growspecbio.com
+- WhatsApp updated to +8618718396182
+- Website URL confirmed as www.growspecbio.com
+- ROI calculator requires name, email and contact number before access
+- ROI lead form configured for email delivery to abbas@growspecbio.com with static-site form action and WhatsApp fallback
+- Added final dark contrast lock across all HTML pages

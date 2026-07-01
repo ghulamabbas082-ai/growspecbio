@@ -1,0 +1,32 @@
+GROWSPEC Bio V12 Final Polish Report
+====================================
+
+Checks performed:
+- 10 HTML pages scanned for missing internal assets.
+- Final V12 typography/contrast stylesheet applied to all HTML pages.
+- Index page base64 image embeds externalized to /images/optimized/.
+- FarmCube Nano Leafy Green index image replaced with uploaded real image.
+- robots.txt, sitemap.xml, llms.txt, and ai.txt checked/added for Google + AI-tool discovery.
+- Contact email set to abbas@growspecbio.com and WhatsApp +86 187 1839 6182 retained.
+- Mobile CSS breakpoints added for <=1100px and <=720px.
+- BioCube Modular two-column card layout and folding script retained/fixed.
+
+Missing internal assets: 0
+
+Page sizes:
+- 404.html: 41.3 KB; V12 CSS: yes
+- index.html: 112.2 KB; V12 CSS: yes
+- products/biocube-container.html: 746.1 KB; V12 CSS: yes
+- products/biocube-modular.html: 7242.9 KB; V12 CSS: yes
+- products/farmcube-nano.html: 1701.7 KB; V12 CSS: yes
+- products/farmcube-neo.html: 1091.9 KB; V12 CSS: yes
+- products/farmcube-ultra.html: 3218.7 KB; V12 CSS: yes
+- products/pegma-germin.html: 603.9 KB; V12 CSS: yes
+- products/pegma-omni.html: 2261.3 KB; V12 CSS: yes
+- roi-calculator.html: 105.5 KB; V12 CSS: yes
+
+Index data:image remaining: no
+robots.txt exists: True
+sitemap.xml exists: True
+llms.txt exists: True
+ai.txt exists: True

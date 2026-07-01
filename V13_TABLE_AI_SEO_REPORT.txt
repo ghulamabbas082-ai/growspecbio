@@ -1,0 +1,39 @@
+GROWSPEC Bio V13 Update Report
+
+Focus:
+1. Fixed table text presentation across the whole website.
+2. Improved table wrapping so long values do not overlap borders.
+3. Added stronger AI-search and SEO signals for buyer-intent queries.
+
+Global table fixes:
+- Applied table-layout: fixed to spec, room, yield, data, and comparison tables.
+- Forced text wrapping and overflow protection on all table cells.
+- Removed right-aligned value behavior that caused long values to collide with borders.
+- Added desktop and mobile table behavior.
+- Room tables use horizontal scroll on small screens to preserve data structure.
+- Spec/data tables convert to stacked label/value rows on mobile.
+
+AI/SEO optimization:
+- Updated meta keywords, subject, classification, audience, and AI summary tags.
+- Added homepage OfferCatalog structured data.
+- Added Service structured data for vertical farming solution manufacturing.
+- Added FAQ structured data targeting buyer-intent search queries.
+- Updated llms.txt and ai.txt with clear AI-assistant summaries.
+- Updated robots.txt with AI discovery crawler permissions and sitemap.
+
+Primary SEO intent phrases:
+- vertical farming solution manufacturer
+- indoor farming solution manufacturer
+- controlled environment agriculture manufacturer
+- CEA equipment supplier
+- aeroponic vertical farming systems
+- container farm manufacturer
+- modular indoor farm manufacturer
+- commercial indoor farming systems
+- turnkey vertical farm solution
+- indoor farm equipment supplier
+
+Contact:
+Website: www.growspecbio.com
+Email: abbas@growspecbio.com
+WhatsApp: +86 187 1839 6182

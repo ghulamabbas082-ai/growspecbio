@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<!-- SEO: Essential Meta Tags -->
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<meta content="GROWSPEC Bio" name="author"/>
+<meta content="GROWSPEC Bio" name="publisher"/>
+<meta content="GROWSPEC Bio 2026" name="copyright"/>
+<meta content="#020b07" name="theme-color"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="telephone=no" name="format-detection"/>
+<!-- SEO: Title, Description, Keywords, Canonical -->
+<title>Vertical Farming ROI Calculator | GROWSPEC Bio</title>
+<meta content="Estimate investment, operating costs, annual output, payback period, and ROI for BioCube, FarmCube, and Pegma indoor farming systems." name="description"/>
+<meta content="vertical farming solution manufacturer, vertical farming systems manufacturer, indoor farming solution manufacturer, controlled environment agriculture manufacturer, CEA equipment manufacturer, aeroponic vertical farming systems, commercial indoor farming systems, container farm manufacturer, modular indoor farm manufacturer, turnkey vertical farm solution, hydroponic and aeroponic growing systems, indoor farm equipment supplier, leafy green vertical farm, microgreens growing system, strawberry vertical farming system, high value crop indoor farming, FarmCube, BioCube, Pegma, GROWSPEC Bio, GROWSPEC Bio ROI calculator helps buyers compare indoor farming systems, estimate operating costs, evaluate crop output and request vertical farming project consultation." name="keywords"/>
+<link href="https://www.growspecbio.com/roi-calculator" rel="canonical"/>
+<!-- SEO: Open Graph -->
+<meta content="Vertical Farming ROI Calculator | GROWSPEC Bio" property="og:title"/>
+<meta content="Estimate investment, operating costs, annual output, payback period, and ROI for BioCube, FarmCube, and Pegma indoor farming systems." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.growspecbio.com/roi-calculator" property="og:url"/>
+<meta content="https://www.growspecbio.com/images/og-roi-calculator.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="GROWSPEC Bio" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Growspec" property="product:brand"/>
+<meta content="in stock" property="product:availability"/>
+<meta content="new" property="product:condition"/>
+<!-- SEO: Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Vertical Farming ROI Calculator | GROWSPEC Bio" name="twitter:title"/>
+<meta content="Estimate investment, operating costs, annual output, payback period, and ROI for BioCube, FarmCube, and Pegma indoor farming systems." name="twitter:description"/>
+<meta content="https://www.growspecbio.com/images/og-roi-calculator.jpg" name="twitter:image"/>
+<meta content="@GROWSPEC_GLOBAL" name="twitter:site"/>
+<!-- SEO: Favicon -->
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<!-- SEO: Performance -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700;800;850&amp;family=Playfair+Display:ital,wght@0,700;0,750;1,700;1,750&amp;display=swap" rel="stylesheet"/>
+<style>
+    /* ===========================================
+       GROWSPEC ROI CALCULATOR - DARK THEME
+       Matches product page design system
+       =========================================== */
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; height: -webkit-fill-available; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: #c8dccb;
+      background: #060f08;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* --- Navigation --- */
+    .pnav { position: sticky; top: 0; z-index: 300; display: flex; align-items: center; justify-content: space-between; padding: 0 3.5rem; height: 68px; border-bottom: 1px solid rgba(255,255,255,0.06); background: rgba(6,15,8,0.97); backdrop-filter: blur(24px); }
+    .logo { font-size: 1.05rem; font-weight: 800; letter-spacing: 0.12em; color: #fff; }
+    .logo b { color: #3efa7e; }
+    .back-link { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .back-link:hover { color: #3efa7e; }
+    .nav-btn { font-size: 0.78rem; font-weight: 700; padding: 0.6rem 1.4rem; border-radius: 100px; background: #3efa7e; color: #060f08; transition: opacity .2s; white-space: nowrap; cursor: pointer; border: none; }
+    .nav-btn:hover { opacity: 0.85; }
+
+    /* --- Hero Section --- */
+    .phero { position: relative; min-height: 55vh; display: flex; align-items: flex-end; overflow: hidden; padding: 0; }
+    .phero-bg { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, #05100e 0%, #071a20 60%, #060f08 100%); }
+    .phero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, #060f08 100%); }
+    .phero-inner { position: relative; z-index: 1; padding: 6rem 2.5rem 3.5rem; max-width: 960px; margin: 0 auto; width: 100%; text-align: center; }
+    .phero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3efa7e; margin-bottom: 1.25rem; }
+    .dot { width: 6px; height: 6px; background: #3efa7e; border-radius: 50%; animation: blink 2s infinite; flex-shrink: 0; }
+    @keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: 0.15 } }
+    .phero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.06; color: #fff; margin-bottom: 1rem; }
+    .phero h1 i { font-style: italic; color: #3efa7e; }
+    .phero-sub { font-size: 1rem; color: #b0c8b4; line-height: 1.8; max-width: 620px; margin: 0 auto 1.75rem; }
+    .phero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn-g { background: #3efa7e; color: #060f08; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.82rem; padding: 0.85rem 1.85rem; border-radius: 100px; transition: all .2s; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; border: none; text-decoration: none; }
+    .btn-g:hover { background: #31d669; transform: translateY(-1px); }
+    .btn-ghost { border: 1.5px solid rgba(255,255,255,0.25); color: #fff; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.82rem; padding: 0.85rem 1.85rem; border-radius: 100px; transition: all .2s; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; text-decoration: none; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+
+    /* --- Stat Strip --- */
+    .stat-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); background: #081209; }
+    .stat-cell { padding: 1.6rem 1.2rem; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
+    .stat-cell:last-child { border-right: none; }
+    .stat-val { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; color: #3efa7e; line-height: 1; }
+    .stat-lbl { font-size: 0.62rem; font-weight: 600; color: #7aab80; letter-spacing: 0.05em; margin-top: 0.4rem; text-transform: uppercase; line-height: 1.4; }
+
+    /* --- Section Layout --- */
+    section { padding: 6rem 3.5rem; }
+    .wrap { max-width: 1380px; margin: 0 auto; }
+    .sec-eyebrow { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #3efa7e; margin-bottom: 0.8rem; }
+    .sec-head { max-width: 700px; margin-bottom: 2.75rem; }
+    section h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 2.7vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.2; }
+    .sec-sub { font-size: 0.9rem; color: #8fb094; margin-top: 0.85rem; line-height: 1.75; }
+
+    /* --- Calculator Section --- */
+    .calc-section { background: #060f08; padding: 4rem 2.5rem; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2.5rem; max-width: 1180px; margin: 0 auto; }
+    @media (max-width: 1024px) { .calc-grid { grid-template-columns: 1fr; } }
+
+    /* --- Cards --- */
+    .feat-card { background: #0b1e10; border: 1px solid rgba(62,250,126,0.1); border-radius: 16px; padding: 1.8rem 1.6rem; transition: border-color .25s; }
+    .feat-card:hover { border-color: rgba(62,250,126,0.3); }
+    .feat-icon { font-size: 1.4rem; margin-bottom: 1rem; }
+    .feat-title { font-size: 0.88rem; font-weight: 800; color: #fff; margin-bottom: 0.55rem; }
+    .feat-desc { font-size: 0.8rem; color: #8fb094; line-height: 1.7; }
+
+    .calc-card { background: #0b1e10; border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 2rem; }
+    .calc-card h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #fff; margin-bottom: 0.5rem; }
+    .calc-card .calc-desc { font-size: 0.8rem; color: #8fb094; margin-bottom: 1.5rem; line-height: 1.6; }
+
+    /* --- Inputs (Dark Theme) --- */
+    .input-group { margin-bottom: 10px; }
+    .input-group label { display: block; margin-bottom: 4px; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7aab80; }
+    .input-wrap { position: relative; }
+    .input-unit { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px; color: #7aab80; pointer-events: none; }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      color: #eafbec;
+      outline: none;
+      transition: all 0.2s;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      min-height: 44px;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="text"]:focus, input[type="number"]:focus, select:focus {
+      border-color: rgba(62,250,126,0.4);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 0 0 3px rgba(62,250,126,0.08);
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237aab80' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+    select option {
+      background: #0b1e10;
+      color: #c8dccb;
+      padding: 8px 12px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+    }
+    select option:hover, select option:focus, select option:checked {
+      background: rgba(62,250,126,0.15);
+      color: #3efa7e;
+    }
+    input::placeholder { color: #4a6b4f; }
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+
+    .grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    @media (min-width: 640px) { .grid-3-cols { gap: 12px; } }
+    .grid-4-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    @media (min-width: 640px) { .grid-4-cols { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+    .section-divider { display: flex; align-items: center; gap: 8px; padding-top: 12px; margin-bottom: 12px; border-top: 1px solid rgba(255,255,255,0.08); color: #3efa7e; }
+    .section-divider svg { flex-shrink: 0; }
+    .section-divider .divider-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* --- Results Strip --- */
+    .results-strip { display: flex; flex-direction: column; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); }
+    @media (min-width: 640px) { .results-strip { flex-direction: row; justify-content: space-between; align-items: center; } }
+    .result-item { text-align: center; }
+    @media (min-width: 640px) { .result-item { text-align: left; } }
+    .result-item .res-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #7aab80; margin-bottom: 4px; }
+    .result-item .res-value { font-family: 'Playfair Display', serif; font-size: 24px; color: #3efa7e; line-height: 1; }
+
+    /* --- Table --- */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .data-table th { background: rgba(62,250,126,0.12); color: #3efa7e; padding: 10px 16px; text-align: right; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1px solid rgba(62,250,126,0.2); }
+    .data-table th:first-child { text-align: left; }
+    .data-table td { padding: 10px 16px; text-align: right; border-bottom: 1px solid rgba(255,255,255,0.06); color: #c8dccb; }
+    .data-table td:first-child { text-align: left; color: #8fb094; }
+    .data-table tr.revenue-row { background: rgba(62,250,126,0.04); }
+    .data-table tr.profit-row { background: rgba(62,250,126,0.06); border-top: 2px solid rgba(62,250,126,0.3); font-weight: 700; }
+    .data-table tr.profit-row td { color: #3efa7e; }
+
+    /* --- Progress Bars --- */
+    .progress-bg { background: rgba(255,255,255,0.04); border-radius: 8px; height: 20px; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 8px; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    /* --- Highlight Box --- */
+    .highlight-box { background: rgba(62,250,126,0.06); border: 1px solid rgba(62,250,126,0.2); border-radius: 16px; padding: 20px; }
+
+    /* --- Chart --- */
+    .chart-container { overflow-x: auto; }
+    .chart-svg { width: 100%; min-width: 600px; max-width: 900px; margin: 0 auto; display: block; }
+
+    /* --- Layout Grids --- */
+    .grid-2 { display: grid; gap: 24px; }
+    @media (min-width: 1024px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+    .grid-3 { display: grid; gap: 24px; }
+    @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .grid-4 { display: grid; gap: 20px; }
+    @media (min-width: 640px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+    /* --- Product Cards --- */
+    .product-card { background: #0b1e10; border: 1px solid rgba(62,250,126,0.1); border-radius: 16px; padding: 24px; transition: all 0.3s; display: flex; flex-direction: column; }
+    .product-card:hover { border-color: rgba(62,250,126,0.3); transform: translateY(-4px); }
+    .product-card .pc-type { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #3efa7e; margin-bottom: 8px; }
+    .product-card .pc-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; margin-bottom: 6px; }
+    .product-card .pc-desc { font-size: 0.78rem; color: #8fb094; line-height: 1.6; margin-bottom: 12px; flex-grow: 1; }
+    .product-card .pc-specs { display: flex; gap: 16px; margin-bottom: 12px; }
+    .product-card .pc-spec { text-align: center; }
+    .product-card .pc-spec-val { font-size: 0.85rem; font-weight: 700; color: #3efa7e; }
+    .product-card .pc-spec-label { font-size: 0.55rem; color: #7aab80; text-transform: uppercase; letter-spacing: 0.08em; }
+    .product-card .btn-sm { width: 100%; text-align: center; justify-content: center; font-size: 0.7rem; padding: 10px 16px; }
+
+    /* --- CTA Band --- */
+    .cta-band { background: #0b1e10; border: 1px solid rgba(62,250,126,0.15); border-radius: 20px; padding: 3rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .cta-band h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-band p { font-size: 0.86rem; color: #8fb094; max-width: 480px; }
+
+    /* --- Footer --- */
+    .pfoot { padding: 2.5rem; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .pfoot-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .pfoot-social { display:flex; gap:.65rem; flex-wrap:wrap; align-items:center; }
+    .pfoot-links a { font-size: 0.78rem; color: #7aab80; font-weight: 600; transition: color .2s; }
+    .pfoot-links a:hover { color: #3efa7e; }
+    .pfoot-note { font-size: 0.72rem; color: #4a6b4f; }
+
+    /* --- Entrance Animations --- */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- Scrollbar --- */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #060f08; }
+    ::-webkit-scrollbar-thumb { background: rgba(62,250,126,0.3); border-radius: 4px; }
+
+    /* --- Responsive --- */
+    @media (max-width: 760px) {
+      .pnav { padding: 0 1.25rem; }
+      section { padding: 3.5rem 1.25rem; }
+      .calc-section { padding: 2.5rem 1.25rem; }
+      .phero-inner { padding: 4rem 1.25rem 2.5rem; }
+      .cta-band { padding: 2rem 1.5rem; }
+      .pfoot { padding: 1.75rem 1.25rem; }
+      .calc-grid { grid-template-columns: 1fr; }
+    }
+
+    /* --- Mobile Menu --- */
+    .mobile-menu { position: fixed; inset: 0; z-index: 60; background: #0b1e10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; }
+    .mobile-menu-close { position: absolute; top: 12px; right: 12px; background: none; border: none; color: #fff; min-width: 44px; min-height: 44px; cursor: pointer; }
+    .mobile-menu a { color: #fff; font-family: 'Playfair Display', serif; font-size: 24px; text-decoration: none; }
+    .mobile-menu .mobile-cta { background: #3efa7e; color: #060f08; padding: 14px 32px; border-radius: 100px; font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 16px; }
+    .hidden { display: none !important; }
+
+    /* Hamburger */
+    .hamburger { display: none; background: none; border: none; padding: 8px; min-width: 44px; min-height: 44px; cursor: pointer; color: #fff; }
+    @media (max-width: 1024px) { .hamburger { display: block; } .nav-links-desk { display: none !important; } }
+
+    /* --- Buttons override for nav --- */
+    .nav-links-desk { display: flex; gap: 32px; align-items: center; }
+    .nav-link-desk { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); text-decoration: none; transition: color .2s; }
+    .nav-link-desk:hover { color: #3efa7e; }
+
+    button, a, [role="button"] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+
+/* =========================================================
+   V9 VERIFIED DARK PREMIUM CONTRAST SYSTEM
+   One clean final layer after removing previous light-theme patches.
+   Goal: no pale text, no white cards with white text, readable all pages.
+   ========================================================= */
+:root{
+  --bg:#020907;
+  --bg-2:#04110c;
+  --bg-3:#061912;
+  --surface:#0a2418;
+  --surface-2:#0f3021;
+  --surface-3:#143d2a;
+  --line:rgba(91,255,165,.30);
+  --line-strong:rgba(91,255,165,.58);
+  --text:#f6fff8;
+  --body:#dff4e6;
+  --muted:#b9d3c1;
+  --soft:#8fb69a;
+  --green:#42ff91;
+  --green-2:#19d873;
+  --gold:#ffe08a;
+  --dark-text:#031109;
+  --shadow:0 24px 70px rgba(0,0,0,.36);
+  --shadow-soft:0 14px 38px rgba(0,0,0,.24);
+  --radius:22px;
+  --gs-bg:var(--bg)!important;
+  --gs-bg-soft:var(--bg-2)!important;
+  --gs-card:var(--surface)!important;
+  --gs-ink:var(--text)!important;
+  --gs-muted:var(--body)!important;
+  --gs-soft:var(--muted)!important;
+  --gs-line:var(--line)!important;
+  --gs-green:var(--green)!important;
+  --gs-deep:var(--text)!important;
+  --gs-gold:var(--gold)!important;
+}
+html,body{
+  background:
+    radial-gradient(900px 520px at 10% 0%,rgba(66,255,145,.16),transparent 58%),
+    radial-gradient(850px 520px at 90% 8%,rgba(38,130,255,.12),transparent 62%),
+    linear-gradient(180deg,#020907 0%,#061811 42%,#020705 100%)!important;
+  color:var(--body)!important;
+  font-family:'Manrope',Arial,sans-serif!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:optimizeLegibility!important;
+}
+body::before{background:none!important;display:none!important;}
+a{color:inherit;text-decoration:none;}
+img{display:block;}
+
+/* Universal readable text */
+body :where(p,li,span,div,td,th,label,small,summary,strong,b,em,i){opacity:1!important;text-shadow:none;}
+body :where(p,li,td,th,label,small,summary,
+.hero-desc,.hero-sub,.hero-copy,.phero-sub,.phero-desc,.sec-intro,.sec-sub,
+.b-desc,.pc-desc,.vc-desc,.feat-desc,.app-desc,.arch-desc,.model-desc,.platform-desc,.spectrum-desc,.tray-desc,.comp-desc,.vent-desc,.tl-desc,.related-desc,.crop-desc,.tech-desc,.step p,.mkt p,.proof-q,.detail-para,.pc-subtitle,.cat-info p,.faq-item p,.contact-item p,.footer-brand p,.footer-copy,.pfoot-note,.calc-desc,.input-group label,.input-unit,.res-label,.stat-lbl,.kpi-lbl,.pc-stat-lbl,.data-table td,.room-table td,.spec-table td,.pc-spec-label,.product-card .pc-desc,.product-card .pc-spec-label){
+  color:var(--body)!important;
+  font-weight:650!important;
+}
+body :where(h1,h2,h3,h4,h5,h6,.hero h1,.hero-title,.phero h1,.phero-title,.sec-title,.sec-head,.b-title,.pc-name,.product-card .pc-name,.vc-name,.feat-title,.arch-title,.app-title,.model-name,.platform-title,.spectrum-title,.tray-title,.comp-title,.vent-title,.tl-title,.related-name,.crop-name,.tech-name,.step-title,.layer-label,.detail-heading,.pc-title,.cat-info h2,.cat-info h3,.faq-item summary,.mkt h4,.proof-name,.logo){
+  color:var(--text)!important;
+  opacity:1!important;
+  text-shadow:0 2px 18px rgba(0,0,0,.42)!important;
+}
+body :where(.hero h1 i,.phero h1 i,.sec-title i,.cta-sec i,.cta-band i){color:var(--green)!important;}
+
+/* Global dark layout */
+.nav,.pnav{background:rgba(2,9,7,.96)!important;border-bottom:1px solid var(--line)!important;box-shadow:0 12px 36px rgba(0,0,0,.38)!important;backdrop-filter:blur(22px)!important;}
+.logo{color:var(--text)!important}.logo b{color:var(--green)!important}
+.nav-links>li>a,.nav-link-desk,.back-link,.mobile-menu a{color:var(--body)!important;font-weight:800!important;}
+.nav-links>li>a:hover,.nav-links>li.active>a,.nav-link-desk:hover,.back-link:hover{color:var(--green)!important;}
+.dropdown,.mobile-menu{background:rgba(4,17,12,.98)!important;border:1px solid var(--line)!important;box-shadow:var(--shadow)!important;}
+.dd-cat:hover{background:rgba(66,255,145,.10)!important;}
+.dd-cat-name{color:var(--text)!important}.dd-cat-desc{color:var(--body)!important}.dd-cat-label{color:var(--green)!important;}
+
+.hero,.phero,.phero-bg,.sec,.sec-dark,main,section,.calc-section,#calculator,#metrics,#products{
+  background:
+    radial-gradient(760px 420px at 20% 4%,rgba(66,255,145,.13),transparent 64%),
+    linear-gradient(135deg,#04110c 0%,#061912 58%,#020907 100%)!important;
+  color:var(--body)!important;
+}
+.phero-bg::after,.hero-img-main::after,.img-banner::after,.sec-img-banner::after,.pc-img::after,.img-gallery-item::after,.img-split-img::after,.gal-cell::after,.crop-img::after{
+  background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.20) 52%,rgba(0,0,0,.68) 100%)!important;
+}
+
+/* Premium dark surfaces/cards */
+.bento,.prod-cards,.markets-grid,.proof-grid,.gallery-grid,.related-grid,.feature-grid,.feat-grid,.cards-grid,.app-grid,.model-grid,.tech-grid,.process-steps,.grid-2,.grid-2-cols,.grid-3,.grid-3-cols,.grid-4,.grid-4-cols,.calc-grid,.product-grid,.product-cards,.systems-grid{
+  background:rgba(91,255,165,.12)!important;
+  border:1px solid rgba(91,255,165,.16)!important;
+}
+body :where(.b,.pc,.pc.premium,.variant-card,.faq-item,.detail-section,.proof-card,.mkt,.feature-card,.feat-card,.contact-card,.rel-card,.step,.tech-card,.app-card,.model-card,.platform-card,.spectrum-card,.tray-card,.comp-card,.vent-card,.vent-stage,.tl-card,.pc-detail,.deepdive,.cmp-wrap,.chip-block,.intro-split,.img-split,.img-split-row,.yield-wrap,.calc-card,.highlight-box,.data-table,.chart-container,.result-card,.summary-card,.metric-card,.stat-card,.product-card,.cta-band,.config-panel,.config-cell,.quick_specs,.room-table-wrap,.spec-table,.room-table,.input-card,.overview-card,.comparison-card,.market-card,.crop-card){
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035)),linear-gradient(135deg,var(--surface),var(--bg-2))!important;
+  color:var(--body)!important;
+  border:1px solid var(--line)!important;
+  box-shadow:var(--shadow-soft)!important;
+}
+body :where(.b:hover,.pc:hover,.pc.premium:hover,.variant-card:hover,.faq-item:hover,.detail-section:hover,.mkt:hover,.feature-card:hover,.feat-card:hover,.contact-card:hover,.rel-card:hover,.tech-card:hover,.product-card:hover,.cta-band:hover){
+  background:linear-gradient(180deg,rgba(66,255,145,.13),rgba(255,255,255,.055)),linear-gradient(135deg,var(--surface-2),var(--surface))!important;
+  border-color:var(--line-strong)!important;
+}
+
+/* Small pills/spec lines: the main problem areas */
+.pc-spec,.pc-specs .pc-spec,.pc.premium .pc-spec,.pc.premium .pc-specs .pc-spec,
+.product-card .pc-spec,.product-card .pc-specs .pc-spec,.spec-item,.sys-item,.qs-cell,.result-item,.stat-cell,.config-cell,.model-row,.spec-row,.pc-stat,.kpi,.stat-card,.res-item,.option-row,.metric-mini,.summary-row,.comp-spec-row,.room-table td,.spec-table td{
+  background:rgba(255,255,255,.095)!important;
+  border:1px solid rgba(145,255,190,.34)!important;
+  color:var(--text)!important;
+  opacity:1!important;
+  font-weight:780!important;
+}
+.pc-spec *,.pc.premium .pc-spec *,.product-card .pc-spec *,.spec-item *,.sys-item *,.qs-cell *,.result-item *,.stat-cell *,.config-cell *,.model-row *,.spec-row *,.pc-stat *,.kpi *,.stat-card *,.res-item *,.option-row *,.summary-row *,.comp-spec-row *{
+  color:var(--text)!important;
+  opacity:1!important;
+  font-weight:780!important;
+}
+.pc-spec::before,.pc.premium .pc-spec::before,.product-card .pc-spec::before,.spec-item::before,.sys-item::before{background:var(--green)!important;color:var(--green)!important;box-shadow:0 0 14px rgba(66,255,145,.58)!important;}
+
+/* Values, numbers, ROI result data */
+.kpi-val,.stat-val,.pc-stat-val,.stat-value,.b-num,.result-value,.qs-val,.res-value,.pc-spec-val,.product-card .pc-spec-val,
+#metricYield,#metricRevenue,#metricOpex,#metricRoi,#metricPower,#metricWater,#metricMargin,#metricAnnualNet,#resultMonthlyProfit,#resultMonthlyOpex,#resultPayback,#timelinePayback,#timelineInvestment,#timelineAnnualNet,#timeline5Year{
+  color:var(--green)!important;
+  opacity:1!important;
+  font-weight:900!important;
+  text-shadow:0 0 18px rgba(66,255,145,.20)!important;
+}
+
+/* Tags and accents */
+.sec-eyebrow,.hero-tag,.phero-tag,.phero-kicker,.hero-kicker,.b-lbl,.sub-section-label,.dd-cat-label,.pc-cta,.related-link,.footer-col h6,.pfoot-title,.cat-badge,.pc-tag,.product-card .pc-type,.vc-tag,.badge,.tag,.chip,.variant-tag,.ctag,.spectrum-tag,.arch-badge,.model-badge,.sys-badge,.subtype-btn,.sub-tab,.prod-nav-btn{
+  color:var(--green)!important;
+  background:rgba(66,255,145,.12)!important;
+  border:1px solid rgba(66,255,145,.26)!important;
+  font-weight:900!important;
+  opacity:1!important;
+}
+.pc-tag.gold,.pc-tag.rose,.pc.premium .pc-name,.pc.premium .pc-tag,.pc.premium .pc-cta,.gold{color:var(--gold)!important;}
+.pc.premium .pc-spec,.pc.premium .pc-spec *{color:var(--text)!important;}
+
+/* Marquee */
+.marquee-wrap{background:#020907!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important;box-shadow:inset 0 0 0 999px rgba(0,0,0,.22)!important;}
+.m-item{color:var(--body)!important;font-weight:900!important;opacity:1!important;}
+.m-item::after{color:var(--green)!important;opacity:1!important;}
+
+/* Buttons */
+.btn-g,.nav-btn,.cta-btn,.submit-btn,.btn-primary,.mobile-cta,.product-card .btn-sm{
+  background:linear-gradient(135deg,var(--green),#13c76a)!important;
+  color:var(--dark-text)!important;
+  border:1px solid rgba(198,255,218,.44)!important;
+  box-shadow:0 16px 36px rgba(66,255,145,.20)!important;
+  font-weight:900!important;
+  text-shadow:none!important;
+}
+.btn-g *,.nav-btn *,.cta-btn *,.submit-btn *,.btn-primary *,.mobile-cta *,.product-card .btn-sm *{color:var(--dark-text)!important;text-shadow:none!important;}
+.btn-g:hover,.nav-btn:hover,.cta-btn:hover,.submit-btn:hover,.btn-primary:hover{filter:saturate(1.12) brightness(1.03)!important;transform:translateY(-2px)!important;}
+.btn-ghost,.btn-o,.btn-outline,.btn-detail,.cta-band .btn-ghost,.cta-sec .btn-ghost{
+  background:rgba(255,255,255,.09)!important;
+  color:var(--text)!important;
+  border:1px solid rgba(220,255,232,.38)!important;
+  font-weight:850!important;
+  text-shadow:none!important;
+}
+.btn-ghost *,.btn-o *,.btn-outline *,.btn-detail *,.cta-band .btn-ghost *,.cta-sec .btn-ghost *{color:var(--text)!important;}
+.cta-sec .btn-g,.cta-band .btn-g{background:linear-gradient(135deg,var(--green),#13c76a)!important;color:var(--dark-text)!important;}
+
+/* Forms, calculator, tables */
+input,textarea,select,.input-wrap input,.input-wrap select{
+  background:#0b2418!important;
+  color:var(--text)!important;
+  border:1px solid rgba(145,255,190,.38)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)!important;
+  opacity:1!important;
+  font-weight:760!important;
+}
+input::placeholder,textarea::placeholder{color:var(--muted)!important;opacity:1!important;}
+.input-unit,.input-group label{color:var(--muted)!important;font-weight:900!important;opacity:1!important;}
+select option{background:#0b2418!important;color:var(--text)!important;}
+.data-table,.room-table,.spec-table{background:var(--surface)!important;border:1px solid var(--line)!important;color:var(--body)!important;}
+.data-table th,.room-table th,.spec-table th{background:rgba(66,255,145,.18)!important;color:var(--text)!important;border-color:var(--line)!important;font-weight:900!important;}
+.data-table td,.room-table td,.spec-table td{color:var(--body)!important;border-color:rgba(145,255,190,.18)!important;background:rgba(255,255,255,.04)!important;}
+.revenue-row td,.profit-row td{color:var(--text)!important;font-weight:850!important;}
+.progress-bg{background:rgba(255,255,255,.12)!important;border:1px solid rgba(145,255,190,.18)!important;}
+
+/* Image overlay text */
+.img-banner-text,.sec-img-banner-text,.gal-label,.gal-cap,.img-3col-cap{
+  background:rgba(3,10,7,.84)!important;color:#fff!important;border:1px solid rgba(255,255,255,.18)!important;text-shadow:0 2px 18px rgba(0,0,0,.70)!important;
+}
+.img-banner-text *,.sec-img-banner-text *,.gal-label *,.gal-cap *,.img-3col-cap *{color:#fff!important;}
+
+/* Attribute overrides for old inline low-contrast leftovers */
+[style*="color:#8ab08e"],[style*="color: #8ab08e"],[style*="color:#8fb094"],[style*="color: #8fb094"],[style*="color:#7aab80"],[style*="color: #7aab80"],[style*="color:#6e8f72"],[style*="color: #6e8f72"],[style*="color:#4b4030"],[style*="color: #4b4030"],[style*="color:#5a8560"],[style*="color: #5a8560"],[style*="color:#c8dccb"],[style*="color: #c8dccb"],[style*="color:var(--gs-muted"],[style*="color: var(--gs-muted"],[style*="color:var(--gs-soft"],[style*="color: var(--gs-soft"]{
+  color:var(--body)!important;
+  opacity:1!important;
+  font-weight:760!important;
+}
+[style*="background:#fff"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background: #fff"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background:#ffffff"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background: #ffffff"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background:white"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background: white"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background:rgba(255,255,255"]:not(.btn-g):not(.nav-btn):not(.submit-btn),[style*="background: rgba(255,255,255"]:not(.btn-g):not(.nav-btn):not(.submit-btn){
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035)),linear-gradient(135deg,var(--surface),var(--bg-2))!important;
+  color:var(--body)!important;
+  border-color:var(--line)!important;
+}
+[style*="background:#060f08"],[style*="background: #060f08"],[style*="background:#081209"],[style*="background: #081209"],[style*="background:#0b1e10"],[style*="background: #0b1e10"]{background:transparent!important;}
+[style*="color:#fff"],[style*="color: #fff"],[style*="color:#ffffff"],[style*="color: #ffffff"]{color:var(--text)!important;}
+[style*="color:#3efa7e"],[style*="color: #3efa7e"]{color:var(--green)!important;}
+
+/* Footer */
+.footer,.pfoot{background:linear-gradient(180deg,#06150f,#020705)!important;color:var(--body)!important;border-top:1px solid var(--line)!important;}
+.footer a,.pfoot a,.footer-col a,.pfoot-links a{color:var(--body)!important;opacity:1!important;}
+.footer a:hover,.pfoot a:hover,.footer-col a:hover,.pfoot-links a:hover{color:var(--green)!important;}
+.social,.social-links{display:flex!important;gap:.65rem!important;flex-wrap:wrap;}
+.sl,.social-link{width:38px;height:38px;border-radius:50%;display:inline-flex!important;align-items:center;justify-content:center;background:rgba(66,255,145,.11)!important;border:1px solid rgba(66,255,145,.28)!important;color:var(--green)!important;font-weight:900!important;font-size:.72rem!important;text-transform:uppercase;transition:all .2s;}
+.sl:hover,.social-link:hover{background:var(--green)!important;color:var(--dark-text)!important;transform:translateY(-2px);}
+
+@media(max-width:900px){
+  .nav,.pnav{padding:0 1.1rem!important}.nav-links{display:none!important}.hero{grid-template-columns:1fr!important}.hero-left{padding:4rem 1.25rem 2rem!important}.hero-right{padding:0 1.25rem 1.25rem!important}.sec,section{padding:4rem 1.25rem!important}.hero-kpis,.stat-strip,.process-steps,.markets-grid,.proof-grid,.prod-cards,.prod-cards.two-col,.prod-cards.four-col,.footer-top,.calc-grid,.grid-3,.grid-4{grid-template-columns:1fr!important}.dropdown{display:none!important}.pfoot-links{gap:1rem!important;justify-content:flex-start!important}.cta-band{padding:1.5rem!important}.social{margin-bottom:.75rem}
+}
+
+
+/* =====================================================
+   V10 FINAL DARK CONTRAST LOCK + CONTACT/ROI UI
+   Purpose: remove any low-contrast leftovers and keep every
+   card, button, input, pill, metric and table readable.
+===================================================== */
+:root{
+  --gs-bg:#03110c;
+  --gs-bg-2:#061913;
+  --gs-card:#0b2118;
+  --gs-card-2:#102b20;
+  --gs-card-3:#143829;
+  --gs-border:rgba(75,255,155,.28);
+  --gs-border-soft:rgba(255,255,255,.12);
+  --gs-white:#f7fff8;
+  --gs-body:#dceee0;
+  --gs-muted:#b7d2bd;
+  --gs-soft:#93b69b;
+  --gs-green:#42ff91;
+  --gs-green-2:#18c768;
+  --gs-gold:#f0cd68;
+  --gs-dark-text:#02130d;
+}
+html,body{background:var(--gs-bg)!important;color:var(--gs-body)!important;}
+body{background:
+  radial-gradient(circle at 15% 8%,rgba(35,255,139,.08),transparent 28%),
+  radial-gradient(circle at 82% 24%,rgba(50,132,255,.07),transparent 34%),
+  linear-gradient(180deg,#03110c 0%,#04150f 45%,#03110c 100%)!important;}
+body :where(section,.sec,.sec-dark,.calc-section,.products-section,.pbody){background-color:transparent!important;}
+body :where(.nav,.pnav){background:rgba(3,17,12,.94)!important;border-bottom:1px solid rgba(66,255,145,.20)!important;backdrop-filter:blur(18px)!important;}
+body :where(.logo,.logo b){text-shadow:none!important;}
+body :where(h1,h2,h3,h4,h5,h6,.hero h1,.hero-title,.phero h1,.phero-title,.sec-title,.sec-head,.b-title,.pc-name,.product-card .pc-name,.vc-name,.feat-title,.arch-title,.app-title,.model-name,.platform-title,.spectrum-title,.tray-title,.comp-title,.vent-title,.tl-title,.related-name,.crop-name,.tech-name,.step-title,.layer-label,.detail-heading,.pc-title,.cat-info h2,.cat-info h3,.faq-item summary,.mkt h4,.proof-name,.cta-band h3,.calc-card h3,.footer-col h6){color:var(--gs-white)!important;text-shadow:0 1px 12px rgba(0,0,0,.22)!important;}
+body :where(p,li,span,div,label,td,th,a,button,summary,input,select,textarea){text-shadow:none;}
+body :where(.hero-desc,.phero-sub,.sec-intro,.sec-sub,.b-desc,.pc-desc,.vc-desc,.feat-desc,.app-desc,.arch-desc,.model-desc,.platform-desc,.spectrum-desc,.tray-desc,.comp-desc,.vent-desc,.tl-desc,.related-desc,.crop-desc,.tech-desc,.step p,.mkt p,.proof-q,.detail-para,.pc-subtitle,.cat-info p,.faq-item p,.contact-item p,.footer-brand p,.footer-copy,.pfoot-note,.calc-desc,.product-card .pc-desc,.cta-band p){color:var(--gs-body)!important;}
+body :where(.input-group label,.input-unit,.res-label,.stat-lbl,.kpi-lbl,.pc-stat-lbl,.data-table td,.room-table td,.spec-table td,.pc-spec-label,.product-card .pc-spec-label,.sub-section-label,.divider-label,.footer-col a,.pfoot-links a,.nav-links a,.nav-link-desk,.back-link,.mobile-menu a){color:var(--gs-muted)!important;}
+body :where(.sec-eyebrow,.phero-tag,.hero-tag,.dd-cat-label,.pc-tag,.cat-badge,.m-item,.b-lbl,.stat-val,.kpi-val,.pc-stat-val,.res-value,.metric-value,.result-value,.result-item .res-value,.product-card .pc-spec-val,.data-table tr.profit-row td,.highlight){color:var(--gs-green)!important;}
+body :where(.gold,.pc-tag.gold,.cat-badge.gold,.pc.premium .pc-name,.pc.premium .pc-tag,.pc.premium .pc-cta){color:var(--gs-gold)!important;}
+body :where(.b,.pc,.pc.premium,.variant-card,.faq-item,.detail-section,.proof-card,.mkt,.feature-card,.feat-card,.contact-card,.rel-card,.step,.tech-card,.app-card,.model-card,.platform-card,.spectrum-card,.tray-card,.comp-card,.vent-card,.vent-stage,.tl-card,.pc-detail,.deepdive,.cmp-wrap,.chip-block,.intro-split,.img-split,.img-split-row,.yield-wrap,.calc-card,.highlight-box,.data-table,.chart-container,.result-card,.summary-card,.metric-card,.stat-card,.product-card,.cta-band,.config-panel,.config-cell,.quick_specs,.room-table-wrap,.spec-table,.room-table,.input-card,.overview-card,.comparison-card,.market-card,.crop-card,.results-strip,.result-item){background:linear-gradient(145deg,rgba(15,45,32,.96),rgba(6,25,18,.98))!important;border-color:var(--gs-border)!important;color:var(--gs-body)!important;box-shadow:0 18px 48px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.04)!important;}
+body :where(.product-card,.pc){background:linear-gradient(155deg,#0b2118 0%,#092017 52%,#071811 100%)!important;}
+body :where(.pc.premium,.product-card:nth-child(4n),.product-card:nth-child(7n)){background:linear-gradient(155deg,#10251a 0%,#092017 48%,#141d0b 100%)!important;}
+body :where(.pc-spec,.product-card .pc-spec,.pc-specs li,.spec-pill,.chip,.badge,.stat-cell,.kpi,.result-item){background:rgba(255,255,255,.07)!important;border:1px solid rgba(139,255,188,.25)!important;color:var(--gs-body)!important;}
+body :where(.pc-spec,.product-card .pc-spec,.pc-spec *, .product-card .pc-spec *, .spec-pill,.spec-pill *, .chip,.chip *, .badge,.badge *){color:var(--gs-body)!important;opacity:1!important;}
+body :where(.pc-spec::before,.product-card .pc-spec::before,.ct-item::before){background:var(--gs-green)!important;color:var(--gs-green)!important;}
+body :where(input,select,textarea,.input-wrap input,.input-wrap select){background:#0e281d!important;color:var(--gs-white)!important;border:1px solid rgba(139,255,188,.34)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)!important;opacity:1!important;}
+body :where(input[readonly]){background:#10281e!important;color:var(--gs-body)!important;opacity:1!important;}
+body :where(input::placeholder,textarea::placeholder){color:#a9cbb0!important;opacity:1!important;}
+body :where(select option){background:#0b2118!important;color:var(--gs-white)!important;}
+body :where(.input-unit){color:#d4f1d8!important;font-weight:800!important;}
+body :where(.btn-g,.nav-btn,.mobile-cta,.submit-btn,.btn-primary,.pc-cta.btn-g,.product-card .btn-g){background:linear-gradient(135deg,var(--gs-green),var(--gs-green-2))!important;color:var(--gs-dark-text)!important;border:1px solid rgba(120,255,180,.52)!important;font-weight:900!important;text-shadow:none!important;box-shadow:0 16px 36px rgba(24,199,104,.28)!important;}
+body :where(.btn-g *, .nav-btn *, .submit-btn *, .btn-primary *){color:var(--gs-dark-text)!important;}
+body :where(.btn-ghost,.btn-detail,.subtype-btn,.sub-tab,.prod-nav-btn){background:rgba(255,255,255,.06)!important;color:var(--gs-white)!important;border:1px solid rgba(255,255,255,.28)!important;text-shadow:none!important;}
+body :where(.btn-ghost:hover,.btn-detail:hover,.subtype-btn.active,.sub-tab.active,.prod-nav-btn.active){background:rgba(66,255,145,.14)!important;color:var(--gs-green)!important;border-color:rgba(66,255,145,.48)!important;}
+body :where(a[href^="mailto:"],a[href^="https://wa.me"],.contact-link,.pfoot-contact a,.footer-col a[href^="mailto"],.footer-col a[href^="https://wa.me"]){color:var(--gs-green)!important;font-weight:800!important;}
+body :where(.marquee-wrap){background:#071a13!important;border-color:rgba(66,255,145,.24)!important;}
+body :where(.m-item){color:#c9f6d2!important;opacity:1!important;}
+body :where(.m-item::after){color:var(--gs-green)!important;opacity:1!important;}
+body :where(.data-table th,.room-table th,.spec-table th){background:#143a2a!important;color:var(--gs-green)!important;border-color:rgba(66,255,145,.32)!important;}
+body :where(.data-table td,.room-table td,.spec-table td){color:var(--gs-body)!important;background:rgba(255,255,255,.025)!important;}
+body :where(.data-table td:first-child,.room-table td:first-child,.spec-table td:first-child){color:var(--gs-white)!important;font-weight:700!important;}
+body :where(.stat-strip){background:#081c14!important;border-color:rgba(66,255,145,.22)!important;}
+body :where(.stat-cell){background:rgba(255,255,255,.04)!important;}
+body :where(.stat-val){color:var(--gs-green)!important;}
+body :where(.stat-lbl){color:var(--gs-muted)!important;}
+body :where(.metric-card,.result-card,.summary-card){background:linear-gradient(145deg,#0f2d20,#071b13)!important;border:1px solid rgba(66,255,145,.32)!important;}
+body :where(.metric-card .metric-label,.result-card .metric-label,.metric-card .res-label,.result-card .res-label){color:var(--gs-muted)!important;}
+body :where(.metric-card .metric-value,.result-card .metric-value,.metric-card .res-value,.result-card .res-value){color:var(--gs-green)!important;text-shadow:none!important;}
+body :where(.phero,.hero,.hero-left){background:linear-gradient(135deg,#05140f 0%,#092219 52%,#04100c 100%)!important;}
+body :where(.phero-bg){background:linear-gradient(135deg,#061710 0%,#0a231b 50%,#03110c 100%)!important;}
+body :where(.cta-sec,.cta-band){background:linear-gradient(135deg,#06170f,#0a2b1d)!important;}
+body :where(.cta-sec p,.cta-trust,.ct-item){color:var(--gs-body)!important;}
+body :where(.footer,.pfoot){background:#03110c!important;color:var(--gs-body)!important;border-color:rgba(66,255,145,.18)!important;}
+body :where(.pfoot-contact,.footer-contact-line){color:var(--gs-body)!important;font-size:.82rem;font-weight:700;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;}
+body :where(.pfoot-contact span,.footer-contact-line span){color:var(--gs-muted)!important;}
+/* ROI access gate */
+.roi-lead-gate{padding:4rem 2.5rem 2rem!important;background:transparent!important;}
+.roi-gate-card{max-width:980px;margin:0 auto;background:linear-gradient(145deg,#102d21,#071c14)!important;border:1px solid rgba(66,255,145,.34)!important;border-radius:28px;padding:2.4rem;box-shadow:0 22px 60px rgba(0,0,0,.32)!important;}
+.roi-gate-card h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--gs-white)!important;margin-bottom:.65rem;}
+.roi-gate-card p{color:var(--gs-body)!important;line-height:1.7;max-width:720px;margin-bottom:1.4rem;}
+.roi-lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.4rem 0 1rem;}
+.roi-lead-field label{display:block;color:var(--gs-muted)!important;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;font-weight:800;margin-bottom:.35rem;}
+.roi-lead-note{font-size:.78rem;color:var(--gs-muted)!important;margin-top:.9rem!important;}
+.roi-locked #calculator,.roi-locked #metrics,.roi-locked #results,.roi-locked .calc-section{display:none!important;}
+.roi-locked .product-card .btn-g{pointer-events:auto!important;}
+.roi-unlocked .roi-gate-card{border-color:rgba(66,255,145,.55)!important;}
+.roi-gate-success{display:none;color:var(--gs-green)!important;font-weight:900;margin-top:1rem;}
+.roi-unlocked .roi-gate-success{display:block;}
+@media(max-width:800px){.roi-lead-grid{grid-template-columns:1fr}.roi-gate-card{padding:1.5rem}.pnav,.nav{padding-left:1rem!important;padding-right:1rem!important}}
+
+
+/* V10.1 computed contrast cleanup: solid button color + brighter small labels */
+body :where(.btn-g,.nav-btn,.mobile-cta,.submit-btn,.btn-primary,.pc-cta.btn-g,.product-card .btn-g){background-color:var(--gs-green)!important;background-image:linear-gradient(135deg,var(--gs-green),var(--gs-green-2))!important;color:var(--gs-dark-text)!important;}
+body :where(.btn-g *, .nav-btn *, .mobile-cta *, .submit-btn *, .btn-primary *){color:var(--gs-dark-text)!important;}
+body :where(.breadcrumbs,.breadcrumbs *,.pcrumb,.pcrumb *,.breadcrumb,.breadcrumb *,.stat-label,.data-label,.info-label,.spec-label,.quick_specs span,.quick-specs span,.phero-stats span,.hero-kpis span,.kpi-lbl,.stat-lbl,.pc-stat-lbl){color:#bedcc3!important;opacity:1!important;}
+body :where(.footer-col a,.pfoot-links a,.footer-copy,.pfoot-note){color:#bedcc3!important;opacity:1!important;}
+
+
+/* V10.2 hard specificity accessibility override */
+body a.btn-g,body button.btn-g,body .btn-g,body a.nav-btn,body .nav-btn,body .mobile-cta,body .submit-btn,body .btn-primary{background-color:#42ff91!important;background-image:linear-gradient(135deg,#42ff91,#18c768)!important;color:#02130d!important;border-color:rgba(120,255,180,.65)!important;text-shadow:none!important;}
+body a.btn-g *,body button.btn-g *,body .btn-g *,body .nav-btn *{color:#02130d!important;}
+body span:not(.dot):not(.arr):not(.social-link):not(.sl),body small,body label,body .input-unit,body .stat-lbl,body .kpi-lbl,body .pc-stat-lbl,body .pc-spec-label,body .data-label,body .info-label,body .spec-label{color:#c4e0c9!important;opacity:1!important;}
+body a:not(.btn-g):not(.btn-ghost):not(.nav-btn):not(.mobile-cta):not(.logo):not(.social-link):not(.sl){color:#c4e0c9!important;opacity:1!important;}
+body .sec-eyebrow,body .phero-tag,body .hero-tag,body .pc-tag,body .cat-badge,body .m-item,body .b-lbl,body .dd-cat-label,body .stat-val,body .kpi-val,body .pc-stat-val,body .res-value,body .metric-value,body .product-card .pc-spec-val{color:#42ff91!important;opacity:1!important;}
+body h1,body h2,body h3,body h4,body h5,body h6,body .pc-name,body .product-card .pc-name,body .b-title,body .sec-title{color:#f7fff8!important;}
+body .pc-tag.gold,body .gold,body .pc.premium .pc-name{color:#f0cd68!important;}
+
+
+/* V10.3 final button computed contrast */
+body a.btn-g,body button.btn-g,body .btn-g,body a.nav-btn,body .nav-btn,body .mobile-cta,body .submit-btn,body .btn-primary,body .product-card .btn-g{background:#42ff91!important;background-color:#42ff91!important;background-image:none!important;color:#02130d!important;border-color:#42ff91!important;}
+body a[style*="background:#3efa7e"],body a[style*="background: #3efa7e"],body a[style*="background:#31d669"],body a[style*="background: #31d669"]{background:#42ff91!important;background-color:#42ff91!important;color:#02130d!important;}
+
+
+
+/* V12 final premium typography, contrast, responsive and OS behavior */
+:root{
+  --gs-bg:#020b07;
+  --gs-bg-2:#03110b;
+  --gs-surface:#071910;
+  --gs-surface-2:#0b2417;
+  --gs-surface-3:#102d1f;
+  --gs-border:rgba(70,255,150,.28);
+  --gs-border-soft:rgba(166,255,205,.16);
+  --gs-text:#f4fff8;
+  --gs-body:#d9eadf;
+  --gs-muted:#a9c6b6;
+  --gs-dim:#88aa98;
+  --gs-green:#35f28a;
+  --gs-green-2:#18c96e;
+  --gs-gold:#e8c65a;
+  --gs-black:#020b07;
+  color-scheme:dark;
+}
+html{background:var(--gs-bg)!important;scroll-behavior:smooth;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter','Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif!important;background:radial-gradient(circle at 18% 8%,rgba(37,153,86,.16),transparent 28%),radial-gradient(circle at 84% 20%,rgba(32,117,89,.12),transparent 32%),linear-gradient(180deg,#020b07 0%,#03140d 44%,#020b07 100%)!important;color:var(--gs-body)!important;font-size:16px!important;font-weight:450!important;letter-spacing:-.008em!important;line-height:1.64!important}
+main,section,.sec,.sec-dark,.phero,.hero,.contact,.footer,.modal,.modal-content{background-color:transparent!important;color:var(--gs-body)!important}
+a{color:inherit}
+.logo,.logo b{letter-spacing:.16em!important;font-weight:850!important}.logo b{color:var(--gs-green)!important}
+.nav{background:rgba(2,11,7,.88)!important;border-bottom:1px solid var(--gs-border-soft)!important;backdrop-filter:blur(18px) saturate(140%)!important}.nav-links>li>a{color:#d9eadf!important;font-weight:650!important}.nav-links>li>a:hover,.nav-links>li.active>a{color:var(--gs-green)!important}.nav-btn,.btn-g,.pc-cta,.btn-detail{font-family:'Inter','Manrope',sans-serif!important}
+/* headings */
+h1,h2,h3,h4,h5,h6,.hero h1,.phero-title,.hero-title,.sec-title,.pc-name,.cat-info h2,.b-title,.detail-heading,.img-banner-text h2,.sec-img-banner-text h2,.related-name,.footer-brand h3{font-family:'Playfair Display',Georgia,serif!important;color:var(--gs-text)!important;letter-spacing:-.035em!important;font-weight:750!important;text-wrap:balance;text-shadow:none!important}.pc-name,.b-title,.detail-heading{letter-spacing:-.02em!important}
+/* readable body text */
+p,li,td,th,label,small,summary,input,select,textarea,button,.hero-desc,.phero-sub,.hero-sub,.hero-copy,.sec-intro,.b-desc,.pc-desc,.pc-spec,.pc-specs,.variant-card,.variant-title,.variant-desc,.cat-info p,.feature-card p,.feat-desc,.app-desc,.arch-desc,.model-desc,.platform-desc,.spectrum-desc,.tray-desc,.comp-desc,.vent-desc,.tl-desc,.related-desc,.crop-desc,.tech-desc,.step p,.mkt p,.detail-para,.faq-item p,.contact-item p,.contact-card p,.footer-copy,.footer-brand p,.footer-col a,.footer-col li,.room-table td,.spec-table td,.kpi-lbl,.stat-label,.dd-cat-desc{font-family:'Inter','Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif!important;color:var(--gs-body)!important;font-weight:520!important;line-height:1.62!important;text-shadow:none!important}
+.sec-intro,.hero-desc,.phero-sub,.pc-desc,.b-desc{color:#cfe5d7!important;font-size:clamp(.94rem,.82rem + .22vw,1.03rem)!important}.pc-desc{max-width:68ch}.detail-para{font-size:1rem!important;line-height:1.72!important}
+/* labels + tags */
+.sec-eyebrow,.hero-tag,.pc-tag,.cat-badge,.sub-section-label,.m-item,.dd-cat-label,.gal-label,.img-3col-cap,.layer-label,.spectrum-label,.mkt-tag{font-family:'Inter','Manrope',sans-serif!important;color:var(--gs-green)!important;background:rgba(53,242,138,.10)!important;border:1px solid rgba(53,242,138,.22)!important;border-radius:999px!important;font-weight:800!important;letter-spacing:.10em!important;text-transform:uppercase!important;text-shadow:none!important}.pc-tag.gold,.cat-badge.gold,.pc.premium .pc-tag,.pc.premium .pc-name{color:var(--gs-gold)!important}.pc-tag.gold{background:rgba(232,198,90,.12)!important;border-color:rgba(232,198,90,.35)!important}
+/* cards and surfaces */
+.bento,.prod-cards,.prod-cards.two-col,.prod-cards.four-col,.variant-grid{background:transparent!important;gap:1.25rem!important;border:0!important;overflow:visible!important}.b,.pc,.variant-card,.feature-card,.contact-card,.faq-item,.detail-section,.rel-card,.step,.tech-card,.market-card,.calc-card,.result-card,.metric-card,.info-card,.summary-card{background:linear-gradient(145deg,rgba(12,38,25,.96),rgba(5,21,14,.98))!important;border:1px solid var(--gs-border)!important;border-radius:24px!important;box-shadow:0 24px 70px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.045)!important;color:var(--gs-body)!important}.pc:hover,.b:hover,.variant-card:hover,.result-card:hover{border-color:rgba(53,242,138,.54)!important;box-shadow:0 28px 80px rgba(0,0,0,.40),0 0 0 1px rgba(53,242,138,.12) inset!important}
+/* specs/pills */
+.pc-spec,.spec-pill,.pc-specs li,.pc-specs div,.pill,.mini-stat,.method-card,.platform-pill{background:rgba(255,255,255,.055)!important;border:1px solid rgba(168,255,205,.22)!important;border-radius:999px!important;color:#e7f7ec!important;font-size:.88rem!important;font-weight:630!important;line-height:1.35!important;text-shadow:none!important}.pc-spec::before,.pc-specs li::before,.spec-pill::before{background:var(--gs-green)!important;box-shadow:0 0 12px rgba(53,242,138,.55)!important}.pc-spec *,.spec-pill *,.pc-specs *{color:#e7f7ec!important}
+/* buttons */
+.btn-g,.nav-btn,.pc-cta,button[type=submit],.submit-btn,.calc-btn{background:linear-gradient(135deg,#44f793 0%,#18c96e 100%)!important;color:#02100a!important;border:0!important;font-weight:850!important;letter-spacing:-.01em!important;box-shadow:0 14px 35px rgba(24,201,110,.22)!important;text-shadow:none!important}.btn-g:hover,.nav-btn:hover,button[type=submit]:hover,.submit-btn:hover{filter:brightness(1.05);transform:translateY(-1px)}.btn-ghost,.btn-detail,.secondary-btn{background:rgba(255,255,255,.06)!important;border:1px solid rgba(222,255,236,.32)!important;color:#f3fff7!important;font-weight:750!important;text-shadow:none!important}.btn-ghost:hover,.btn-detail:hover{background:rgba(255,255,255,.10)!important;border-color:rgba(53,242,138,.55)!important}
+/* images */
+img{image-rendering:auto}.pc-img,.img-banner,.sec-img-banner,.img-split-img,.img-gallery-item,.hero-img-main,.crop-img,.gal-cell{border-radius:18px!important;background:#020b07!important;border:1px solid rgba(255,255,255,.07)!important;overflow:hidden!important}.pc-img img,.img-banner img,.sec-img-banner img,.img-split-img img,.img-gallery-item img,.hero-img-main img,.crop-img img,.gal-cell img{object-fit:cover!important}.img-banner-text,.sec-img-banner-text,.gal-cap{background:linear-gradient(180deg,rgba(2,11,7,.02),rgba(2,11,7,.74))!important;color:var(--gs-text)!important;text-shadow:0 2px 12px rgba(0,0,0,.45)!important}
+/* numbers */
+.kpi-val,.pc-stat-val,.stat-value,.b-num,.metric-value,.result-value,.roi-value{font-family:'Playfair Display',Georgia,serif!important;color:var(--gs-green)!important;font-weight:750!important;letter-spacing:-.03em!important}.kpi-lbl,.pc-stat-lbl,.metric-label,.result-label{color:#d6eadc!important;font-weight:750!important;font-size:.74rem!important;letter-spacing:.055em!important;text-transform:uppercase!important}
+/* tables/forms/ROI */
+input,select,textarea{background:#0b2216!important;color:#f5fff8!important;border:1px solid rgba(168,255,205,.32)!important;border-radius:14px!important;box-shadow:none!important}input::placeholder,textarea::placeholder{color:#8fb49f!important}table,.spec-table,.room-table{background:rgba(255,255,255,.035)!important;border-color:rgba(168,255,205,.24)!important}th,.room-table th,.spec-table th{background:rgba(53,242,138,.11)!important;color:#f4fff8!important;font-weight:850!important;letter-spacing:.05em!important}td,.room-table td,.spec-table td{color:#e6f5ea!important;border-color:rgba(168,255,205,.18)!important}.result-card,.metric-card{background:linear-gradient(145deg,#0b2a1a,#07190f)!important}.result-card *,.metric-card *{color:#e7faee!important}.result-card .value,.metric-card .value,.result-value,.metric-value{color:var(--gs-green)!important}.roi-card,.calc-card{background:linear-gradient(145deg,rgba(13,43,28,.98),rgba(5,19,12,.98))!important;color:#e7f7ec!important}.roi-card *,.calc-card *{text-shadow:none!important}
+/* marquee */
+.marquee-wrap{background:linear-gradient(90deg,#06180f,#0e2d1e,#06180f)!important;border-top:1px solid rgba(53,242,138,.25)!important;border-bottom:1px solid rgba(53,242,138,.25)!important}.m-item{color:#dff8e8!important;background:transparent!important;border:0!important;text-shadow:none!important}.m-item::after{color:var(--gs-green)!important}
+/* details folding */
+.pc-detail{display:none!important;height:auto!important;max-height:none!important;overflow:hidden!important}.pc-detail.open{display:block!important;overflow:visible!important}.pc:has(.pc-detail.open){height:auto!important;align-self:start!important}.prod-cards,.prod-grid{align-items:start!important}
+/* BioCube Modular wider 2-column products */
+.modular-cards,.prod-cards.modular-cards{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1.6rem!important;align-items:start!important}.modular-cards .pc{min-height:unset!important;height:auto!important}.modular-cards .pc-img{height:320px!important}.modular-cards .pc-desc{font-size:1rem!important}.modular-cards .pc-stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+/* responsive */
+@media (max-width:1100px){.modular-cards,.prod-cards.modular-cards,.prod-cards,.prod-cards.two-col,.prod-cards.four-col{grid-template-columns:1fr!important}.hero{grid-template-columns:1fr!important}.sec{padding:4.5rem 1.25rem!important}.nav{padding:0 1rem!important}.modular-cards .pc-img{height:240px!important}}
+@media (max-width:720px){body{font-size:15px!important}.hero h1,.phero-title,.sec-title{font-size:clamp(2.15rem,12vw,3.25rem)!important}.pc,.b,.variant-card,.calc-card,.result-card{border-radius:20px!important;padding:1.3rem!important}.hero-left{padding:4rem 1.25rem!important}.nav-links{display:none!important}.hero-kpis,.pc-stats,.modular-cards .pc-stats{grid-template-columns:1fr!important}.pc-img,.modular-cards .pc-img{height:220px!important}.btn-g,.btn-ghost,.btn-detail{width:100%;justify-content:center}.footer{padding:3rem 1.25rem!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+
+/* =====================================================
+   V13 GLOBAL TABLE + PROFESSIONAL TYPOGRAPHY + AI SEO LOCK
+   Fixes: all table text wrapping, no border overlap,
+   premium readable paragraph/spec typography across pages.
+===================================================== */
+:root{
+  --v13-bg:#03110c;
+  --v13-panel:#0b2118;
+  --v13-panel-2:#102c20;
+  --v13-line:rgba(126,255,181,.28);
+  --v13-line-strong:rgba(126,255,181,.46);
+  --v13-white:#f7fff8;
+  --v13-body:#e2f2e5;
+  --v13-muted:#b9d1c0;
+  --v13-green:#42ff91;
+  --v13-gold:#f2cc68;
+  --v13-dark:#03110c;
+}
+html,body{
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+body{
+  font-family:'Inter','Manrope','Segoe UI',Roboto,Arial,sans-serif!important;
+  color:var(--v13-body)!important;
+  letter-spacing:-0.006em;
+}
+body :where(p,li,td,th,label,summary,input,select,textarea,button,.hero-desc,.phero-sub,.hero-sub,.hero-copy,.sec-intro,.sec-sub,.b-desc,.pc-desc,.pc-spec,.product-card .pc-desc,.product-card .pc-spec,.feat-desc,.detail-para,.contact-item p,.footer-copy,.footer-brand p){
+  font-family:'Inter','Manrope','Segoe UI',Roboto,Arial,sans-serif!important;
+  font-weight:560!important;
+  line-height:1.72!important;
+  letter-spacing:-0.004em!important;
+  color:var(--v13-body)!important;
+  text-shadow:none!important;
+}
+body :where(h1,h2,h3,.hero h1,.phero-title,.hero-title,.sec-title,.pc-name,.product-card .pc-name,.detail-heading){
+  letter-spacing:-0.025em!important;
+}
+body :where(.pc-spec,.product-card .pc-spec,.spec-pill,.chip,.badge,.result-item,.stat-cell,.kpi){
+  font-size:.86rem!important;
+  line-height:1.55!important;
+  color:var(--v13-body)!important;
+}
+body :where(.pc-spec *, .product-card .pc-spec *, .spec-pill *, .chip *, .badge *){
+  color:var(--v13-body)!important;
+  opacity:1!important;
+}
+body :where(.btn-g,.nav-btn,.submit-btn,.btn-primary,.pc-cta.btn-g){
+  color:var(--v13-dark)!important;
+  font-weight:880!important;
+}
+body :where(.btn-g *, .nav-btn *, .submit-btn *, .btn-primary *){color:var(--v13-dark)!important;}
+body :where(.btn-ghost,.btn-detail,.prod-nav-btn,.sub-tab,.subtype-btn){
+  color:var(--v13-white)!important;
+  font-weight:800!important;
+}
+
+/* Global table behavior: no overlap, no clipped values, premium readable table cells */
+body :where(table,.spec-table,.room-table,.yield-table,.data-table,.cmp){
+  width:100%!important;
+  max-width:100%!important;
+  border-collapse:separate!important;
+  border-spacing:0!important;
+  table-layout:fixed!important;
+  background:linear-gradient(145deg,rgba(13,43,29,.96),rgba(5,22,15,.98))!important;
+  border:1px solid var(--v13-line)!important;
+  border-radius:16px!important;
+  overflow:hidden!important;
+  color:var(--v13-body)!important;
+}
+body :where(.room-table-wrap,.table-wrap,.cmp-wrap,.yield-wrap){
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  border-radius:16px!important;
+  border:1px solid var(--v13-line)!important;
+  background:rgba(3,17,12,.55)!important;
+}
+body :where(th,.spec-table th,.room-table th,.yield-table th,.data-table th,.cmp th){
+  padding:.82rem 1rem!important;
+  background:rgba(66,255,145,.14)!important;
+  color:var(--v13-green)!important;
+  border-right:1px solid rgba(126,255,181,.20)!important;
+  border-bottom:1px solid rgba(126,255,181,.28)!important;
+  font-size:.72rem!important;
+  line-height:1.45!important;
+  font-weight:880!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+  text-align:left!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  hyphens:auto!important;
+}
+body :where(td,.spec-table td,.room-table td,.yield-table td,.data-table td,.cmp td){
+  padding:.86rem 1rem!important;
+  color:var(--v13-body)!important;
+  background:rgba(255,255,255,.035)!important;
+  border-right:1px solid rgba(126,255,181,.18)!important;
+  border-bottom:1px solid rgba(126,255,181,.18)!important;
+  font-size:.86rem!important;
+  line-height:1.62!important;
+  font-weight:620!important;
+  text-align:left!important;
+  vertical-align:top!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  hyphens:auto!important;
+  min-width:0!important;
+  max-width:100%!important;
+}
+body :where(tr:last-child td){border-bottom:none!important;}
+body :where(th:last-child,td:last-child){border-right:none!important;}
+body :where(.spec-table td:first-child,.yield-table td:first-child,.data-table td:first-child,.cmp td:first-child){
+  width:38%!important;
+  color:var(--v13-white)!important;
+  font-weight:780!important;
+}
+body :where(.spec-table td:last-child,.yield-table td:last-child,.data-table td:last-child,.cmp td:last-child){
+  width:62%!important;
+  color:#effff3!important;
+  font-weight:760!important;
+  text-align:left!important;
+}
+body :where(.room-table){min-width:760px!important;}
+body :where(.room-table th,.room-table td){font-size:.82rem!important;}
+body :where(.room-table th:first-child,.room-table td:first-child){width:22%!important;}
+body :where(.room-table th:nth-child(2),.room-table td:nth-child(2)){width:24%!important;}
+body :where(.room-table th:nth-child(3),.room-table td:nth-child(3)){width:54%!important;}
+body :where(.data-table tr.profit-row td,.revenue-row td,.profit-row td){
+  color:var(--v13-white)!important;
+  font-weight:840!important;
+}
+
+/* Keep table section headings separated from table borders */
+body :where(.detail-heading,.sub-section-label,.divider-label){
+  display:inline-flex!important;
+  align-items:center!important;
+  max-width:100%!important;
+  margin-bottom:.7rem!important;
+  padding:.35rem .75rem!important;
+  border:1px solid rgba(66,255,145,.32)!important;
+  border-radius:999px!important;
+  background:rgba(66,255,145,.08)!important;
+  color:var(--v13-green)!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+}
+
+@media (max-width: 900px){
+  body :where(.spec-table,.yield-table,.data-table,.cmp){
+    display:block!important;
+    border-radius:14px!important;
+  }
+  body :where(.spec-table tbody,.yield-table tbody,.data-table tbody,.cmp tbody,
+              .spec-table tr,.yield-table tr,.data-table tr,.cmp tr,
+              .spec-table td,.yield-table td,.data-table td,.cmp td){
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  body :where(.spec-table tr,.yield-table tr,.data-table tr,.cmp tr){
+    border-bottom:1px solid rgba(126,255,181,.22)!important;
+  }
+  body :where(.spec-table td:first-child,.yield-table td:first-child,.data-table td:first-child,.cmp td:first-child){
+    padding-bottom:.35rem!important;
+    background:rgba(66,255,145,.09)!important;
+    color:var(--v13-green)!important;
+    border-right:none!important;
+    font-size:.78rem!important;
+    text-transform:uppercase!important;
+    letter-spacing:.05em!important;
+  }
+  body :where(.spec-table td:last-child,.yield-table td:last-child,.data-table td:last-child,.cmp td:last-child){
+    padding-top:.35rem!important;
+    border-right:none!important;
+    color:var(--v13-white)!important;
+  }
+  body :where(.room-table){min-width:680px!important;}
+}
+
+@media (max-width: 560px){
+  body :where(td,.spec-table td,.room-table td,.yield-table td,.data-table td,.cmp td){
+    font-size:.82rem!important;
+    padding:.76rem .82rem!important;
+  }
+  body :where(th,.spec-table th,.room-table th,.yield-table th,.data-table th,.cmp th){
+    font-size:.66rem!important;
+    padding:.7rem .82rem!important;
+  }
+}
+
+</style>
+<script data-gs="optimized" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.growspecbio.com/"},{"@type":"ListItem","position":2,"name":"ROI Calculator","item":"https://www.growspecbio.com/roi-calculator"}]}</script>
+<meta content="Vertical farming solution manufacturer and controlled environment agriculture equipment supplier" name="subject"/><meta content="B2B vertical farming systems, controlled environment agriculture, aeroponic farm equipment, indoor farming technology" name="classification"/><meta content="Commercial growers, restaurants, retailers, research institutions, schools, facility growers, vertical farming investors" name="audience"/><meta content="GROWSPEC Bio ROI calculator helps buyers compare indoor farming systems, estimate operating costs, evaluate crop output and request vertical farming project consultation." name="ai-summary"/><link href="/llms.txt" rel="alternate" title="LLM site summary" type="text/plain"/></head>
+<body class="roi-locked">
+<!-- ============================================
+       NAVIGATION
+       ============================================ -->
+<nav class="pnav" id="navbar">
+<a class="logo" href="/">GROW<b>SPEC</b></a>
+<div style="display:flex;align-items:center;gap:24px;">
+<div class="nav-links-desk">
+<a class="nav-link-desk" href="/">Home</a>
+<a class="nav-link-desk" href="/#products">Products</a>
+<a class="nav-link-desk" href="/roi-calculator.html" style="color:#3efa7e;">ROI Calculator</a>
+<a class="nav-link-desk" href="/#contact">Contact</a>
+</div>
+<a class="nav-btn" href="/#contact" style=";background:#42ff91 !important;background-color:#42ff91 !important;background-image:none !important;color:#02130d !important;border-color:#42ff91 !important;text-shadow:none !important;">Get a Quote</a>
+<button aria-label="Open menu" class="hamburger" onclick="toggleMobileMenu()">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu hidden" id="mobileMenu">
+<button aria-label="Close menu" class="mobile-menu-close" onclick="toggleMobileMenu()">
+<svg fill="none" height="28" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="28"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+<a href="/">Home</a>
+<a href="/#products">Products</a>
+<a href="/roi-calculator.html" style="color:#3efa7e;">ROI Calculator</a>
+<a href="/#contact">Contact</a>
+<a class="mobile-cta" href="/#contact" onclick="toggleMobileMenu()" style=";background:#42ff91 !important;background-color:#42ff91 !important;background-image:none !important;color:#02130d !important;border-color:#42ff91 !important;text-shadow:none !important;">Get a Quote</a>
+</div>
+<!-- ============================================
+       HERO
+       ============================================ -->
+<section class="phero" id="hero" style="padding-top: 64px;">
+<div class="phero-bg"></div>
+<div class="phero-inner">
+<div class="phero-tag"><span class="dot"></span>Investment Analysis Tool</div>
+<h1>Turn Seeds Into <i>Profit</i></h1>
+<p class="phero-sub">International ROI calculator with country-specific costs for electricity, water, nutrients &amp; labor. Compare 11 GrowSpec systems across 15+ markets and find your payback period.</p>
+<div class="phero-btns">
+<a class="btn-g" href="#calculator" style=";background:#42ff91 !important;background-color:#42ff91 !important;background-image:none !important;color:#02130d !important;border-color:#42ff91 !important;text-shadow:none !important;">Start Calculating</a>
+<a class="btn-ghost" href="#metrics">View Results</a>
+</div>
+</div>
+</section>
+<!-- Stat Strip -->
+<div class="stat-strip">
+<div class="stat-cell"><div class="stat-val">15+</div><div class="stat-lbl">Countries</div></div>
+<div class="stat-cell"><div class="stat-val">11</div><div class="stat-lbl">Grow Systems</div></div>
+<div class="stat-cell"><div class="stat-val">5</div><div class="stat-lbl">Crop Types</div></div>
+<div class="stat-cell"><div class="stat-val">5yr</div><div class="stat-lbl">Forecast</div></div>
+<div class="stat-cell"><div class="stat-val">Real-Time</div><div class="stat-lbl">Calculations</div></div>
+</div>
+<!-- ROI Lead Gate: required before calculator access -->
+<section class="roi-lead-gate" id="roi-access">
+<div class="roi-gate-card">
+<div class="sec-eyebrow">ROI Access</div>
+<h2>Get your ROI estimate</h2>
+<p>Please share your contact details before using the ROI calculator. The lead information is configured to be sent to <a class="contact-link" href="mailto:abbas@growspecbio.com">abbas@growspecbio.com</a>, and the calculator will unlock after submission.</p>
+<form action="https://formsubmit.co/abbas@growspecbio.com" id="roiLeadForm" method="POST">
+<input name="_subject" type="hidden" value="New GROWSPEC Bio ROI Calculator Lead"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_next" type="hidden" value="https://www.growspecbio.com/roi-calculator.html?roi_access=approved#calculator"/>
+<input name="Website" type="hidden" value="www.growspecbio.com"/>
+<div class="roi-lead-grid">
+<div class="roi-lead-field"><label for="leadName">Name *</label><input autocomplete="name" id="leadName" name="Name" placeholder="Your name" required="" type="text"/></div>
+<div class="roi-lead-field"><label for="leadEmail">Email *</label><input autocomplete="email" id="leadEmail" name="Email" placeholder="you@example.com" required="" type="email"/></div>
+<div class="roi-lead-field"><label for="leadPhone">Contact Number *</label><input autocomplete="tel" id="leadPhone" name="Contact number" placeholder="Phone / WhatsApp" required="" type="tel"/></div>
+</div>
+<div class="roi-lead-field"><label for="leadProject">Project Note</label><textarea id="leadProject" name="Project note" placeholder="Crop type, country, target scale, or anything you want us to know" rows="3"></textarea></div>
+<div style="display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.2rem;align-items:center;">
+<button class="btn-g" style=";background:#42ff91 !important;background-color:#42ff91 !important;background-image:none !important;color:#02130d !important;border-color:#42ff91 !important;text-shadow:none !important;" type="submit">Submit Details &amp; Unlock ROI →</button>
+<a class="btn-ghost" href="https://wa.me/8618718396182" rel="noopener noreferrer" target="_blank">WhatsApp Abbas</a>
+</div>
+<p class="roi-lead-note">Static-site note: the form is connected for email delivery to abbas@growspecbio.com. After upload, test once and approve/activate the email service if prompted.</p>
+<div class="roi-gate-success">Details submitted. The ROI calculator is unlocked on this browser.</div>
+</form>
+</div>
+</section>
+<!-- ============================================
+       CALCULATOR
+       ============================================ -->
+<section class="calc-section" id="calculator">
+<div class="calc-grid">
+<!-- Left Panel -->
+<div>
+<div class="sec-eyebrow">Configure Your Farm</div>
+<h2 style="margin-bottom:1rem;">Select Your Setup</h2>
+<p class="sec-sub" style="margin-bottom:2rem;">Choose your country, system, and crop. All cost fields are fully editable to match your local conditions.</p>
+<div class="calc-card" style="margin-bottom:1.5rem;">
+<h3>Setup</h3>
+<div class="grid-2-cols" style="margin-bottom:8px;">
+<div class="input-group">
+<label>Country</label>
+<div class="input-wrap">
+<select id="countrySelect" onchange="onCountryChange(this.value)"></select>
+</div>
+</div>
+<div class="input-group">
+<label>Currency</label>
+<input id="currencyDisplay" readonly="" style="opacity:0.6;" type="text"/>
+</div>
+</div>
+<div class="grid-2-cols" style="margin-bottom:8px;">
+<div class="input-group">
+<label>Grow System</label>
+<select id="productSelect" onchange="onProductChange(this.value)"></select>
+</div>
+<div class="input-group">
+<label>Crop Type</label>
+<select id="cropSelect" onchange="onCropChange(this.value)"></select>
+</div>
+</div>
+<div class="grid-3-cols">
+<div class="input-group">
+<label>Units</label>
+<input id="numUnits" max="100" min="1" oninput="calcUpdate('units', this.value)" type="number" value="1"/>
+</div>
+<div class="input-group">
+<label>Cycle (days)</label>
+<input id="cycleDays" max="365" min="1" oninput="calcUpdate('growCycleDays', this.value)" type="number" value="20"/>
+</div>
+<div class="input-group">
+<label>Yield (kg)</label>
+<input id="yieldPerCycle" oninput="calcUpdate('yieldPerCycle', this.value)" step="0.1" type="number" value="25"/>
+</div>
+</div>
+<div class="grid-2-cols" style="margin-top:8px;">
+<div class="input-group">
+<label>Price / kg</label>
+<div class="input-wrap"><input id="pricePerKg" oninput="calcUpdate('pricePerKg', this.value)" step="0.01" type="number" value="8"/><span class="input-unit" id="priceUnit">GBP</span></div>
+</div>
+<div class="input-group">
+<label>Unit Cost</label>
+<div class="input-wrap"><input id="unitCost" oninput="calcUpdate('unitCost', this.value)" step="100" type="number" value="5120"/><span class="input-unit" id="costUnit">GBP</span></div>
+</div>
+</div>
+</div>
+<div class="calc-card" style="margin-bottom:1.5rem;">
+<h3>Operating Costs</h3>
+<!-- Power -->
+<div class="section-divider">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+<span class="divider-label">Power</span>
+</div>
+<div class="grid-3-cols" style="margin-bottom:4px;">
+<div class="input-group">
+<label>Power (W)</label>
+<div class="input-wrap"><input id="powerDemand" oninput="calcUpdate('powerDemandPerUnit', this.value)" type="number" value="988"/><span class="input-unit">W</span></div>
+</div>
+<div class="input-group">
+<label>Hours</label>
+<div class="input-wrap"><input id="opHours" max="24" min="1" oninput="calcUpdate('dailyOperatingHours', this.value)" type="number" value="18"/><span class="input-unit">h</span></div>
+</div>
+<div class="input-group">
+<label>Elec / kWh</label>
+<div class="input-wrap"><input id="elecRate" oninput="calcUpdate('electricityRatePerKwh', this.value)" step="0.001" type="number" value="0.34"/><span class="input-unit" id="elecUnit">GBP</span></div>
+</div>
+</div>
+<!-- Water -->
+<div class="section-divider">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+<span class="divider-label">Water</span>
+</div>
+<div class="grid-2-cols" style="margin-bottom:4px;">
+<div class="input-group">
+<label>Water (L/day)</label>
+<div class="input-wrap"><input id="waterUse" oninput="calcUpdate('dailyWaterConsumption', this.value)" step="0.1" type="number" value="8"/><span class="input-unit">L</span></div>
+</div>
+<div class="input-group">
+<label>Water / m3</label>
+<div class="input-wrap"><input id="waterRate" oninput="calcUpdate('waterCostPerM3', this.value)" step="0.01" type="number" value="6.80"/><span class="input-unit" id="waterUnit">GBP</span></div>
+</div>
+</div>
+<!-- Nutrients -->
+<div class="section-divider">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"></path></svg>
+<span class="divider-label">Nutrients</span>
+</div>
+<div class="grid-2-cols" style="margin-bottom:4px;">
+<div class="input-group">
+<label>Nutrients (L/day)</label>
+<div class="input-wrap"><input id="nutrientUse" oninput="calcUpdate('dailyNutrientConsumption', this.value)" step="0.1" type="number" value="0.5"/><span class="input-unit">L</span></div>
+</div>
+<div class="input-group">
+<label>Nutrient / L</label>
+<div class="input-wrap"><input id="nutrientRate" oninput="calcUpdate('nutrientCostPerLiter', this.value)" step="0.01" type="number" value="3.50"/><span class="input-unit" id="nutrientUnit">GBP</span></div>
+</div>
+</div>
+<!-- Labor -->
+<div class="section-divider">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+<span class="divider-label">Labor</span>
+</div>
+<div class="grid-3-cols" style="margin-bottom:4px;">
+<div class="input-group">
+<label>Hours / Day</label>
+<div class="input-wrap"><input id="laborHours" oninput="calcUpdate('laborHoursPerDay', this.value)" step="0.1" type="number" value="1"/><span class="input-unit">h</span></div>
+</div>
+<div class="input-group">
+<label>Rate / Hr</label>
+<div class="input-wrap"><input id="laborRate" oninput="calcUpdate('laborRatePerHour', this.value)" step="0.1" type="number" value="16.50"/><span class="input-unit" id="laborUnit">GBP</span></div>
+</div>
+<div class="input-group">
+<label>Work Days</label>
+<input id="workDays" max="31" min="1" oninput="calcUpdate('workingDaysPerMonth', this.value)" type="number" value="22"/>
+</div>
+</div>
+<!-- Equipment -->
+<div class="section-divider">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+<span class="divider-label">Equipment &amp; Taxes</span>
+</div>
+<div class="grid-4-cols" style="margin-bottom:12px;">
+<div class="input-group">
+<label>Shipping</label>
+<div class="input-wrap"><input id="shippingCost" oninput="calcUpdate('shippingCost', this.value)" step="10" type="number" value="500"/><span class="input-unit" id="shipUnit">GBP</span></div>
+</div>
+<div class="input-group">
+<label>Duty %</label>
+<input id="importDuty" max="100" min="0" oninput="calcUpdate('importDutyPercent', this.value)" type="number" value="0"/>
+</div>
+<div class="input-group">
+<label>VAT/GST %</label>
+<input id="vatRate" max="100" min="0" oninput="calcUpdate('vatPercent', this.value)" type="number" value="20"/>
+</div>
+<div class="input-group">
+<label>Maint %</label>
+<input id="maintRate" max="50" min="0" oninput="calcUpdate('maintenancePercent', this.value)" type="number" value="2"/>
+</div>
+</div>
+<!-- Results -->
+<div class="results-strip">
+<div class="result-item">
+<div class="res-label">Monthly Net Profit</div>
+<div class="res-value" id="resultMonthlyProfit">--</div>
+</div>
+<div class="result-item">
+<div class="res-label">Monthly OpEx</div>
+<div class="res-value" id="resultMonthlyOpex" style="color:#c8dccb;">--</div>
+</div>
+<div class="result-item">
+<div class="res-label">Payback Period</div>
+<div class="res-value" id="resultPayback">--</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel -->
+<div>
+<div class="sec-eyebrow">Projected Performance</div>
+<h2 style="margin-bottom:2rem;">Your Farm at a Glance</h2>
+<!-- Key Metrics -->
+<div class="grid-2" style="margin-bottom:2rem;">
+<div class="feat-card fade-in">
+<div class="feat-icon"><svg fill="none" height="20" stroke="#3efa7e" stroke-width="2" viewbox="0 0 24 24" width="20"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>
+<div class="feat-title">Annual Yield</div>
+<div class="feat-desc" id="metricYield" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;">--</div>
+<div class="feat-desc" style="color:#7aab80;">Based on cycle time &amp; units</div>
+</div>
+<div class="feat-card fade-in">
+<div class="feat-icon"><svg fill="none" height="20" stroke="#3efa7e" stroke-width="2" viewbox="0 0 24 24" width="20"><line x1="12" x2="12" y1="1" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+<div class="feat-title">Annual Revenue</div>
+<div class="feat-desc" id="metricRevenue" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;">--</div>
+<div class="feat-desc" style="color:#7aab80;">Based on market price</div>
+</div>
+<div class="feat-card fade-in">
+<div class="feat-icon"><svg fill="none" height="20" stroke="#3efa7e" stroke-width="2" viewbox="0 0 24 24" width="20"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+<div class="feat-title">Annual OpEx</div>
+<div class="feat-desc" id="metricOpex" style="font-family:'Playfair Display',serif;font-size:28px;color:#c8dccb;margin-bottom:4px;">--</div>
+<div class="feat-desc" style="color:#7aab80;">Power + water + nutrients + labor</div>
+</div>
+<div class="feat-card fade-in">
+<div class="feat-icon"><svg fill="none" height="20" stroke="#3efa7e" stroke-width="2" viewbox="0 0 24 24" width="20"><line x1="19" x2="5" y1="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg></div>
+<div class="feat-title">ROI Year 1</div>
+<div class="feat-desc" id="metricRoi" style="font-family:'Playfair Display',serif;font-size:28px;color:#3efa7e;margin-bottom:4px;">--</div>
+<div class="feat-desc" style="color:#7aab80;">After equipment recovery</div>
+</div>
+</div>
+<!-- Power & Water Metrics -->
+<div class="grid-2" style="margin-bottom:2rem;">
+<div class="calc-card">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">MONTHLY POWER</div>
+<div id="metricPower" style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;">--</div>
+</div>
+<div class="calc-card">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">MONTHLY WATER</div>
+<div id="metricWater" style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;">--</div>
+</div>
+</div>
+<!-- Cost Breakdown -->
+<div class="calc-card" style="margin-bottom:2rem;">
+<h3>Cost Breakdown</h3>
+<div class="calc-desc">Monthly operating costs by category</div>
+<div style="overflow-x:auto;">
+<table class="data-table" id="breakdownTable">
+<thead><tr><th style="text-align:left;">Category</th><th>Monthly</th><th>Annual</th><th>% OpEx</th></tr></thead>
+<tbody id="breakdownBody"></tbody>
+</table>
+</div>
+<div class="highlight-box" style="margin-top:16px;">
+<div class="grid-2-cols">
+<div>
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3efa7e;margin-bottom:4px;">NET PROFIT MARGIN</div>
+<div id="metricMargin" style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;">--</div>
+</div>
+<div style="text-align:right;">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3efa7e;margin-bottom:4px;">ANNUAL NET</div>
+<div id="metricAnnualNet" style="font-family:'Playfair Display',serif;font-size:24px;color:#3efa7e;">--</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Annual Cost Bars -->
+<div class="calc-card" style="margin-bottom:2rem;">
+<h3>Annual Cost Split</h3>
+<div class="calc-desc">Visual breakdown of annual operating costs</div>
+<div id="costBars"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================
+       TIMELINE CHART
+       ============================================ -->
+<section id="metrics" style="background:#081209;">
+<div class="wrap" style="text-align:center;">
+<div class="sec-eyebrow">Payback Forecast</div>
+<h2 style="margin-bottom:16px;">When Will You Break Even?</h2>
+<p style="color:#8fb094;max-width:600px;margin:0 auto 40px;font-size:15px;line-height:1.7;">Track cumulative profit over 5 years with your payback period highlighted</p>
+<div class="chart-container">
+<svg class="chart-svg" id="timelineChart" viewbox="0 0 900 360"></svg>
+</div>
+<div class="grid-4" style="margin-top:32px;max-width:900px;margin-left:auto;margin-right:auto;">
+<div class="feat-card" style="text-align:left;">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">PAYBACK PERIOD</div>
+<div id="timelinePayback" style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;">--</div>
+</div>
+<div class="feat-card" style="text-align:left;">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">TOTAL INVESTMENT</div>
+<div id="timelineInvestment" style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;">--</div>
+</div>
+<div class="feat-card" style="text-align:left;">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">ANNUAL NET PROFIT</div>
+<div id="timelineAnnualNet" style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;">--</div>
+</div>
+<div class="feat-card" style="text-align:left;">
+<div style="font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7aab80;margin-bottom:8px;">5-YEAR PROFIT</div>
+<div id="timeline5Year" style="font-family:'Playfair Display',serif;font-size:22px;color:#3efa7e;">--</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================
+       PRODUCTS
+       ============================================ -->
+<section id="products" style="background:#060f08;">
+<div class="wrap">
+<div style="text-align:center;margin-bottom:48px;">
+<div class="sec-eyebrow">Our Growing Systems</div>
+<h2>Choose Your Farm</h2>
+<p class="sec-sub" style="max-width:560px;margin:0.85rem auto 0;">Select any system above to calculate its ROI, or explore our full range.</p>
+</div>
+<div class="grid-3" id="productsGrid"></div>
+</div>
+</section>
+<!-- ============================================
+       CTA + FOOTER
+       ============================================ -->
+<section style="padding-top:0;">
+<div class="wrap">
+<div class="cta-band">
+<div>
+<h3>Ready to Start Growing?</h3>
+<p>Get a personalized ROI report and farm plan from our team of vertical farming experts.</p>
+</div>
+<div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+<a class="btn-g" href="/#contact" style=";background:#42ff91 !important;background-color:#42ff91 !important;background-image:none !important;color:#02130d !important;border-color:#42ff91 !important;text-shadow:none !important;">Get a Quote</a>
+<a class="btn-ghost" href="/#products">Explore Products</a>
+</div>
+</div>
+</div>
+</section>
+<footer class="pfoot">
+<div class="pfoot-links">
+<a href="/">Home</a>
+<a href="/#products">Products</a>
+<a href="/roi-calculator.html">ROI Calculator</a>
+<a href="/#contact">Contact</a>
+</div>
+<div class="pfoot-social"><a aria-label="GROWSPEC Facebook" class="social-link" href="https://www.facebook.com/GrowspecGlobal/" rel="noopener noreferrer" target="_blank">fb</a><a aria-label="GROWSPEC YouTube" class="social-link" href="https://www.youtube.com/@GROWSPEC_GLOBAL" rel="noopener noreferrer" target="_blank">yt</a><a aria-label="GROWSPEC LinkedIn" class="social-link" href="https://www.linkedin.com/company/growspec-inc/" rel="noopener noreferrer" target="_blank">in</a><a aria-label="GROWSPEC Instagram" class="social-link" href="https://www.instagram.com/growspec_inc/" rel="noopener noreferrer" target="_blank">ig</a></div>
+<div class="pfoot-note">© 2026 GROWSPEC Bio · growspecbio.com</div>
+</footer>
+<!-- ============================================
+       JAVASCRIPT - COMPLETE APPLICATION LOGIC
+       (Preserved entirely from original calculator)
+       ============================================ -->
+<script>
+  // ============================================
+  // DATA: Products, Countries, Crops
+  // ============================================
+
+  const PRODUCTS = [
+    { id: 'farmcube-nano', name: 'FarmCube Nano', tagline: 'Front-of-House Display', type: 'Aeroponic', power: 988, waterTank: 80, weight: 320, yield: 25, cycle: 20, elecCost: 150, price: 5120, image: 'product-nano', desc: '4-tier aeroponic growing display for restaurants and hotels.', features: ['16 trays/cycle', '80L tank', '18 cycles/yr'] },
+    { id: 'farmcube-neo-2t', name: 'FarmCube Neo-2T', tagline: 'Compact Microgreens', type: 'Microgreens', power: 120, waterTank: 18, weight: 40, yield: 4, cycle: 7, elecCost: 20, price: 600, image: 'product-neo', desc: 'Compact 2-tier microgreens cabinet for home kitchens.', features: ['24 punnets', '120W power', '7-day cycles'] },
+    { id: 'farmcube-neo-5t', name: 'FarmCube Neo-5T', tagline: 'High-Volume Microgreens', type: 'Microgreens', power: 240, waterTank: 30, weight: 70, yield: 10, cycle: 7, elecCost: 35, price: 1200, image: 'product-neo', desc: '5-tier high-volume microgreens for central kitchens.', features: ['60 punnets', '240W power', '5-tier design'] },
+    { id: 'farmcube-ultra', name: 'FarmCube Ultra', tagline: 'Research-Grade Chamber', type: 'Research', power: 4240, waterTank: 150, weight: 800, yield: 45, cycle: 20, elecCost: 350, price: 16500, image: 'product-ultra', desc: 'Research-grade sealed chamber with AI cultivation.', features: ['45+ crops', '5 LED spectra', 'Climate control'] },
+    { id: 'pegma-germin', name: 'Pegma Germin', tagline: '5-Layer Vertical Rack', type: 'Vertical Rack', power: 150, waterTank: 0, weight: 60, yield: 8, cycle: 18, elecCost: 25, price: 2500, image: 'product-ultra', desc: 'Versatile 5-layer aeroponic rack for seedlings & greens.', features: ['5 layers', '99% less water', 'Movable'] },
+    { id: 'pegma-omni-4', name: 'Pegma Omni-4', tagline: 'All-in-One Grow Kit', type: 'All-in-One', power: 900, waterTank: 60, weight: 150, yield: 12, cycle: 30, elecCost: 120, price: 1200, image: 'product-biocube', desc: 'Complete grow kit with 800W LED and touchscreen.', features: ['800W LED', '4 buckets', 'Touchscreen'] },
+    { id: 'biocube-leafy', name: 'BioCube Leafy Greens', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 1150, cycle: 30, elecCost: 2800, price: 65000, image: 'product-biocube', desc: '40ft container for leafy greens. 70m2 canopy.', features: ['70m2 canopy', '3,450 cells', '13.8t/yr'] },
+    { id: 'biocube-micro', name: 'BioCube Microgreens', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 675, cycle: 7, elecCost: 2800, price: 65000, image: 'product-biocube', desc: '40ft container for microgreens. 70m2 canopy.', features: ['70m2 canopy', '234k boxes/yr', 'Aeroponic'] },
+    { id: 'biocube-strawberry', name: 'BioCube Strawberries', tagline: 'Container Farm', type: 'Container', power: 20000, waterTank: 650, weight: 8000, yield: 504, cycle: 60, elecCost: 2800, price: 68000, image: 'product-biocube', desc: '40ft container for strawberries. 80m2 canopy.', features: ['80m2 canopy', '2,016 cells', '3,024kg/yr'] },
+    { id: 'biocube-cannabis-aero', name: 'BioCube Cannabis (Aero)', tagline: 'Container Farm', type: 'Container', power: 16600, waterTank: 650, weight: 8000, yield: 22, cycle: 73, elecCost: 2500, price: 65000, image: 'product-biocube', desc: 'Container farm for cannabis with aeroponics.', features: ['26.6m2 canopy', '196 buckets', '110kg/yr'] },
+    { id: 'biocube-cannabis-drip', name: 'BioCube Cannabis (Drip)', tagline: 'Container Farm', type: 'Container', power: 16600, waterTank: 650, weight: 8000, yield: 75, cycle: 73, elecCost: 2500, price: 60000, image: 'product-biocube', desc: 'Container farm for cannabis with drip irrigation.', features: ['30.4m2 canopy', '252 sites', '375kg/yr'] }
+  ];
+
+  const COUNTRIES = [
+    { id: 'uk', name: 'United Kingdom', currency: 'GBP', symbol: 'GBP', rate: 0.79, elec: 0.34, water: 6.80, nutrient: 3.50, labor: 16.50, workDays: 22, vat: 20, duty: 0, shipping: 500 },
+    { id: 'usa', name: 'United States', currency: 'USD', symbol: '$', rate: 1.0, elec: 0.14, water: 2.50, nutrient: 2.80, labor: 18.00, workDays: 22, vat: 0, duty: 0, shipping: 800 },
+    { id: 'uae', name: 'UAE', currency: 'AED', symbol: 'AED', rate: 3.67, elec: 0.08, water: 0.80, nutrient: 3.20, labor: 10.00, workDays: 26, vat: 5, duty: 5, shipping: 1200 },
+    { id: 'saudi', name: 'Saudi Arabia', currency: 'SAR', symbol: 'SAR', rate: 3.75, elec: 0.06, water: 0.60, nutrient: 3.00, labor: 8.50, workDays: 26, vat: 15, duty: 5, shipping: 1400 },
+    { id: 'singapore', name: 'Singapore', currency: 'SGD', symbol: 'S$', rate: 1.35, elec: 0.18, water: 2.00, nutrient: 3.80, labor: 14.00, workDays: 22, vat: 9, duty: 0, shipping: 1500 },
+    { id: 'australia', name: 'Australia', currency: 'AUD', symbol: 'A$', rate: 1.52, elec: 0.22, water: 3.50, nutrient: 3.60, labor: 28.00, workDays: 22, vat: 10, duty: 5, shipping: 1800 },
+    { id: 'germany', name: 'Germany', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.25, water: 4.20, nutrient: 3.20, labor: 18.50, workDays: 22, vat: 19, duty: 0, shipping: 600 },
+    { id: 'france', name: 'France', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.21, water: 4.30, nutrient: 3.10, labor: 17.00, workDays: 22, vat: 20, duty: 0, shipping: 600 },
+    { id: 'india', name: 'India', currency: 'INR', symbol: 'INR', rate: 83.5, elec: 0.09, water: 0.50, nutrient: 2.00, labor: 3.00, workDays: 26, vat: 18, duty: 15, shipping: 900 },
+    { id: 'china', name: 'China', currency: 'CNY', symbol: 'CNY', rate: 7.25, elec: 0.09, water: 0.70, nutrient: 2.20, labor: 5.50, workDays: 26, vat: 13, duty: 10, shipping: 700 },
+    { id: 'canada', name: 'Canada', currency: 'CAD', symbol: 'CAD', rate: 1.38, elec: 0.12, water: 2.00, nutrient: 3.00, labor: 20.00, workDays: 22, vat: 5, duty: 0, shipping: 700 },
+    { id: 'netherlands', name: 'Netherlands', currency: 'EUR', symbol: 'EUR', rate: 0.92, elec: 0.23, water: 4.00, nutrient: 3.00, labor: 19.00, workDays: 22, vat: 21, duty: 0, shipping: 550 },
+    { id: 'norway', name: 'Norway', currency: 'NOK', symbol: 'NOK', rate: 10.8, elec: 0.10, water: 7.80, nutrient: 4.00, labor: 25.00, workDays: 22, vat: 25, duty: 0, shipping: 800 },
+    { id: 'south-africa', name: 'South Africa', currency: 'ZAR', symbol: 'ZAR', rate: 18.5, elec: 0.12, water: 1.50, nutrient: 2.50, labor: 4.50, workDays: 22, vat: 15, duty: 10, shipping: 1100 },
+    { id: 'nigeria', name: 'Nigeria', currency: 'NGN', symbol: 'NGN', rate: 1500, elec: 0.07, water: 0.40, nutrient: 1.80, labor: 2.50, workDays: 22, vat: 7.5, duty: 10, shipping: 1300 }
+  ];
+
+  const CROPS = [
+    { id: 'leafy-greens', name: 'Leafy Greens', price: 8, factor: 1.0 },
+    { id: 'herbs', name: 'Herbs', price: 25, factor: 0.6 },
+    { id: 'microgreens', name: 'Microgreens', price: 40, factor: 0.4 },
+    { id: 'tomatoes', name: 'Tomatoes', price: 6, factor: 1.5 },
+    { id: 'strawberries', name: 'Strawberries', price: 15, factor: 0.8 }
+  ];
+
+  const RESOURCE_DEFAULTS = {
+    'farmcube-nano': { water: 8, nutrients: 0.5, labor: 1, hours: 18 },
+    'farmcube-neo-2t': { water: 3, nutrients: 0.2, labor: 0.5, hours: 16 },
+    'farmcube-neo-5t': { water: 5, nutrients: 0.3, labor: 0.75, hours: 16 },
+    'farmcube-ultra': { water: 15, nutrients: 1.0, labor: 2, hours: 20 },
+    'pegma-germin': { water: 4, nutrients: 0.3, labor: 0.5, hours: 16 },
+    'pegma-omni-4': { water: 8, nutrients: 0.5, labor: 1, hours: 18 },
+    'biocube-leafy': { water: 80, nutrients: 5.0, labor: 4, hours: 24 },
+    'biocube-micro': { water: 70, nutrients: 4.0, labor: 4, hours: 24 },
+    'biocube-strawberry': { water: 90, nutrients: 6.0, labor: 4, hours: 24 },
+    'biocube-cannabis-aero': { water: 60, nutrients: 4.0, labor: 4, hours: 24 },
+    'biocube-cannabis-drip': { water: 70, nutrients: 5.0, labor: 4, hours: 24 }
+  };
+
+  // ============================================
+  // STATE
+  // ============================================
+  let state = {
+    country: 'uk', product: 'farmcube-nano', crop: 'leafy-greens',
+    units: 1, cycleDays: 20, yieldPerCycle: 25, pricePerKg: 8, unitCost: 5120,
+    powerDemand: 988, opHours: 18, elecRate: 0.34,
+    waterUse: 8, waterRate: 6.80,
+    nutrientUse: 0.5, nutrientRate: 3.50,
+    laborHours: 1, laborRate: 16.50, workDays: 22,
+    shipping: 500, duty: 0, vat: 20, maint: 2
+  };
+
+  function getCountry() { return COUNTRIES.find(c => c.id === state.country) || COUNTRIES[0]; }
+  function getProduct() { return PRODUCTS.find(p => p.id === state.product) || PRODUCTS[0]; }
+  function getCrop() { return CROPS.find(c => c.id === state.crop) || CROPS[0]; }
+  function curSym() { return getCountry().symbol; }
+
+  // ============================================
+  // INITIALIZATION
+  // ============================================
+  function init() {
+    populateSelects();
+    renderProducts();
+    calculate();
+    setupScrollAnimations();
+  }
+
+  function populateSelects() {
+    const countrySel = document.getElementById('countrySelect');
+    COUNTRIES.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; countrySel.appendChild(o); });
+    countrySel.value = state.country;
+
+    const productSel = document.getElementById('productSelect');
+    PRODUCTS.forEach(p => { const o = document.createElement('option'); o.value = p.id; o.textContent = p.name; productSel.appendChild(o); });
+    productSel.value = state.product;
+
+    const cropSel = document.getElementById('cropSelect');
+    CROPS.forEach(c => { const o = document.createElement('option'); o.value = c.id; o.textContent = c.name; cropSel.appendChild(o); });
+    cropSel.value = state.crop;
+
+    document.getElementById('currencyDisplay').value = getCountry().currency;
+  }
+
+  // ============================================
+  // EVENT HANDLERS
+  // ============================================
+  function onCountryChange(cid) {
+    state.country = cid;
+    const c = getCountry();
+    document.getElementById('currencyDisplay').value = c.currency;
+    state.elecRate = c.elec;
+    state.waterRate = c.water;
+    state.nutrientRate = c.nutrient;
+    state.laborRate = c.labor;
+    state.workDays = c.workDays;
+    state.duty = c.duty;
+    state.vat = c.vat;
+    state.shipping = c.shipping;
+    state.unitCost = Math.round(getProduct().price / c.rate);
+    syncInputs();
+    calculate();
+  }
+
+  function onProductChange(pid) {
+    state.product = pid;
+    const p = getProduct();
+    const c = getCountry();
+    const r = RESOURCE_DEFAULTS[pid] || RESOURCE_DEFAULTS['farmcube-nano'];
+    state.powerDemand = p.power;
+    state.cycleDays = p.cycle;
+    state.yieldPerCycle = p.yield;
+    state.unitCost = Math.round(p.price / c.rate);
+    state.waterUse = r.water;
+    state.nutrientUse = r.nutrients;
+    state.laborHours = r.labor;
+    state.opHours = r.hours;
+    state.elecCost = p.elecCost;
+    syncInputs();
+    calculate();
+  }
+
+  function onCropChange(cid) {
+    state.crop = cid;
+    const crop = getCrop();
+    const c = getCountry();
+    state.pricePerKg = Math.round(crop.price / c.rate * 100) / 100;
+    const p = getProduct();
+    state.yieldPerCycle = Math.round(p.yield * crop.factor * 10) / 10;
+    syncInputs();
+    calculate();
+  }
+
+  function calcUpdate(key, val) {
+    state[key] = parseFloat(val) || 0;
+    calculate();
+  }
+
+  function syncInputs() {
+    const c = getCountry();
+    const ids = {
+      numUnits: 'units', cycleDays: 'cycleDays', yieldPerCycle: 'yieldPerCycle',
+      pricePerKg: 'pricePerKg', unitCost: 'unitCost',
+      powerDemand: 'powerDemand', opHours: 'opHours', elecRate: 'elecRate',
+      waterUse: 'waterUse', waterRate: 'waterRate',
+      nutrientUse: 'nutrientUse', nutrientRate: 'nutrientRate',
+      laborHours: 'laborHours', laborRate: 'laborRate', workDays: 'workDays',
+      shipping: 'shippingCost', duty: 'importDuty', vat: 'vatRate', maint: 'maintRate'
+    };
+    for (const [k, id] of Object.entries(ids)) {
+      const el = document.getElementById(id);
+      if (el) el.value = state[k];
+    }
+    document.getElementById('currencyDisplay').value = c.currency;
+    document.getElementById('priceUnit').textContent = c.symbol;
+    document.getElementById('costUnit').textContent = c.symbol;
+    document.getElementById('elecUnit').textContent = c.symbol;
+    document.getElementById('waterUnit').textContent = c.symbol;
+    document.getElementById('nutrientUnit').textContent = c.symbol;
+    document.getElementById('laborUnit').textContent = c.symbol;
+    document.getElementById('shipUnit').textContent = c.symbol;
+  }
+
+  // ============================================
+  // CALCULATION ENGINE
+  // ============================================
+  function calculate() {
+    const units = state.units;
+
+    const monthlyKwh = (state.powerDemand * state.opHours * 30 * units) / 1000;
+    const monthlyPowerCost = monthlyKwh * state.elecRate;
+    const annualPowerCost = monthlyPowerCost * 12;
+
+    const monthlyWaterLiters = state.waterUse * 30 * units;
+    const monthlyWaterCost = (monthlyWaterLiters / 1000) * state.waterRate;
+    const annualWaterCost = monthlyWaterCost * 12;
+
+    const monthlyNutrientCost = state.nutrientUse * 30 * units * state.nutrientRate;
+    const annualNutrientCost = monthlyNutrientCost * 12;
+
+    const monthlyLaborCost = state.laborHours * state.laborRate * state.workDays * units;
+    const annualLaborCost = monthlyLaborCost * 12;
+
+    const annualMaintCost = state.unitCost * units * (state.maint / 100);
+    const monthlyMaintCost = annualMaintCost / 12;
+
+    const monthlyOpex = monthlyPowerCost + monthlyWaterCost + monthlyNutrientCost + monthlyLaborCost + monthlyMaintCost;
+    const annualOpex = annualPowerCost + annualWaterCost + annualNutrientCost + annualLaborCost + annualMaintCost;
+
+    const subtotal = state.unitCost * units;
+    const importDutyAmt = subtotal * (state.duty / 100);
+    const vatAmt = (subtotal + importDutyAmt + state.shipping) * (state.vat / 100);
+    const totalEquipment = subtotal + importDutyAmt + state.shipping + vatAmt;
+
+    const cyclesPerYear = Math.floor(365 / state.cycleDays);
+    const annualYield = state.yieldPerCycle * cyclesPerYear * units;
+    const annualRevenue = annualYield * state.pricePerKg;
+    const monthlyRevenue = annualRevenue / 12;
+
+    const monthlyNet = monthlyRevenue - monthlyOpex;
+    const annualNet = annualRevenue - annualOpex;
+
+    const payback = monthlyNet > 0 ? totalEquipment / monthlyNet : Infinity;
+    const roi1 = totalEquipment > 0 ? ((annualRevenue - annualOpex - totalEquipment) / totalEquipment) * 100 : 0;
+    const roi5 = totalEquipment > 0 ? (((annualRevenue - annualOpex) * 5 - totalEquipment) / totalEquipment) * 100 : 0;
+    const fiveYearProfit = (annualRevenue - annualOpex) * 5 - totalEquipment;
+
+    const sym = curSym();
+
+    document.getElementById('resultMonthlyProfit').textContent = sym + Math.round(monthlyNet).toLocaleString();
+    document.getElementById('resultMonthlyProfit').style.color = monthlyNet >= 0 ? '#3efa7e' : '#e74c3c';
+    document.getElementById('resultMonthlyOpex').textContent = sym + Math.round(monthlyOpex).toLocaleString();
+    document.getElementById('resultPayback').textContent = isFinite(payback) ? (payback >= 12 ? (payback/12).toFixed(1) + ' yrs' : payback.toFixed(1) + ' mo') : 'N/A';
+
+    document.getElementById('metricYield').textContent = Math.round(annualYield).toLocaleString() + ' kg';
+    document.getElementById('metricRevenue').textContent = sym + Math.round(annualRevenue).toLocaleString();
+    document.getElementById('metricOpex').textContent = sym + Math.round(annualOpex).toLocaleString();
+    document.getElementById('metricRoi').textContent = roi1.toFixed(1) + '%';
+    document.getElementById('metricPower').textContent = Math.round(monthlyKwh).toLocaleString() + ' kWh';
+    document.getElementById('metricWater').textContent = Math.round(monthlyWaterLiters).toLocaleString() + ' L';
+    document.getElementById('metricMargin').textContent = (annualRevenue > 0 ? (annualNet/annualRevenue)*100 : 0).toFixed(1) + '%';
+    document.getElementById('metricAnnualNet').textContent = sym + Math.round(annualNet).toLocaleString();
+
+    renderBreakdown(sym, monthlyRevenue, monthlyPowerCost, monthlyWaterCost, monthlyNutrientCost, monthlyLaborCost, monthlyMaintCost, monthlyNet, monthlyOpex, annualRevenue, annualNet, annualOpex);
+    renderCostBars(annualPowerCost, annualWaterCost, annualNutrientCost, annualLaborCost, annualMaintCost, annualOpex);
+    renderTimeline(totalEquipment, monthlyNet, payback, fiveYearProfit, annualNet, sym);
+  }
+
+  function renderBreakdown(sym, mRev, mPow, mWat, mNut, mLab, mMaint, mNet, mOpex, aRev, aNet, aOpex) {
+    const tbody = document.getElementById('breakdownBody');
+    tbody.innerHTML = `
+      <tr class="revenue-row"><td>Revenue</td><td>${sym}${Math.round(mRev).toLocaleString()}</td><td>${sym}${Math.round(aRev).toLocaleString()}</td><td>-</td></tr>
+      <tr><td>Power</td><td>${sym}${Math.round(mPow).toLocaleString()}</td><td>${sym}${Math.round(mPow*12).toLocaleString()}</td><td>${(mPow/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Water</td><td>${sym}${Math.round(mWat).toLocaleString()}</td><td>${sym}${Math.round(mWat*12).toLocaleString()}</td><td>${(mWat/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Nutrients</td><td>${sym}${Math.round(mNut).toLocaleString()}</td><td>${sym}${Math.round(mNut*12).toLocaleString()}</td><td>${(mNut/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Labor</td><td>${sym}${Math.round(mLab).toLocaleString()}</td><td>${sym}${Math.round(mLab*12).toLocaleString()}</td><td>${(mLab/mOpex*100).toFixed(1)}%</td></tr>
+      <tr><td>Maintenance</td><td>${sym}${Math.round(mMaint).toLocaleString()}</td><td>${sym}${Math.round(mMaint*12).toLocaleString()}</td><td>${(mMaint/mOpex*100).toFixed(1)}%</td></tr>
+      <tr class="profit-row"><td>Net Profit</td><td>${sym}${Math.round(mNet).toLocaleString()}</td><td>${sym}${Math.round(aNet).toLocaleString()}</td><td>${(aRev>0?(aNet/aRev*100):0).toFixed(1)}%</td></tr>
+    `;
+  }
+
+  function renderCostBars(aPow, aWat, aNut, aLab, aMaint, aOpex) {
+    const container = document.getElementById('costBars');
+    if (!aOpex) { container.innerHTML = ''; return; }
+    const colors = ['#3efa7e', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+    const labels = ['Power', 'Water', 'Nutrients', 'Labor', 'Maintenance'];
+    const values = [aPow, aWat, aNut, aLab, aMaint];
+    let html = '';
+    values.forEach((v, i) => {
+      const pct = (v / aOpex * 100).toFixed(1);
+      html += `<div style="margin-bottom:10px;"><div style="display:flex;justify-content:space-between;margin-bottom:4px;font-size:0.75rem;"><span style="color:#8fb094;">${labels[i]}</span><span style="color:#eafbec;font-weight:600;">${pct}%</span></div><div class="progress-bg"><div class="progress-fill" style="width:${pct}%;background:${colors[i]};"></div></div></div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  function renderTimeline(totalEquipment, monthlyNet, payback, fiveYearProfit, annualNet, sym) {
+    const svg = document.getElementById('timelineChart');
+    if (!svg) return;
+
+    const months = 60;
+    const isProfitable = monthlyNet > 0;
+    let maxVal = totalEquipment;
+    let data = [];
+    for (let m = 0; m <= months; m++) {
+      const val = isProfitable ? (monthlyNet * m - totalEquipment) : -totalEquipment;
+      data.push(val);
+      if (Math.abs(val) > maxVal) maxVal = Math.abs(val);
+    }
+
+    const pad = { top: 40, right: 40, bottom: 60, left: 80 };
+    const W = 900 - pad.left - pad.right;
+    const H = 360 - pad.top - pad.bottom;
+
+    const xScale = m => pad.left + (m / months) * W;
+    const yScale = v => pad.top + H - ((v + maxVal) / (2 * maxVal)) * H;
+
+    let pathD = `M${xScale(0)},${yScale(data[0])}`;
+    for (let m = 1; m <= months; m++) pathD += ` L${xScale(m)},${yScale(data[m])}`;
+
+    let zeroD = `M${pad.left},${yScale(0)} L${pad.left + W},${yScale(0)}`;
+
+    const paybackMonth = isFinite(payback) ? Math.round(payback) : null;
+    const paybackX = paybackMonth ? xScale(Math.min(paybackMonth, months)) : null;
+
+    let html = `
+      <defs>
+        <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3efa7e" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#3efa7e" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="${pad.left}" y1="${yScale(0)}" x2="${pad.left + W}" y2="${yScale(0)}" stroke="#7aab80" stroke-width="1" stroke-dasharray="4"/>
+      <path d="${pathD} L${xScale(months)},${yScale(0)} L${pad.left},${yScale(0)} Z" fill="url(#areaGrad)"/>
+      <path d="${pathD}" fill="none" stroke="#3efa7e" stroke-width="2.5"/>
+      <text x="${pad.left - 10}" y="${yScale(0) + 4}" fill="#7aab80" font-size="11" text-anchor="end">Break-even</text>
+    `;
+
+    for (let y = -Math.ceil(maxVal/5000)*5000; y <= Math.ceil(maxVal/5000)*5000; y += 5000) {
+      if (y === 0) continue;
+      html += `<text x="${pad.left - 10}" y="${yScale(y) + 4}" fill="#4a6b4f" font-size="10" text-anchor="end">${sym}${(y/1000).toFixed(0)}k</text>`;
+      html += `<line x1="${pad.left}" y1="${yScale(y)}" x2="${pad.left + W}" y2="${yScale(y)}" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>`;
+    }
+
+    for (let m = 0; m <= months; m += 12) {
+      html += `<text x="${xScale(m)}" y="${pad.top + H + 25}" fill="#4a6b4f" font-size="10" text-anchor="middle">Year ${m/12}</text>`;
+      html += `<line x1="${xScale(m)}" y1="${pad.top}" x2="${xScale(m)}" y2="${pad.top + H}" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>`;
+    }
+
+    if (paybackX && paybackX <= pad.left + W) {
+      html += `<line x1="${paybackX}" y1="${pad.top}" x2="${paybackX}" y2="${pad.top + H}" stroke="#3efa7e" stroke-width="1" stroke-dasharray="4"/>
+      <text x="${paybackX}" y="${pad.top - 10}" fill="#3efa7e" font-size="11" text-anchor="middle" font-weight="bold">Payback</text>`;
+    }
+
+    html += `<text x="${pad.left + W/2}" y="${pad.top + H + 50}" fill="#4a6b4f" font-size="11" text-anchor="middle">Time (Years)</text>`;
+    html += `<text x="15" y="${pad.top + H/2}" fill="#4a6b4f" font-size="11" text-anchor="middle" transform="rotate(-90, 15, ${pad.top + H/2})">Cumulative Profit</text>`;
+
+    svg.innerHTML = html;
+
+    document.getElementById('timelinePayback').textContent = isFinite(payback) ? (payback >= 12 ? (payback/12).toFixed(1) + ' yrs' : payback.toFixed(1) + ' mo') : 'N/A';
+    document.getElementById('timelineInvestment').textContent = sym + Math.round(totalEquipment).toLocaleString();
+    document.getElementById('timelineAnnualNet').textContent = sym + Math.round(annualNet).toLocaleString();
+    document.getElementById('timeline5Year').textContent = sym + Math.round(fiveYearProfit).toLocaleString();
+  }
+
+  // ============================================
+  // RENDER PRODUCTS
+  // ============================================
+  function renderProducts() {
+    const grid = document.getElementById('productsGrid');
+    grid.innerHTML = PRODUCTS.map(p => `
+      <div class="product-card" onclick="onProductChange('${p.id}')" style="cursor:pointer;">
+        <div class="pc-type">${p.type}</div>
+        <div class="pc-name">${p.name}</div>
+        <div class="pc-desc">${p.desc}</div>
+        <div class="pc-specs">
+          <div class="pc-spec"><div class="pc-spec-val">${p.power}W</div><div class="pc-spec-label">Power</div></div>
+          <div class="pc-spec"><div class="pc-spec-val">${p.yield}kg</div><div class="pc-spec-label">Yield</div></div>
+          <div class="pc-spec"><div class="pc-spec-val">${p.cycle}d</div><div class="pc-spec-label">Cycle</div></div>
+        </div>
+        <a href="#calculator" class="btn-g btn-sm" onclick="onProductChange('${p.id}')">Calculate ROI</a>
+      </div>
+    `).join('');
+  }
+
+  // ============================================
+  // UI HELPERS
+  // ============================================
+  function toggleMobileMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+
+  function setupScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }
+
+  // Start
+  init();
+  </script>
+<script id="roi-lead-gate-script">
+(function(){
+  const approved = new URLSearchParams(window.location.search).get('roi_access') === 'approved' || localStorage.getItem('gsbio_roi_lead_submitted') === 'yes';
+  function unlock(){
+    document.body.classList.remove('roi-locked');
+    document.body.classList.add('roi-unlocked');
+  }
+  if (approved) unlock();
+  const form = document.getElementById('roiLeadForm');
+  if (form) {
+    form.addEventListener('submit', function(){
+      const payload = {
+        name: (document.getElementById('leadName')||{}).value || '',
+        email: (document.getElementById('leadEmail')||{}).value || '',
+        phone: (document.getElementById('leadPhone')||{}).value || '',
+        note: (document.getElementById('leadProject')||{}).value || '',
+        website: 'www.growspecbio.com',
+        submittedAt: new Date().toISOString()
+      };
+      localStorage.setItem('gsbio_roi_lead_submitted','yes');
+      localStorage.setItem('gsbio_roi_lead_details', JSON.stringify(payload));
+    });
+  }
+  document.querySelectorAll('a[href="#calculator"], a[href="/roi-calculator.html#calculator"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (document.body.classList.contains('roi-locked')) {
+        e.preventDefault();
+        document.getElementById('roi-access')?.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

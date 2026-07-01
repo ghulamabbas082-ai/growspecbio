@@ -1,0 +1,80 @@
+{
+  "html_files_checked": 10,
+  "tables_found": 37,
+  "files": [
+    {
+      "file": "404.html",
+      "tables": 0,
+      "jsonld_scripts": 0,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "index.html",
+      "tables": 0,
+      "jsonld_scripts": 7,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "roi-calculator.html",
+      "tables": 1,
+      "jsonld_scripts": 1,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/pegma-omni.html",
+      "tables": 0,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/biocube-modular.html",
+      "tables": 32,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/farmcube-nano.html",
+      "tables": 2,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/biocube-container.html",
+      "tables": 1,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/farmcube-ultra.html",
+      "tables": 0,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/farmcube-neo.html",
+      "tables": 1,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    },
+    {
+      "file": "products/pegma-germin.html",
+      "tables": 0,
+      "jsonld_scripts": 2,
+      "has_ai_summary": true,
+      "has_keywords": true
+    }
+  ],
+  "table_fix": "All tables use fixed layout, normal white-space, overflow-wrap:anywhere, left-aligned wrapped values, mobile stacked spec/data tables, and horizontal scroll for room tables.",
+  "ai_seo_fix": "Meta keywords/subject/classification/audience/ai-summary added; homepage OfferCatalog, Service and FAQ structured data added; llms.txt and ai.txt expanded; robots.txt updated for AI discovery crawlers and sitemap.",
+  "visible_overflow_check": "BioCube Modular opened-detail table cells were rendered and checked with DOM measurements; visible table cells returned 0 overflow problems in the check script.",
+  "notes": "CAPEX/pricing is not added. Contact remains abbas@growspecbio.com and WhatsApp +86 187 1839 6182."
+}
