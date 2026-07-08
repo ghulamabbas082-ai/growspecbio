@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.growspecbio.com/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/biocube-container/biocube-container-vertical-farming-system-open-door-hero.webp</image:loc>
+      <image:title>GROWSPEC Bio | AI-Ready Aeroponic Vertical Farming &amp; CEA Systems</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/biocube-container/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/biocube-container/biocube-container-vertical-farming-system-open-door-hero.webp</image:loc>
+      <image:title>BioCube Container | 40ft Controlled Environment Vertical Farm System</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/biocube-modular/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/biocube-modular/biocube-modular-leafy-green-full-production-room.webp</image:loc>
+      <image:title>BioCube Modular | Scalable Indoor Farm Rooms &amp; CEA Architecture</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/farmcube-nano/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-nano/farmcube-nano-premium-fresh-produce-display.webp</image:loc>
+      <image:title>FarmCube Nano | Compact Indoor Grow Cabinet for Hospitality</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/farmcube-ultra/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-ultra/farmcube-ultra-aeroponic-research-chamber.webp</image:loc>
+      <image:title>FarmCube Ultra | Aeroponic Research Chamber &amp; Crop Trial System</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/farmcube-neo/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-neo/farmcube-neo-5t-built-in-smart-farm-cabinet-kitchen-hero.webp</image:loc>
+      <image:title>FarmCube Neo | 2-Tier &amp; 5-Tier Microgreens Cabinet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/pegma-germin/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/pegma-germin/pegma-germin-led-germination-rack-leafy-greens-hero.webp</image:loc>
+      <image:title>Pegma Germin | Aeroponic Propagation Rack &amp; Seedling System</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/products/pegma-omni/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/pegma-omni/pegma-omni-smart-vertical-growing-system-hero.webp</image:loc>
+      <image:title>Pegma Omni-4 | Professional Aeroponic Grow Kit for Tall Plants</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/roi-calculator/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/og-images/home.jpg</image:loc>
+      <image:title>Indoor Farming ROI Calculator | CAPEX, OPEX, Payback &amp; 5-Year Profit</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.growspecbio.com/about/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.growspecbio.com/contact/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+</urlset>
