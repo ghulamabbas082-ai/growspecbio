@@ -1,0 +1,23 @@
+{
+  "version": "M30 No Images Patch",
+  "base_version": "M29 Clean Used Images",
+  "purpose": "Small patch after M29 upload. Fixes visible escaped marker and cache busts CSS/JS. No image folder upload needed.",
+  "upload_note": "Upload only the files/folders inside this patch ZIP. Do not upload /images again.",
+  "audit": {
+    "html_pages": 12,
+    "visible_escaped_marker_files": [],
+    "hidden_marker_pages_count": 12,
+    "missing_local_references": [],
+    "missing_image_alt": [],
+    "h1_issues": {},
+    "seo_issues": {},
+    "whatsapp_visible_pages_count": 12,
+    "scroll_fix_pages": [
+      "about/index.html",
+      "contact/index.html"
+    ],
+    "js_syntax": {
+      "assets/js/growspec-premium-v11.js": "ok"
+    }
+  }
+}

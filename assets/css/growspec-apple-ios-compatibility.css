@@ -1,0 +1,220 @@
+/* =========================================================
+   GROWSPEC Bio — Apple / iOS / Safari Compatibility Layer
+   Final pass: viewport safe areas, touch behavior, Safari rendering,
+   mobile crop protection, and reduced heavy hover effects on touch devices.
+   ========================================================= */
+
+:root {
+  --gs-safe-top: env(safe-area-inset-top, 0px);
+  --gs-safe-right: env(safe-area-inset-right, 0px);
+  --gs-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --gs-safe-left: env(safe-area-inset-left, 0px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(72px + var(--gs-safe-top));
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+}
+
+a,
+button,
+summary,
+input,
+select,
+textarea,
+[role="button"] {
+  -webkit-tap-highlight-color: rgba(212, 165, 116, 0.16);
+  touch-action: manipulation;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px !important; /* prevents iPhone Safari input zoom */
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.pnav,
+.nav,
+.mobile-menu,
+.pfoot,
+.footer,
+.cta-band,
+.cta-bar {
+  padding-left: max(1.25rem, var(--gs-safe-left));
+  padding-right: max(1.25rem, var(--gs-safe-right));
+}
+
+.pnav,
+.nav {
+  padding-top: var(--gs-safe-top);
+  height: calc(72px + var(--gs-safe-top));
+}
+
+.mobile-menu {
+  padding-top: max(2rem, var(--gs-safe-top));
+  padding-bottom: max(2rem, var(--gs-safe-bottom));
+}
+
+.pfoot,
+.footer {
+  padding-bottom: max(2rem, var(--gs-safe-bottom));
+}
+
+/* Better iOS rendering for dark/glass UI */
+.pnav,
+.nav,
+.prod-menu,
+.mobile-menu,
+.glass-2,
+.sec-img-banner-text,
+.gs-img-caption {
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+
+/* Avoid fixed-background jank on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  html body {
+    background-attachment: scroll !important;
+  }
+
+  .phero,
+  .hero {
+    min-height: 68svh;
+  }
+
+  #webgl-hero,
+  canvas {
+    transform: translateZ(0);
+  }
+
+  .sec-img-banner,
+  .img-banner,
+  .img-split-img,
+  .img-split-side,
+  .gs-img-frame {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+/* Touch devices should not rely on desktop hover/tilt behavior */
+@media (hover: none) and (pointer: coarse) {
+  .tilt-card,
+  .magnetic,
+  .spotlight,
+  .parallax,
+  .float-anim {
+    transform: none !important;
+  }
+
+  .tilt-card:hover,
+  .gal-cell.tilt-card:hover,
+  .img-gallery-item.tilt-card:hover,
+  .img-3col-item.tilt-card:hover,
+  .img-2col-item.tilt-card:hover {
+    transform: none !important;
+  }
+
+  .spotlight::after,
+  .shimmer::after {
+    display: none !important;
+  }
+
+  .gs-img-frame:hover img,
+  .crop-card:hover img,
+  .img-3col-item:hover img,
+  .img-2col-item:hover img,
+  .img-gallery-item:hover img,
+  .intro-split:hover img,
+  .img-split:hover img,
+  .img-split-row:hover img {
+    transform: none !important;
+  }
+}
+
+/* Mobile image protection */
+@media (max-width: 768px) {
+  .phero-inner,
+  .hero-inner,
+  section,
+  .wrap {
+    max-width: 100%;
+  }
+
+  .gs-ratio-hero,
+  .gs-ratio-banner,
+  .gs-ratio-wide,
+  .sec-img-banner,
+  .img-banner {
+    aspect-ratio: 4 / 3;
+    min-height: 240px;
+  }
+
+  .img-split-side,
+  .intro-split-img,
+  .img-split-img {
+    min-height: 220px;
+  }
+
+  .sec-img-banner-overlay,
+  .img-banner-overlay {
+    padding-left: max(1.25rem, var(--gs-safe-left)) !important;
+    padding-right: max(1.25rem, var(--gs-safe-right)) !important;
+  }
+
+  .phero-btns,
+  .cta-btns,
+  .pc-footer {
+    gap: .75rem;
+  }
+
+  .btn-g,
+  .btn-ghost,
+  .nav-btn,
+  .mobile-cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
