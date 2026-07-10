@@ -1,0 +1,56 @@
+{
+  "version": "M32 Final QA No Images Patch",
+  "base_version": "M29 Clean Used Images + contact/mobile/iOS QA fixes",
+  "purpose": "Final QA pass for mobile view, text presentation, iOS/Safari safeguards, contact layout, nav, links, SEO basics and upload convenience.",
+  "upload_note": "No /images folder is included. Upload this patch only after M29 images are already uploaded.",
+  "what_was_checked": [
+    "Homepage/product/about/contact HTML structure",
+    "Mobile navigation behavior and menu height",
+    "Contact card padding and text hierarchy",
+    "About card padding",
+    "iOS Safari viewport, safe-area, tap highlight and scroll behavior",
+    "About/Contact mouse-wheel scroll fallback",
+    "CSS/JS cache-busting v=m32",
+    "Local links and referenced files",
+    "Image ALT text",
+    "H1 count",
+    "SEO title/meta/canonical presence",
+    "WhatsApp visibility",
+    "JS syntax"
+  ],
+  "fixes_added": [
+    "Contact page logo brand panel",
+    "Contact card inner padding and spacing",
+    "About page card padding consistency",
+    "Mobile nav and iPhone safe-area CSS",
+    "iOS/Safari viewport-fit and text-size safeguards",
+    "About/Contact scroll stability CSS and JS",
+    "CSS/JS cache version v=m32"
+  ],
+  "audit": {
+    "html_pages": 12,
+    "nav_ok_pages_count": 10,
+    "h1_ok_pages_count": 12,
+    "contact_brand_panel_present": true,
+    "contact_card_pad_count": 3,
+    "about_card_pad_count": 3,
+    "scroll_fix_pages": [
+      "about/index.html",
+      "contact/index.html"
+    ],
+    "visible_escaped_marker_files": [],
+    "missing_local_references": [],
+    "missing_image_alt": [],
+    "non_webp_files_under_images": [],
+    "repeated_non_logo_images": {},
+    "h1_issues": {},
+    "seo_issues": {},
+    "css_version_bad": [],
+    "whatsapp_visible_pages_count": 12,
+    "marker_pages_count": 12,
+    "long_text_warnings": [],
+    "js_syntax": {
+      "assets/js/growspec-premium-v11.js": "ok"
+    }
+  }
+}
