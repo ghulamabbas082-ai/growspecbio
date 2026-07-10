@@ -1,0 +1,27 @@
+# GROWSPEC Bio
+
+GROWSPEC Bio designs and manufactures AI-ready vertical farming systems, aeroponic container farms, modular controlled environment agriculture rooms, compact grow cabinets, propagation racks and aeroponic specialty crop systems.
+
+## Primary capabilities
+- Controlled environment agriculture (CEA) system design
+- Aeroponic vertical farming hardware
+- Turnkey container farm systems
+- Modular indoor farm rooms
+- LED grow lighting, fertigation, climate control and SaaS/IoT monitoring
+- ROI planning for commercial indoor farming projects
+
+## Product pages
+- BioCube Container: https://www.growspecbio.com/products/biocube-container/ — turnkey controlled environment container farm for leafy greens, microgreens, strawberries and crop-specific production.
+- BioCube Modular: https://www.growspecbio.com/products/biocube-modular/ — scalable modular indoor farm architecture for commercial crop rooms.
+- FarmCube Nano: https://www.growspecbio.com/products/farmcube-nano/ — compact indoor grow cabinet for hospitality, restaurants and fresh produce display.
+- FarmCube Ultra: https://www.growspecbio.com/products/farmcube-ultra/ — aeroponic research chamber for crop trials, education and biotech research.
+- FarmCube Neo: https://www.growspecbio.com/products/farmcube-neo/ — 2-tier and 5-tier microgreens cabinet for restaurants, hotels and retail environments.
+- Pegma Germin: https://www.growspecbio.com/products/pegma-germin/ — aeroponic propagation rack for seedling, germination and early-stage crop production.
+- Pegma Omni-4: https://www.growspecbio.com/products/pegma-omni/ — professional aeroponic grow kit for tall plants, specialty crop trials and controlled cultivation.
+- ROI Calculator: https://www.growspecbio.com/roi-calculator/ — indoor farming ROI calculator for CAPEX, OPEX, revenue, payback and profit planning.
+
+## Contact
+abbas@growspecbio.com
+
+- About: https://www.growspecbio.com/about/
+- Contact: https://www.growspecbio.com/contact/
