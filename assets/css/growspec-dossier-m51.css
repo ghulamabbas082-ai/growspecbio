@@ -1,0 +1,562 @@
+
+/* ================================================================
+   M51 — PREMIUM TECHNICAL DOSSIER PRESENTATION
+   Keeps the M50 layout and data; reorganises technical information.
+   ================================================================ */
+
+body.nexus-m51 .m48-dossier-section{
+  padding:104px 0 118px;
+}
+
+body.nexus-m51 .m51-dossier-header{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(300px,.48fr);
+  gap:clamp(38px,6vw,88px);
+  align-items:end;
+  margin-bottom:34px;
+}
+
+body.nexus-m51 .m51-dossier-header .m48-dossier-eyebrow{
+  color:#9fd1ff;
+}
+
+body.nexus-m51 .m51-dossier-header h2{
+  max-width:880px;
+  margin:16px 0 18px;
+  color:#fff!important;
+  font-size:clamp(42px,5vw,68px);
+  font-weight:650;
+  line-height:1.01;
+  letter-spacing:-.052em;
+  text-wrap:balance;
+}
+
+body.nexus-m51 .m51-dossier-header>div>p{
+  max-width:780px;
+  margin:0;
+  color:rgba(255,255,255,.8)!important;
+  font-size:16px;
+  line-height:1.75;
+}
+
+body.nexus-m51 .m51-engineering-note{
+  padding:22px 24px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  box-shadow:0 18px 50px rgba(0,0,0,.12);
+  backdrop-filter:blur(16px);
+}
+
+body.nexus-m51 .m51-engineering-note span{
+  display:block;
+  color:#9ed0ff;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+body.nexus-m51 .m51-engineering-note p{
+  margin:9px 0 0;
+  color:rgba(255,255,255,.76)!important;
+  font-size:13px;
+  line-height:1.65;
+}
+
+body.nexus-m51 .m51-dashboard{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:28px;
+}
+
+body.nexus-m51 .m51-dashboard .m48-key-card{
+  min-height:112px;
+  padding:18px;
+  border-color:rgba(255,255,255,.17);
+  background:rgba(255,255,255,.09);
+  box-shadow:none;
+}
+
+body.nexus-m51 .m51-dashboard .m48-key-card span{
+  color:#a9d6fb;
+  font-size:8px;
+  letter-spacing:.11em;
+  line-height:1.45;
+}
+
+body.nexus-m51 .m51-dashboard .m48-key-card strong{
+  margin-top:10px;
+  color:#fff!important;
+  font-size:clamp(16px,1.45vw,22px);
+  line-height:1.18;
+}
+
+body.nexus-m51 .m51-dossier-shell{
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:26px;
+  background:#f5f9fc;
+  box-shadow:0 34px 90px rgba(0,0,0,.2);
+}
+
+body.nexus-m51 .m51-tabs{
+  position:sticky;
+  top:74px;
+  z-index:12;
+  display:flex;
+  gap:6px;
+  max-width:100%;
+  padding:12px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  border-bottom:1px solid #d8e5ef;
+  background:rgba(248,251,253,.96);
+  backdrop-filter:blur(18px);
+}
+
+body.nexus-m51 .m51-tabs::-webkit-scrollbar{
+  display:none;
+}
+
+body.nexus-m51 .m51-tab{
+  flex:0 0 auto;
+  min-height:45px;
+  padding:0 17px;
+  border:1px solid transparent;
+  border-radius:12px;
+  background:transparent;
+  color:#526d85;
+  font:800 11px/1 "Manrope",sans-serif;
+  letter-spacing:.015em;
+  cursor:pointer;
+  transition:.22s ease;
+}
+
+body.nexus-m51 .m51-tab:hover{
+  color:#0d3357;
+  background:#eaf3f9;
+}
+
+body.nexus-m51 .m51-tab[aria-selected="true"]{
+  color:#fff!important;
+  border-color:#164f86!important;
+  background:linear-gradient(135deg,#0b2c4c,#1765a9)!important;
+  box-shadow:0 10px 26px rgba(17,85,142,.22);
+}
+
+body.nexus-m51 .m51-tab:focus-visible{
+  outline:3px solid rgba(135,178,217,.55);
+  outline-offset:2px;
+}
+
+body.nexus-m51 .m51-panel{
+  display:none;
+  min-height:360px;
+  padding:clamp(28px,4vw,50px);
+}
+
+body.nexus-m51 .m51-panel.is-active{
+  display:block;
+  animation:m51PanelIn .35s ease both;
+}
+
+@keyframes m51PanelIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:none}
+}
+
+body.nexus-m51 .m51-panel-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:32px;
+  align-items:end;
+  margin-bottom:28px;
+  padding-bottom:24px;
+  border-bottom:1px solid #d7e4ed;
+}
+
+body.nexus-m51 .m51-panel-intro>div:first-child{
+  max-width:780px;
+}
+
+body.nexus-m51 .m51-panel-intro>div:first-child>span{
+  color:#1765a9;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+body.nexus-m51 .m51-panel-intro h3{
+  margin:8px 0 9px;
+  color:#071d36!important;
+  font-size:clamp(27px,3vw,40px);
+  line-height:1.06;
+}
+
+body.nexus-m51 .m51-panel-intro p{
+  margin:0;
+  color:#526c84!important;
+  font-size:14px;
+  line-height:1.7;
+}
+
+body.nexus-m51 .m51-panel-count{
+  min-width:104px;
+  padding:14px 17px;
+  border:1px solid #d5e3ed;
+  border-radius:15px;
+  background:#fff;
+  text-align:center;
+}
+
+body.nexus-m51 .m51-panel-count strong{
+  display:block;
+  color:#0a3155!important;
+  font-size:25px;
+  line-height:1;
+}
+
+body.nexus-m51 .m51-panel-count span{
+  display:block;
+  margin-top:5px;
+  color:#667f95;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+body.nexus-m51 .m51-brief-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+body.nexus-m51 .m51-brief-card{
+  position:relative;
+  min-height:210px;
+  padding:24px;
+  overflow:hidden;
+  border:1px solid #d7e4ed;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 16px 40px rgba(9,39,67,.07);
+}
+
+body.nexus-m51 .m51-brief-card::after{
+  content:"";
+  position:absolute;
+  right:-44px;
+  bottom:-52px;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(135,178,217,.24),transparent 68%);
+}
+
+body.nexus-m51 .m51-brief-number{
+  color:#1765a9;
+  font:850 9px/1 "Manrope",sans-serif;
+  letter-spacing:.14em;
+}
+
+body.nexus-m51 .m51-brief-card h3{
+  margin:28px 0 11px;
+  color:#071d36!important;
+  font-size:20px;
+}
+
+body.nexus-m51 .m51-brief-card p{
+  position:relative;
+  z-index:1;
+  margin:0;
+  color:#4d687f!important;
+  font-size:13px;
+  line-height:1.68;
+}
+
+body.nexus-m51 .m51-spec-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  align-items:start;
+}
+
+body.nexus-m51 .m51-spec-card{
+  min-width:0;
+  border:1px solid #d4e1eb;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 14px 38px rgba(8,38,66,.07);
+}
+
+body.nexus-m51 .m51-spec-card--wide{
+  grid-column:span 2;
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-card-head{
+  position:relative;
+  min-height:76px;
+  padding-right:110px;
+  background:linear-gradient(135deg,#fbfdff,#eef5fa);
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-card-head h3{
+  color:#071d36!important;
+  font-size:18px;
+}
+
+body.nexus-m51 .m51-param-count{
+  position:absolute;
+  top:50%;
+  right:18px;
+  transform:translateY(-50%);
+  color:#648097;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  padding:8px 20px 14px;
+}
+
+body.nexus-m51 .m51-spec-card:not(.m51-spec-card--wide) .m48-spec-list{
+  grid-template-columns:1fr;
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-row{
+  grid-template-columns:minmax(135px,.7fr) minmax(0,1.3fr);
+  min-height:52px;
+  padding:12px 0;
+}
+
+body.nexus-m51 .m51-spec-card--wide .m48-spec-row:nth-child(odd){
+  padding-right:20px;
+  border-right:1px solid #e3ecf3;
+}
+
+body.nexus-m51 .m51-spec-card--wide .m48-spec-row:nth-child(even){
+  padding-left:20px;
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-row dt{
+  color:#60798f!important;
+  font-size:10px;
+  font-weight:800;
+}
+
+body.nexus-m51 .m51-spec-card .m48-spec-row dd{
+  color:#102f4c!important;
+  font-size:12px;
+  font-weight:700;
+}
+
+body.nexus-m51 .m51-data-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+body.nexus-m51 .m51-data-drawer{
+  align-self:start;
+  overflow:hidden;
+  border:1px solid #d5e2ec!important;
+  border-radius:17px!important;
+  background:#fff!important;
+  box-shadow:0 14px 38px rgba(8,38,66,.07)!important;
+}
+
+body.nexus-m51 .m51-data-drawer summary{
+  min-height:92px!important;
+  padding:18px 20px!important;
+  background:#fff!important;
+}
+
+body.nexus-m51 .m51-data-drawer summary:hover{
+  background:#f2f7fb!important;
+}
+
+body.nexus-m51 .m51-data-drawer summary strong{
+  color:#071d36!important;
+  font-size:15px!important;
+  line-height:1.35!important;
+}
+
+body.nexus-m51 .m51-data-drawer .m49-data-category{
+  color:#1765a9!important;
+}
+
+body.nexus-m51 .m51-dataset-meta{
+  display:block;
+  margin-top:7px;
+  color:#70889b;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+body.nexus-m51 .m51-data-drawer .m49-drawer-icon{
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:#eaf3f9;
+  color:#0c4c83!important;
+  font-size:20px;
+}
+
+body.nexus-m51 .m51-data-drawer[open]{
+  grid-column:1 / -1;
+}
+
+body.nexus-m51 .m51-data-drawer[open] summary{
+  border-bottom:1px solid #d9e5ee;
+  background:#f2f7fb!important;
+}
+
+body.nexus-m51 .m51-data-drawer .m48-table-shell{
+  border-radius:0;
+}
+
+body.nexus-m51 .m51-data-drawer .m48-data-table th{
+  position:sticky;
+  top:0;
+  z-index:1;
+  background:#092c4d;
+}
+
+body.nexus-m51 .m51-empty-note{
+  padding:26px;
+  border:1px dashed #bfd2e1;
+  border-radius:16px;
+  color:#587188;
+  background:#fff;
+  text-align:center;
+}
+
+@media(max-width:1180px){
+  body.nexus-m51 .m51-dashboard{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:900px){
+  body.nexus-m51 .m51-dossier-header{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+
+  body.nexus-m51 .m51-engineering-note{
+    max-width:720px;
+  }
+
+  body.nexus-m51 .m51-brief-grid,
+  body.nexus-m51 .m51-data-grid{
+    grid-template-columns:1fr;
+  }
+
+  body.nexus-m51 .m51-spec-card--wide{
+    grid-column:auto;
+  }
+
+  body.nexus-m51 .m51-spec-card .m48-spec-list{
+    grid-template-columns:1fr;
+  }
+
+  body.nexus-m51 .m51-spec-card--wide .m48-spec-row:nth-child(odd),
+  body.nexus-m51 .m51-spec-card--wide .m48-spec-row:nth-child(even){
+    padding-left:0;
+    padding-right:0;
+    border-right:0;
+  }
+
+  body.nexus-m51 .m51-data-drawer[open]{
+    grid-column:auto;
+  }
+}
+
+@media(max-width:680px){
+  body.nexus-m51 .m48-dossier-section{
+    padding:74px 0 86px;
+  }
+
+  body.nexus-m51 .m51-dossier-header h2{
+    font-size:clamp(34px,10vw,46px);
+  }
+
+  body.nexus-m51 .m51-dashboard{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  body.nexus-m51 .m51-dashboard .m48-key-card{
+    min-height:104px;
+  }
+
+  body.nexus-m51 .m51-dossier-shell{
+    margin-inline:-8px;
+    border-radius:20px;
+  }
+
+  body.nexus-m51 .m51-tabs{
+    top:64px;
+    padding:9px;
+  }
+
+  body.nexus-m51 .m51-tab{
+    min-height:42px;
+    padding:0 14px;
+    font-size:10px;
+  }
+
+  body.nexus-m51 .m51-panel{
+    padding:26px 18px 32px;
+  }
+
+  body.nexus-m51 .m51-panel-intro{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  body.nexus-m51 .m51-panel-count{
+    width:max-content;
+    min-width:96px;
+  }
+
+  body.nexus-m51 .m51-spec-grid{
+    grid-template-columns:1fr;
+  }
+
+  body.nexus-m51 .m51-spec-card .m48-spec-card-head{
+    padding-right:88px;
+  }
+
+  body.nexus-m51 .m51-param-count{
+    right:14px;
+    font-size:7px;
+  }
+
+  body.nexus-m51 .m51-spec-card .m48-spec-row{
+    grid-template-columns:1fr;
+    gap:4px;
+  }
+
+  body.nexus-m51 .m51-spec-card .m48-spec-row dt{
+    color:#1765a9!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.nexus-m51 .m51-panel.is-active{
+    animation:none;
+  }
+}
