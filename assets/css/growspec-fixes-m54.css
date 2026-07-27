@@ -1,0 +1,466 @@
+
+/* ==========================================================================
+   M54 — NEO OVERLAY, ULTRA IMAGE & CONTACT ENQUIRY FORM
+   Loaded after all previous website stylesheets.
+   ========================================================================== */
+
+/* FarmCube Neo: explicit white text on dark image-overlay panels. */
+body.nexus-m54.neo-page .neo-application-card{
+  background:#071d36!important;
+}
+
+body.nexus-m54.neo-page .neo-application-card::after{
+  content:"";
+  position:absolute;
+  inset:36% 0 0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(3,14,25,0) 0%,
+    rgba(3,14,25,.42) 35%,
+    rgba(3,14,25,.90) 100%
+  );
+}
+
+body.nexus-m54.neo-page .neo-application-copy.apex-mosaic-caption{
+  position:absolute!important;
+  z-index:2!important;
+  left:18px!important;
+  right:18px!important;
+  bottom:18px!important;
+  padding:20px 22px!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  border-radius:18px!important;
+  background:rgba(4,22,39,.84)!important;
+  box-shadow:0 18px 44px rgba(0,0,0,.25)!important;
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption h3,
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption p,
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption span,
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption strong{
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  opacity:1!important;
+  text-shadow:0 2px 14px rgba(0,0,0,.74)!important;
+}
+
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption h3{
+  margin:0 0 8px!important;
+  font-size:clamp(21px,2.1vw,29px)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+}
+
+body.product-page.neo-page.nexus-m52.nexus-m53.nexus-m54 main .section .wrap .neo-application-card .neo-application-copy.apex-mosaic-caption p{
+  margin:0!important;
+  color:#e1edf6!important;
+  -webkit-text-fill-color:#e1edf6!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  line-height:1.55!important;
+}
+
+/* FarmCube Ultra: every gallery image must occupy a real, stable frame. */
+body.product-page.page-farmcube-ultra.nexus-m54 .cards-grid .apex-mosaic-item{
+  min-height:430px!important;
+  background:#071d36!important;
+}
+
+body.product-page.page-farmcube-ultra.nexus-m54 .cards-grid .apex-mosaic-image{
+  display:block!important;
+  width:100%!important;
+  height:310px!important;
+  min-height:310px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  background:#dce8f1!important;
+}
+
+body.product-page.page-farmcube-ultra.nexus-m54 .cards-grid .apex-mosaic-caption{
+  min-height:118px!important;
+  background:#ffffff!important;
+}
+
+body.product-page.page-farmcube-ultra.nexus-m54 .cards-grid .apex-mosaic-caption h3{
+  color:#061d36!important;
+  -webkit-text-fill-color:#061d36!important;
+}
+
+body.product-page.page-farmcube-ultra.nexus-m54 .cards-grid .apex-mosaic-caption p{
+  color:#49657d!important;
+  -webkit-text-fill-color:#49657d!important;
+}
+
+/* Contact enquiry section */
+body.nexus-m54 .m54-enquiry-section{
+  position:relative;
+  padding:104px 0;
+  overflow:hidden;
+  color:#061d36;
+  background:
+    radial-gradient(circle at 90% 12%,rgba(33,96,166,.14),transparent 26%),
+    linear-gradient(180deg,#f8fbfd,#edf5fa);
+}
+
+body.nexus-m54 .m54-enquiry-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.48;
+  background-image:
+    linear-gradient(rgba(21,95,166,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,95,166,.055) 1px,transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 92%);
+  mask-image:linear-gradient(180deg,#000,transparent 92%);
+}
+
+body.nexus-m54 .m54-enquiry-wrap{
+  position:relative;
+  z-index:1;
+}
+
+body.nexus-m54 .m54-enquiry-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(310px,.52fr);
+  gap:clamp(34px,6vw,84px);
+  align-items:end;
+  margin-bottom:34px;
+}
+
+body.nexus-m54 .m54-enquiry-head .apex-kicker{
+  color:#155fa6!important;
+  -webkit-text-fill-color:#155fa6!important;
+}
+
+body.nexus-m54 .m54-enquiry-head h2{
+  max-width:820px;
+  margin:12px 0 16px;
+  color:#061d36!important;
+  -webkit-text-fill-color:#061d36!important;
+  font-size:clamp(40px,4.8vw,66px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+  text-wrap:balance;
+}
+
+body.nexus-m54 .m54-enquiry-head p{
+  max-width:770px;
+  margin:0;
+  color:#47647d!important;
+  -webkit-text-fill-color:#47647d!important;
+  font-size:16px;
+  line-height:1.75;
+}
+
+body.nexus-m54 .m54-form-assurance{
+  padding:21px 23px;
+  border:1px solid #cfdeea;
+  border-radius:17px;
+  background:rgba(255,255,255,.78);
+  box-shadow:0 16px 42px rgba(7,29,54,.08);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+}
+
+body.nexus-m54 .m54-form-assurance span{
+  color:#155fa6!important;
+  -webkit-text-fill-color:#155fa6!important;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+body.nexus-m54 .m54-form-assurance p{
+  margin:9px 0 0;
+  color:#4b687f!important;
+  -webkit-text-fill-color:#4b687f!important;
+  font-size:13px;
+  line-height:1.65;
+}
+
+body.nexus-m54 .m54-enquiry-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(280px,.52fr);
+  gap:22px;
+  align-items:start;
+}
+
+body.nexus-m54 .m54-enquiry-form{
+  padding:clamp(24px,4vw,42px);
+  border:1px solid #ccdde9;
+  border-radius:24px;
+  background:#ffffff;
+  box-shadow:0 28px 74px rgba(7,29,54,.11);
+}
+
+body.nexus-m54 .m54-form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+body.nexus-m54 .m54-field{
+  min-width:0;
+}
+
+body.nexus-m54 .m54-field--full{
+  grid-column:1 / -1;
+}
+
+body.nexus-m54 .m54-field label{
+  display:block;
+  margin:0 0 7px;
+  color:#0b2c4a!important;
+  -webkit-text-fill-color:#0b2c4a!important;
+  font-size:11px;
+  font-weight:800;
+  line-height:1.35;
+}
+
+body.nexus-m54 .m54-field label span{
+  color:#b9256d!important;
+  -webkit-text-fill-color:#b9256d!important;
+}
+
+body.nexus-m54 .m54-field input,
+body.nexus-m54 .m54-field select,
+body.nexus-m54 .m54-field textarea{
+  width:100%;
+  min-height:52px;
+  padding:13px 14px;
+  border:1px solid #c8d9e6!important;
+  border-radius:12px!important;
+  color:#061d36!important;
+  -webkit-text-fill-color:#061d36!important;
+  background:#f9fcfe!important;
+  font:600 14px/1.45 "Manrope",sans-serif;
+  outline:none;
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+
+body.nexus-m54 .m54-field textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+body.nexus-m54 .m54-field input:focus,
+body.nexus-m54 .m54-field select:focus,
+body.nexus-m54 .m54-field textarea:focus{
+  border-color:#2b78b9!important;
+  background:#ffffff!important;
+  box-shadow:0 0 0 4px rgba(43,120,185,.13);
+}
+
+body.nexus-m54 .m54-field input::placeholder,
+body.nexus-m54 .m54-field textarea::placeholder{
+  color:#7890a4!important;
+  -webkit-text-fill-color:#7890a4!important;
+  opacity:1!important;
+}
+
+body.nexus-m54 .m54-consent{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:18px;
+}
+
+body.nexus-m54 .m54-consent input{
+  flex:0 0 auto;
+  width:17px!important;
+  height:17px!important;
+  margin-top:3px;
+  accent-color:#155fa6;
+}
+
+body.nexus-m54 .m54-consent label{
+  color:#506d84!important;
+  -webkit-text-fill-color:#506d84!important;
+  font-size:12px;
+  line-height:1.6;
+}
+
+body.nexus-m54 .m54-form-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+  margin-top:22px;
+}
+
+body.nexus-m54 .m54-submit{
+  min-height:50px;
+  padding:0 22px;
+  border:1px solid #155fa6;
+  border-radius:12px;
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  background:linear-gradient(135deg,#0b3156,#1768aa);
+  font:800 12px/1 "Manrope",sans-serif;
+  cursor:pointer;
+  box-shadow:0 12px 26px rgba(21,95,166,.22);
+}
+
+body.nexus-m54 .m54-copy{
+  min-height:50px;
+  padding:0 18px;
+  border:1px solid #c6d8e5;
+  border-radius:12px;
+  color:#0b3156!important;
+  -webkit-text-fill-color:#0b3156!important;
+  background:#ffffff;
+  font:800 12px/1 "Manrope",sans-serif;
+  cursor:pointer;
+}
+
+body.nexus-m54 .m54-form-note,
+body.nexus-m54 .m54-form-status{
+  color:#607a90!important;
+  -webkit-text-fill-color:#607a90!important;
+  font-size:11px;
+  line-height:1.55;
+}
+
+body.nexus-m54 .m54-form-status{
+  width:100%;
+  min-height:18px;
+  margin:2px 0 0;
+  color:#155fa6!important;
+  -webkit-text-fill-color:#155fa6!important;
+  font-weight:700;
+}
+
+body.nexus-m54 .m54-enquiry-sidebar{
+  display:grid;
+  gap:14px;
+}
+
+body.nexus-m54 .m54-sidebar-card{
+  padding:22px;
+  border:1px solid #cddde9;
+  border-radius:18px;
+  background:#ffffff;
+  box-shadow:0 16px 42px rgba(7,29,54,.075);
+}
+
+body.nexus-m54 .m54-sidebar-card span{
+  color:#155fa6!important;
+  -webkit-text-fill-color:#155fa6!important;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+body.nexus-m54 .m54-sidebar-card h3{
+  margin:10px 0 8px;
+  color:#061d36!important;
+  -webkit-text-fill-color:#061d36!important;
+  font-size:19px;
+}
+
+body.nexus-m54 .m54-sidebar-card p,
+body.nexus-m54 .m54-sidebar-card li{
+  color:#506c83!important;
+  -webkit-text-fill-color:#506c83!important;
+  font-size:12px;
+  line-height:1.65;
+}
+
+body.nexus-m54 .m54-sidebar-card ul{
+  margin:10px 0 0;
+  padding-left:18px;
+}
+
+body.nexus-m54 .m54-sidebar-card a{
+  color:#155fa6!important;
+  -webkit-text-fill-color:#155fa6!important;
+  font-weight:800;
+}
+
+body.nexus-m54 .m54-honeypot{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  overflow:hidden!important;
+}
+
+@media(max-width:940px){
+  body.nexus-m54 .m54-enquiry-head,
+  body.nexus-m54 .m54-enquiry-grid{
+    grid-template-columns:1fr;
+  }
+
+  body.nexus-m54 .m54-form-assurance{
+    max-width:720px;
+  }
+
+  body.nexus-m54 .m54-enquiry-sidebar{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:680px){
+  body.nexus-m54 .m54-enquiry-section{
+    padding:72px 0;
+  }
+
+  body.nexus-m54 .m54-enquiry-head h2{
+    font-size:clamp(35px,10vw,48px);
+  }
+
+  body.nexus-m54 .m54-form-grid,
+  body.nexus-m54 .m54-enquiry-sidebar{
+    grid-template-columns:1fr;
+  }
+
+  body.nexus-m54 .m54-enquiry-form{
+    padding:22px 18px;
+    border-radius:18px;
+  }
+
+  body.nexus-m54 .m54-form-actions{
+    align-items:stretch;
+  }
+
+  body.nexus-m54 .m54-submit,
+  body.nexus-m54 .m54-copy{
+    width:100%;
+  }
+
+  body.nexus-m54.neo-page .neo-application-copy.apex-mosaic-caption{
+    left:12px!important;
+    right:12px!important;
+    bottom:12px!important;
+    padding:17px 18px!important;
+  }
+}
+
+/* M56 cache-safe FarmCube Neo fallback */
+.neo-page #applications .neo-application-copy h3{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-shadow:0 2px 14px rgba(0,0,0,.78)!important;
+}
+.neo-page #applications .neo-application-copy p{
+  color:#e5f0f7!important;
+  -webkit-text-fill-color:#e5f0f7!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.72)!important;
+}
+.neo-page #applications .neo-application-copy{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  background:rgba(3,21,38,.90)!important;
+}
