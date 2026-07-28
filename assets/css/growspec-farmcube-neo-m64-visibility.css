@@ -1,0 +1,178 @@
+/* GROWSPEC M64 — FarmCube Neo text visibility and contrast correction
+   Loaded after all shared and M62 styles to prevent legacy heading/card rules
+   from reducing contrast on dark sections and application-image captions. */
+
+html body.neo-page.neo62-page{
+  --neo64-white:#ffffff;
+  --neo64-soft-white:#e8f2f9;
+  --neo64-muted-white:#bdd0df;
+  --neo64-card:#102b49;
+  --neo64-card-border:rgba(154,201,235,.30);
+}
+
+/* Dark-section headings and supporting copy */
+html body.neo-page.neo62-page #output-cost .neo62-heading h2,
+html body.neo-page.neo62-page #installation .neo62-heading h2{
+  color:var(--neo64-white)!important;
+  -webkit-text-fill-color:var(--neo64-white)!important;
+  opacity:1!important;
+  text-shadow:0 2px 22px rgba(0,0,0,.24)!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-heading p,
+html body.neo-page.neo62-page #installation .neo62-heading p{
+  color:var(--neo64-soft-white)!important;
+  -webkit-text-fill-color:var(--neo64-soft-white)!important;
+  opacity:1!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-heading span,
+html body.neo-page.neo62-page #installation .neo62-heading span{
+  color:#ff4c9a!important;
+  -webkit-text-fill-color:#ff4c9a!important;
+  opacity:1!important;
+}
+
+/* Output and operating-input cards */
+html body.neo-page.neo62-page #output-cost .neo62-output-card,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card{
+  color:var(--neo64-white)!important;
+  background:linear-gradient(180deg,rgba(27,58,91,.96),rgba(14,43,73,.96))!important;
+  border-color:var(--neo64-card-border)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 16px 40px rgba(0,0,0,.12)!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-output-card>span,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card>span{
+  color:#9fd4fa!important;
+  -webkit-text-fill-color:#9fd4fa!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-output-card h3,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card h3,
+html body.neo-page.neo62-page #output-cost .neo62-output-card>strong,
+html body.neo-page.neo62-page #output-cost .neo62-output-card dd,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card li b,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card a{
+  color:var(--neo64-white)!important;
+  -webkit-text-fill-color:var(--neo64-white)!important;
+  opacity:1!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-output-card>em,
+html body.neo-page.neo62-page #output-cost .neo62-output-card dt,
+html body.neo-page.neo62-page #output-cost .neo62-cost-card li{
+  color:#d3e2ed!important;
+  -webkit-text-fill-color:#d3e2ed!important;
+  opacity:1!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-cost-card a{
+  text-decoration-color:rgba(255,255,255,.56)!important;
+}
+
+html body.neo-page.neo62-page #output-cost .neo62-note{
+  color:#b8cad9!important;
+  -webkit-text-fill-color:#b8cad9!important;
+  opacity:1!important;
+}
+
+/* Installation and maintenance cards */
+html body.neo-page.neo62-page #installation .neo62-install-grid article{
+  color:var(--neo64-white)!important;
+  background:linear-gradient(180deg,rgba(28,60,94,.94),rgba(14,43,73,.96))!important;
+  border-color:var(--neo64-card-border)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 14px 36px rgba(0,0,0,.11)!important;
+}
+
+html body.neo-page.neo62-page #installation .neo62-install-grid h3{
+  color:var(--neo64-white)!important;
+  -webkit-text-fill-color:var(--neo64-white)!important;
+  opacity:1!important;
+}
+
+html body.neo-page.neo62-page #installation .neo62-install-grid p{
+  color:#d5e3ed!important;
+  -webkit-text-fill-color:#d5e3ed!important;
+  opacity:1!important;
+}
+
+html body.neo-page.neo62-page #installation .neo62-install-grid span{
+  color:#b8def9!important;
+  -webkit-text-fill-color:#b8def9!important;
+  background:rgba(135,178,217,.18)!important;
+  border:1px solid rgba(158,206,239,.18)!important;
+}
+
+html body.neo-page.neo62-page #installation .neo62-utility-strip b{
+  color:#bdd2e2!important;
+  -webkit-text-fill-color:#bdd2e2!important;
+}
+
+html body.neo-page.neo62-page #installation .neo62-utility-strip span{
+  color:var(--neo64-white)!important;
+  -webkit-text-fill-color:var(--neo64-white)!important;
+}
+
+/* Application image captions: readable over every image and while lazy images load */
+html body.neo-page.neo62-page #applications .neo62-application-grid article{
+  isolation:isolate!important;
+  background:#071d36!important;
+}
+
+html body.neo-page.neo62-page #applications .neo62-application-grid article img{
+  position:relative!important;
+  z-index:0!important;
+}
+
+html body.neo-page.neo62-page #applications .neo62-application-grid article::after{
+  z-index:1!important;
+  background:linear-gradient(180deg,rgba(3,19,36,.02) 26%,rgba(3,19,36,.44) 58%,rgba(3,19,36,.96) 100%)!important;
+}
+
+html body.neo-page.neo62-page #applications .neo62-application-grid article>div{
+  z-index:3!important;
+  left:16px!important;
+  right:16px!important;
+  bottom:16px!important;
+  padding:18px 20px!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+  border-radius:18px!important;
+  background:rgba(4,25,45,.88)!important;
+  box-shadow:0 16px 38px rgba(0,0,0,.28)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  backdrop-filter:blur(12px)!important;
+}
+
+html body.neo-page.neo62-page #applications .neo62-application-grid h3{
+  color:var(--neo64-white)!important;
+  -webkit-text-fill-color:var(--neo64-white)!important;
+  opacity:1!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.58)!important;
+}
+
+html body.neo-page.neo62-page #applications .neo62-application-grid p{
+  color:#e5f0f7!important;
+  -webkit-text-fill-color:#e5f0f7!important;
+  opacity:1!important;
+  text-shadow:0 2px 10px rgba(0,0,0,.48)!important;
+}
+
+/* Keep contrast stable in forced-colors and reduced-transparency contexts */
+@media (prefers-contrast:more){
+  html body.neo-page.neo62-page #output-cost .neo62-output-card,
+  html body.neo-page.neo62-page #output-cost .neo62-cost-card,
+  html body.neo-page.neo62-page #installation .neo62-install-grid article,
+  html body.neo-page.neo62-page #applications .neo62-application-grid article>div{
+    border-color:rgba(255,255,255,.48)!important;
+  }
+}
+
+@media(max-width:760px){
+  html body.neo-page.neo62-page #applications .neo62-application-grid article>div{
+    left:12px!important;
+    right:12px!important;
+    bottom:12px!important;
+    padding:16px!important;
+  }
+}

@@ -1,0 +1,479 @@
+/* GROWSPEC Bio — ROI Calculator visual unification M61
+   Scoped to the ROI page to prevent cross-page side effects. */
+
+body.roi-refined-m61{
+  --roi-ink:#071f3b;
+  --roi-copy:#405f7d;
+  --roi-muted:#6b8298;
+  --roi-line:rgba(12,69,117,.14);
+  --roi-blue:#2160a6;
+  --roi-blue-2:#16406f;
+  --roi-sky:#87b2d9;
+  --roi-magenta:#d5327f;
+  --roi-surface:#ffffff;
+  --roi-bg:#f4f9fd;
+  --roi-shadow:0 24px 70px rgba(13,51,86,.12);
+  background:
+    radial-gradient(circle at 12% 8%,rgba(135,178,217,.18),transparent 28rem),
+    linear-gradient(180deg,#f8fcff 0%,#eef7fd 54%,#ffffff 100%)!important;
+  color:var(--roi-ink)!important;
+  font-family:Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:optimizeLegibility!important;
+}
+body.roi-refined-m61::before,
+body.roi-refined-m61::after{display:none!important;content:none!important}
+body.roi-refined-m61 *{font-family:inherit}
+body.roi-refined-m61 h1,
+body.roi-refined-m61 h2,
+body.roi-refined-m61 h3,
+body.roi-refined-m61 h4,
+body.roi-refined-m61 .res-value,
+body.roi-refined-m61 [id^="metric"],
+body.roi-refined-m61 [id^="timeline"]{
+  font-family:Sora,Manrope,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+
+/* Remove the unstyled duplicate skip link. The shared Nexus skip link remains keyboard accessible. */
+body.roi-refined-m61 .apex-skip-link{display:none!important}
+
+/* Shared header: cancel legacy ROI rules that target every semantic <nav>. */
+body.roi-refined-m61 .nexus-header{
+  background:transparent!important;
+  border:0!important;
+  color:#fff!important;
+}
+body.roi-refined-m61 .nexus-header-inner{
+  background:#071b2b!important;
+  border:1px solid rgba(255,255,255,.09)!important;
+  box-shadow:0 20px 60px rgba(5,27,49,.17)!important;
+}
+body.roi-refined-m61 .nexus-nav{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  color:#fff!important;
+}
+body.roi-refined-m61 .nexus-nav a,
+body.roi-refined-m61 .nexus-launcher-open{
+  background:transparent!important;
+  border:0!important;
+  color:rgba(255,255,255,.72)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.72)!important;
+}
+body.roi-refined-m61 .nexus-nav a:hover,
+body.roi-refined-m61 .nexus-nav a[aria-current="page"],
+body.roi-refined-m61 .nexus-launcher-open:hover{
+  background:rgba(255,255,255,.08)!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+body.roi-refined-m61 .nexus-project{
+  color:#9a6327!important;
+  -webkit-text-fill-color:#9a6327!important;
+}
+
+/* Hero */
+body.roi-refined-m61 .nexus-hero{
+  background:
+    linear-gradient(rgba(33,96,166,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(33,96,166,.035) 1px,transparent 1px),
+    radial-gradient(circle at 82% 20%,rgba(135,178,217,.22),transparent 34rem),
+    #f5fbff!important;
+  background-size:68px 68px,68px 68px,auto,auto!important;
+}
+body.roi-refined-m61 .nexus-hero-copy h1{
+  color:var(--roi-ink)!important;
+  -webkit-text-fill-color:var(--roi-ink)!important;
+  letter-spacing:-.055em!important;
+}
+body.roi-refined-m61 .nexus-hero-copy p{
+  color:var(--roi-copy)!important;
+  -webkit-text-fill-color:var(--roi-copy)!important;
+  max-width:650px!important;
+}
+body.roi-refined-m61 .nexus-eyebrow{color:var(--roi-blue)!important}
+body.roi-refined-m61 .nexus-button-primary{
+  background:#071b2b!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border-color:#071b2b!important;
+  box-shadow:none!important;
+}
+body.roi-refined-m61 .nexus-button-primary:hover{background:var(--roi-blue)!important}
+body.roi-refined-m61 .nexus-button-ghost{
+  background:#fff!important;
+  color:var(--roi-ink)!important;
+  -webkit-text-fill-color:var(--roi-ink)!important;
+  border:1px solid rgba(33,96,166,.22)!important;
+}
+body.roi-refined-m61 .nexus-viewport{box-shadow:0 35px 90px rgba(7,31,59,.24)!important}
+body.roi-refined-m61 .nexus-metric-rail{
+  background:rgba(255,255,255,.82)!important;
+  border:1px solid var(--roi-line)!important;
+  box-shadow:0 18px 45px rgba(16,64,108,.08)!important;
+}
+body.roi-refined-m61 .nexus-metric span{color:var(--roi-blue)!important}
+body.roi-refined-m61 .nexus-metric strong{color:var(--roi-ink)!important}
+
+/* Page sections */
+body.roi-refined-m61 .apex-roi-section{
+  position:relative;
+  padding:clamp(72px,8vw,118px) clamp(20px,4vw,64px)!important;
+  background:transparent!important;
+  color:var(--roi-ink)!important;
+}
+body.roi-refined-m61 .apex-roi-section:nth-of-type(even){background:rgba(255,255,255,.42)!important}
+body.roi-refined-m61 .qa-wrap,
+body.roi-refined-m61 .calc-grid,
+body.roi-refined-m61 .wrap,
+body.roi-refined-m61 .faq-wrap{
+  width:min(1240px,100%)!important;
+  max-width:1240px!important;
+  margin-inline:auto!important;
+}
+body.roi-refined-m61 .qa-label,
+body.roi-refined-m61 .faq-label,
+body.roi-refined-m61 .sec-eyebrow{
+  color:var(--roi-blue)!important;
+  letter-spacing:.14em!important;
+  font-weight:800!important;
+}
+body.roi-refined-m61 .quick-answer h2,
+body.roi-refined-m61 .faq-wrap h2,
+body.roi-refined-m61 .apex-roi-section h2{
+  color:var(--roi-ink)!important;
+  -webkit-text-fill-color:var(--roi-ink)!important;
+  letter-spacing:-.035em!important;
+}
+body.roi-refined-m61 .sec-sub,
+body.roi-refined-m61 .apex-roi-section p,
+body.roi-refined-m61 .apex-roi-section li{
+  color:var(--roi-copy)!important;
+  -webkit-text-fill-color:var(--roi-copy)!important;
+}
+
+body.roi-refined-m61 .qa-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:22px!important;
+  margin-top:34px!important;
+}
+body.roi-refined-m61 .qa-card,
+body.roi-refined-m61 .faq-item,
+body.roi-refined-m61 .calc-card,
+body.roi-refined-m61 .feat-card,
+body.roi-refined-m61 .roi-gate-card{
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid var(--roi-line)!important;
+  border-radius:22px!important;
+  color:var(--roi-ink)!important;
+  box-shadow:0 18px 55px rgba(16,64,108,.085)!important;
+}
+body.roi-refined-m61 .qa-card,
+body.roi-refined-m61 .faq-item{padding:28px!important}
+body.roi-refined-m61 .qa-card h3,
+body.roi-refined-m61 .faq-item h3,
+body.roi-refined-m61 .calc-card h3,
+body.roi-refined-m61 .feat-title{color:var(--roi-ink)!important}
+body.roi-refined-m61 .qa-card ul{padding-left:1.15rem!important}
+
+/* Lead gate */
+body.roi-refined-m61 .roi-lead-gate{display:flex!important;justify-content:center!important}
+body.roi-refined-m61 .roi-gate-card{
+  width:min(900px,100%)!important;
+  max-width:900px!important;
+  padding:clamp(30px,5vw,58px)!important;
+}
+body.roi-refined-m61 .roi-gate-card h2{text-align:center!important;margin-bottom:14px!important}
+body.roi-refined-m61 .roi-gate-card>p{max-width:690px!important;margin-inline:auto!important}
+body.roi-refined-m61 .roi-lead-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+}
+body.roi-refined-m61 .roi-lead-field{margin-top:16px!important}
+body.roi-refined-m61 .roi-lead-field label,
+body.roi-refined-m61 .input-group label{
+  display:block!important;
+  margin-bottom:8px!important;
+  color:var(--roi-ink)!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  letter-spacing:.05em!important;
+}
+body.roi-refined-m61 .roi-lead-field input,
+body.roi-refined-m61 .roi-lead-field textarea,
+body.roi-refined-m61 .input-group input,
+body.roi-refined-m61 .input-group select{
+  width:100%!important;
+  min-height:50px!important;
+  border:1px solid rgba(33,96,166,.18)!important;
+  border-radius:12px!important;
+  background:#f8fbfe!important;
+  color:var(--roi-ink)!important;
+  -webkit-text-fill-color:var(--roi-ink)!important;
+  box-shadow:none!important;
+  outline:none!important;
+  font-size:15px!important;
+}
+body.roi-refined-m61 .roi-lead-field textarea{min-height:118px!important;resize:vertical!important}
+body.roi-refined-m61 .roi-lead-field input:focus,
+body.roi-refined-m61 .roi-lead-field textarea:focus,
+body.roi-refined-m61 .input-group input:focus,
+body.roi-refined-m61 .input-group select:focus{
+  border-color:var(--roi-blue)!important;
+  box-shadow:0 0 0 4px rgba(33,96,166,.10)!important;
+}
+body.roi-refined-m61 .btn-g{
+  min-height:50px!important;
+  padding:0 22px!important;
+  border-radius:12px!important;
+  background:linear-gradient(135deg,var(--roi-blue),var(--roi-blue-2))!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border:0!important;
+  box-shadow:0 14px 32px rgba(33,96,166,.22)!important;
+}
+body.roi-refined-m61 .btn-ghost{
+  min-height:50px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  padding:0 22px!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  color:var(--roi-ink)!important;
+  -webkit-text-fill-color:var(--roi-ink)!important;
+  border:1px solid rgba(33,96,166,.18)!important;
+}
+body.roi-refined-m61 .roi-lead-note{display:none!important}
+body.roi-refined-m61 .roi-privacy-note{
+  margin:18px 0 0!important;
+  color:var(--roi-muted)!important;
+  font-size:12px!important;
+  line-height:1.6!important;
+}
+body.roi-refined-m61 .roi-gate-success{
+  margin-top:18px!important;
+  padding:14px 16px!important;
+  border-radius:12px!important;
+  background:rgba(26,145,92,.08)!important;
+  border:1px solid rgba(26,145,92,.2)!important;
+  color:#12663f!important;
+}
+
+/* A locked calculator should look intentional, not broken or blurred. */
+body.roi-refined-m61.roi-locked #calculator,
+body.roi-refined-m61.roi-locked #metrics,
+body.roi-refined-m61.roi-locked #products{
+  display:none!important;
+  filter:none!important;
+  opacity:1!important;
+  pointer-events:none!important;
+}
+body.roi-refined-m61.roi-unlocked #calculator,
+body.roi-refined-m61.roi-unlocked #metrics,
+body.roi-refined-m61.roi-unlocked #products{
+  display:block!important;
+  filter:none!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+}
+
+/* Calculator */
+body.roi-refined-m61 .calc-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr)!important;
+  gap:30px!important;
+  align-items:start!important;
+}
+body.roi-refined-m61 .calc-card,
+body.roi-refined-m61 .feat-card{padding:24px!important}
+body.roi-refined-m61 .grid-2,
+body.roi-refined-m61 .grid-2-cols{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+body.roi-refined-m61 .grid-3,
+body.roi-refined-m61 .grid-3-cols{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important}
+body.roi-refined-m61 .grid-4,
+body.roi-refined-m61 .grid-4-cols{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+body.roi-refined-m61 .input-wrap{position:relative!important}
+body.roi-refined-m61 .input-unit{
+  position:absolute!important;
+  right:12px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  color:var(--roi-muted)!important;
+  font-size:11px!important;
+  font-weight:800!important;
+}
+body.roi-refined-m61 .input-wrap input{padding-right:58px!important}
+body.roi-refined-m61 .section-divider{
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  margin:22px 0 12px!important;
+  color:var(--roi-blue)!important;
+}
+body.roi-refined-m61 .divider-label{color:var(--roi-ink)!important;font-weight:800!important;font-size:12px!important}
+body.roi-refined-m61 .results-strip{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:12px!important;
+  margin-top:20px!important;
+}
+body.roi-refined-m61 .result-item{
+  padding:18px!important;
+  border-radius:16px!important;
+  background:#071f3b!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+}
+body.roi-refined-m61 .res-label{color:rgba(255,255,255,.66)!important;font-size:11px!important}
+body.roi-refined-m61 .res-value{color:#fff!important;font-size:clamp(20px,2.2vw,30px)!important}
+body.roi-refined-m61 .feat-icon{
+  background:rgba(33,96,166,.08)!important;
+  color:var(--roi-blue)!important;
+}
+body.roi-refined-m61 .feat-icon svg{stroke:var(--roi-blue)!important}
+body.roi-refined-m61 .feat-desc{color:var(--roi-copy)!important}
+body.roi-refined-m61 #metricYield,
+body.roi-refined-m61 #metricRevenue,
+body.roi-refined-m61 #metricOpex,
+body.roi-refined-m61 #metricRoi,
+body.roi-refined-m61 #metricPower,
+body.roi-refined-m61 #metricWater,
+body.roi-refined-m61 #timelinePayback,
+body.roi-refined-m61 #timelineInvestment,
+body.roi-refined-m61 #timelineAnnualNet,
+body.roi-refined-m61 #timeline5Year{
+  color:var(--roi-blue-2)!important;
+  -webkit-text-fill-color:var(--roi-blue-2)!important;
+}
+body.roi-refined-m61 .data-table{
+  width:100%!important;
+  border-collapse:collapse!important;
+  color:var(--roi-ink)!important;
+}
+body.roi-refined-m61 .data-table th{
+  background:#edf5fb!important;
+  color:var(--roi-blue-2)!important;
+  border-color:var(--roi-line)!important;
+}
+body.roi-refined-m61 .data-table td{color:var(--roi-copy)!important;border-color:var(--roi-line)!important}
+body.roi-refined-m61 .highlight-box{background:#edf6fc!important;border-color:rgba(33,96,166,.16)!important}
+body.roi-refined-m61 .chart-container{
+  padding:24px!important;
+  border-radius:22px!important;
+  background:#fff!important;
+  border:1px solid var(--roi-line)!important;
+  box-shadow:0 18px 55px rgba(16,64,108,.08)!important;
+  overflow:auto!important;
+}
+
+/* Dynamic product cards */
+body.roi-refined-m61 #productsGrid{gap:20px!important}
+body.roi-refined-m61 #productsGrid>*{
+  background:#fff!important;
+  color:var(--roi-ink)!important;
+  border:1px solid var(--roi-line)!important;
+  border-radius:20px!important;
+  box-shadow:0 18px 50px rgba(16,64,108,.08)!important;
+}
+
+/* FAQ and project CTA */
+body.roi-refined-m61 .faq-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important;margin-top:34px!important}
+body.roi-refined-m61 .apex-cta-section{background:transparent!important;padding:clamp(70px,8vw,110px) clamp(20px,4vw,64px)!important}
+body.roi-refined-m61 .apex-cta-inner{
+  width:min(1240px,100%)!important;
+  margin-inline:auto!important;
+  border-radius:28px!important;
+  background:
+    radial-gradient(circle at 92% 5%,rgba(135,178,217,.18),transparent 23rem),
+    #071f3b!important;
+  box-shadow:0 30px 80px rgba(7,31,59,.22)!important;
+}
+body.roi-refined-m61 .apex-cta-inner h2,
+body.roi-refined-m61 .apex-cta-inner p{color:#fff!important;-webkit-text-fill-color:#fff!important}
+body.roi-refined-m61 .apex-kicker{color:var(--roi-sky)!important}
+
+/* Footer: cancel generic ROI nav rules without altering the shared footer design. */
+body.roi-refined-m61 .nexus-footer nav{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important}
+
+@media (max-width:1020px){
+  body.roi-refined-m61 .qa-grid{grid-template-columns:1fr!important}
+  body.roi-refined-m61 .calc-grid{grid-template-columns:1fr!important}
+  body.roi-refined-m61 .roi-lead-grid{grid-template-columns:1fr 1fr!important}
+  body.roi-refined-m61 .faq-grid{grid-template-columns:1fr!important}
+  body.roi-refined-m61 .grid-4,
+  body.roi-refined-m61 .grid-4-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width:760px){
+  body.roi-refined-m61 .nexus-header-inner{background:#071b2b!important}
+  body.roi-refined-m61 .roi-lead-grid,
+  body.roi-refined-m61 .grid-2,
+  body.roi-refined-m61 .grid-2-cols,
+  body.roi-refined-m61 .grid-3,
+  body.roi-refined-m61 .grid-3-cols,
+  body.roi-refined-m61 .grid-4,
+  body.roi-refined-m61 .grid-4-cols,
+  body.roi-refined-m61 .results-strip{grid-template-columns:1fr!important}
+  body.roi-refined-m61 .apex-roi-section{padding-inline:max(16px,env(safe-area-inset-left))!important}
+  body.roi-refined-m61 .roi-gate-card{padding:26px 18px!important}
+  body.roi-refined-m61 .btn-g,
+  body.roi-refined-m61 .btn-ghost{width:100%!important;justify-content:center!important}
+  body.roi-refined-m61 input,
+  body.roi-refined-m61 select,
+  body.roi-refined-m61 textarea{font-size:16px!important}
+  body.roi-refined-m61 .apex-cta-inner{padding:34px 22px!important}
+}
+@media (prefers-reduced-motion:reduce){
+  body.roi-refined-m61 *,body.roi-refined-m61 *::before,body.roi-refined-m61 *::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* M61 final ROI refinements after removing the legacy inline style stack. */
+body.roi-refined-m61 .roi-gate-success{display:none!important}
+body.roi-refined-m61.roi-unlocked .roi-gate-success{display:block!important}
+body.roi-refined-m61 #productsGrid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+}
+body.roi-refined-m61 .product-card{
+  padding:24px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+  cursor:pointer!important;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important;
+}
+body.roi-refined-m61 .product-card:hover{
+  transform:translateY(-4px)!important;
+  border-color:rgba(33,96,166,.30)!important;
+  box-shadow:0 24px 58px rgba(16,64,108,.14)!important;
+}
+body.roi-refined-m61 .pc-type{
+  color:var(--roi-blue)!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+}
+body.roi-refined-m61 .pc-name{
+  color:var(--roi-ink)!important;
+  font-family:Sora,Manrope,sans-serif!important;
+  font-size:20px!important;
+  font-weight:700!important;
+}
+body.roi-refined-m61 .pc-desc{color:var(--roi-copy)!important;font-size:13px!important;line-height:1.6!important;min-height:42px!important}
+body.roi-refined-m61 .pc-specs{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:8px!important;
+  padding:14px 0!important;
+  border-top:1px solid var(--roi-line)!important;
+  border-bottom:1px solid var(--roi-line)!important;
+}
+body.roi-refined-m61 .pc-spec-val{color:var(--roi-blue-2)!important;font-family:Sora,Manrope,sans-serif!important;font-weight:700!important}
+body.roi-refined-m61 .pc-spec-label{color:var(--roi-muted)!important;font-size:10px!important;text-transform:uppercase!important;letter-spacing:.08em!important}
+body.roi-refined-m61 .product-card .btn-sm{align-self:flex-start!important;margin-top:auto!important;min-height:40px!important;padding:0 16px!important;font-size:12px!important}
+@media(max-width:1020px){body.roi-refined-m61 #productsGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:640px){body.roi-refined-m61 #productsGrid{grid-template-columns:1fr!important}}

@@ -1,0 +1,567 @@
+
+/* ==========================================================================
+   M52 — SITEWIDE TEXT CONTRAST & VISIBILITY SYSTEM
+   Final cascade layer loaded after every earlier website stylesheet.
+   ========================================================================== */
+
+html{
+  color-scheme:only light;
+}
+
+body.nexus-m52{
+  --m52-ink:#061d36;
+  --m52-copy:#3f5d77;
+  --m52-muted:#617a91;
+  --m52-blue:#155fa6;
+  --m52-sky:#9ed2ff;
+  --m52-white:#ffffff;
+  --m52-dark:#061522;
+  --m52-dark-2:#0a2946;
+  --m52-on-dark:#ffffff;
+  --m52-on-dark-copy:#c7d9e8;
+  --m52-line:#d7e4ee;
+  color:var(--m52-ink);
+  background:#f7f5ef;
+  forced-color-adjust:none;
+}
+
+/* Never allow reveal scripts to make business content unreadable. */
+body.nexus-m52 .nexus-reveal,
+body.nexus-m52 .apex-reveal,
+body.nexus-m52 .m42-reveal{
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important;
+  filter:none!important;
+}
+
+/* Remove accidental fading and blend effects from all readable content. */
+body.nexus-m52 main h1,
+body.nexus-m52 main h2,
+body.nexus-m52 main h3,
+body.nexus-m52 main h4,
+body.nexus-m52 main h5,
+body.nexus-m52 main h6,
+body.nexus-m52 main p,
+body.nexus-m52 main li,
+body.nexus-m52 main dt,
+body.nexus-m52 main dd,
+body.nexus-m52 main strong,
+body.nexus-m52 main b,
+body.nexus-m52 main small,
+body.nexus-m52 main span,
+body.nexus-m52 footer h2,
+body.nexus-m52 footer h3,
+body.nexus-m52 footer p,
+body.nexus-m52 footer a{
+  opacity:1!important;
+  mix-blend-mode:normal!important;
+  filter:none!important;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT SURFACES: navy headings, readable blue-grey copy
+   -------------------------------------------------------------------------- */
+
+body.nexus-m52 .nexus-hero,
+body.nexus-m52 .nexus-stack,
+body.nexus-m52 .nexus-home-stories,
+body.nexus-m52 .faq-premium-section,
+body.nexus-m52 main>.section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section),
+body.nexus-m52 main>.section-tight:not(.m39-key-specs):not(.apex-tech):not(.m48-dossier-section),
+body.nexus-m52 main>.apex-section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section){
+  color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .nexus-hero h1,
+body.nexus-m52 .nexus-hero h2,
+body.nexus-m52 .nexus-hero h3,
+body.nexus-m52 .nexus-stack h1,
+body.nexus-m52 .nexus-stack h2,
+body.nexus-m52 .nexus-stack h3,
+body.nexus-m52 .nexus-stack strong,
+body.nexus-m52 .nexus-home-stories>.nexus-home-stories-inner>.apex-section-heading h2,
+body.nexus-m52 .faq-premium-section h2,
+body.nexus-m52 .faq-premium-section h3,
+body.nexus-m52 main>.section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section)>.wrap h1,
+body.nexus-m52 main>.section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section)>.wrap h2,
+body.nexus-m52 main>.section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section)>.wrap h3,
+body.nexus-m52 main>.section-tight:not(.m39-key-specs):not(.apex-tech):not(.m48-dossier-section)>.wrap h1,
+body.nexus-m52 main>.section-tight:not(.m39-key-specs):not(.apex-tech):not(.m48-dossier-section)>.wrap h2,
+body.nexus-m52 main>.section-tight:not(.m39-key-specs):not(.apex-tech):not(.m48-dossier-section)>.wrap h3{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .nexus-hero p,
+body.nexus-m52 .nexus-stack p,
+body.nexus-m52 .nexus-stack small,
+body.nexus-m52 .nexus-home-stories>.nexus-home-stories-inner>.apex-section-heading p,
+body.nexus-m52 .faq-premium-section p,
+body.nexus-m52 main>.section:not(.apex-tech):not(.m48-dossier-section):not(.apex-dark-section)>.wrap p,
+body.nexus-m52 main>.section-tight:not(.m39-key-specs):not(.apex-tech):not(.m48-dossier-section)>.wrap p{
+  color:var(--m52-copy)!important;
+  -webkit-text-fill-color:var(--m52-copy)!important;
+}
+
+body.nexus-m52 .nexus-stack{
+  background:#f6f3ed!important;
+}
+
+body.nexus-m52 .nexus-stack-copy .nexus-eyebrow,
+body.nexus-m52 .nexus-stack .nexus-layer span,
+body.nexus-m52 .nexus-home-stories .nexus-eyebrow{
+  color:var(--m52-blue)!important;
+  -webkit-text-fill-color:var(--m52-blue)!important;
+}
+
+body.nexus-m52 .nexus-stack .nexus-layer{
+  border-color:#cfdce6!important;
+}
+
+body.nexus-m52 .nexus-stack .nexus-layer strong{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .nexus-stack .nexus-layer small{
+  color:#536e85!important;
+  -webkit-text-fill-color:#536e85!important;
+}
+
+/* --------------------------------------------------------------------------
+   DARK SURFACES: white headings, light readable copy
+   -------------------------------------------------------------------------- */
+
+body.nexus-m52 .nexus-atlas-section,
+body.nexus-m52 .apex-dark-section,
+body.nexus-m52 .m48-dossier-section,
+body.nexus-m52 .apex-tech,
+body.nexus-m52 .nexus-footer,
+body.nexus-m52 .nexus-launcher-shell,
+body.nexus-m52 .apex-cta-inner,
+body.nexus-m52 .m39-key-specs .apex-wrap,
+body.nexus-m52 .rail-card{
+  color:var(--m52-on-dark)!important;
+}
+
+body.nexus-m52 .nexus-atlas-section{
+  background:#061522!important;
+}
+
+body.nexus-m52 .nexus-atlas-section h1,
+body.nexus-m52 .nexus-atlas-section h2,
+body.nexus-m52 .nexus-atlas-section h3,
+body.nexus-m52 .nexus-atlas-section h4,
+body.nexus-m52 .nexus-atlas-section strong,
+body.nexus-m52 .nexus-atlas-section b,
+body.nexus-m52 .apex-dark-section h1,
+body.nexus-m52 .apex-dark-section h2,
+body.nexus-m52 .apex-dark-section h3,
+body.nexus-m52 .apex-dark-section h4,
+body.nexus-m52 .m48-dossier-section>.wrap>.m51-dossier-header h2,
+body.nexus-m52 .m48-dossier-section>.wrap>.m48-dossier-intro h2,
+body.nexus-m52 .apex-tech>.wrap>.sec-head h2,
+body.nexus-m52 .apex-cta-inner h1,
+body.nexus-m52 .apex-cta-inner h2,
+body.nexus-m52 .apex-cta-inner h3,
+body.nexus-m52 .m39-key-specs .apex-wrap h1,
+body.nexus-m52 .m39-key-specs .apex-wrap h2,
+body.nexus-m52 .m39-key-specs .apex-wrap h3,
+body.nexus-m52 .nexus-footer h1,
+body.nexus-m52 .nexus-footer h2,
+body.nexus-m52 .nexus-footer h3,
+body.nexus-m52 .nexus-footer strong,
+body.nexus-m52 .rail-card h3{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+body.nexus-m52 .nexus-atlas-section p,
+body.nexus-m52 .nexus-atlas-section li,
+body.nexus-m52 .apex-dark-section p,
+body.nexus-m52 .apex-dark-section li,
+body.nexus-m52 .m48-dossier-section>.wrap>.m51-dossier-header p,
+body.nexus-m52 .m48-dossier-section>.wrap>.m48-dossier-intro p,
+body.nexus-m52 .apex-tech>.wrap>.sec-head p,
+body.nexus-m52 .apex-cta-inner p,
+body.nexus-m52 .m39-key-specs .apex-wrap .sec-sub,
+body.nexus-m52 .m39-key-specs .apex-wrap>.apex-section-heading>p,
+body.nexus-m52 .nexus-footer p,
+body.nexus-m52 .nexus-footer a,
+body.nexus-m52 .rail-card p{
+  color:var(--m52-on-dark-copy)!important;
+  -webkit-text-fill-color:var(--m52-on-dark-copy)!important;
+}
+
+body.nexus-m52 .nexus-atlas-section .nexus-eyebrow,
+body.nexus-m52 .apex-dark-section .nexus-eyebrow,
+body.nexus-m52 .apex-dark-section .apex-kicker,
+body.nexus-m52 .m48-dossier-section .m48-dossier-eyebrow,
+body.nexus-m52 .m48-dossier-section .sec-kicker,
+body.nexus-m52 .m39-key-specs .sec-kicker,
+body.nexus-m52 .m39-key-specs .apex-kicker,
+body.nexus-m52 .apex-cta-inner .nexus-eyebrow,
+body.nexus-m52 .apex-cta-inner .apex-kicker,
+body.nexus-m52 .nexus-footer .nexus-eyebrow{
+  color:var(--m52-sky)!important;
+  -webkit-text-fill-color:var(--m52-sky)!important;
+}
+
+/* System Atlas map, nodes and preview */
+body.nexus-m52 .nexus-atlas-node,
+body.nexus-m52 .nexus-atlas-node b,
+body.nexus-m52 .nexus-atlas-core span,
+body.nexus-m52 .nexus-atlas-preview-copy h3,
+body.nexus-m52 .nexus-atlas-preview-copy a{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+body.nexus-m52 .nexus-atlas-node small,
+body.nexus-m52 .nexus-atlas-preview-copy p,
+body.nexus-m52 .nexus-atlas-meta span{
+  color:#d0dfec!important;
+  -webkit-text-fill-color:#d0dfec!important;
+}
+
+/* Image-overlay text always remains white. */
+body.nexus-m52 .nexus-story-copy h3,
+body.nexus-m52 .nexus-story-copy p,
+body.nexus-m52 .nexus-story-copy small,
+body.nexus-m52 .nexus-launcher-preview-copy h2,
+body.nexus-m52 .nexus-launcher-preview-copy p,
+body.nexus-m52 .nexus-launcher-preview-copy small,
+body.nexus-m52 .nexus-viewport-label,
+body.nexus-m52 .nexus-viewport-label span,
+body.nexus-m52 .nexus-status,
+body.nexus-m52 .nexus-pin{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  text-shadow:0 2px 12px rgba(0,0,0,.72);
+}
+
+body.nexus-m52 .nexus-story::after{
+  background:linear-gradient(180deg,rgba(2,10,18,.05) 24%,rgba(2,10,18,.94) 100%)!important;
+}
+
+body.nexus-m52 .nexus-atlas-preview::after{
+  background:linear-gradient(180deg,rgba(2,10,18,.08) 26%,rgba(2,10,18,.96) 100%)!important;
+}
+
+/* --------------------------------------------------------------------------
+   DARK FEATURE PANELS
+   -------------------------------------------------------------------------- */
+
+body.nexus-m52 .m39-key-specs .apex-wrap{
+  background:linear-gradient(145deg,#061522,#0a2c4c)!important;
+}
+
+body.nexus-m52 .m39-key-specs .m48-key-card,
+body.nexus-m52 .m39-key-specs .m39-spec-card,
+body.nexus-m52 .m39-key-specs .apex-data-card,
+body.nexus-m52 .m51-dashboard .m48-key-card,
+body.nexus-m52 .m49-source-metrics .m48-key-card{
+  border-color:rgba(255,255,255,.22)!important;
+  background:rgba(255,255,255,.10)!important;
+  box-shadow:none!important;
+}
+
+body.nexus-m52 .m39-key-specs .m48-key-card span,
+body.nexus-m52 .m39-key-specs .m39-spec-card span,
+body.nexus-m52 .m39-key-specs .apex-data-card span,
+body.nexus-m52 .m51-dashboard .m48-key-card span,
+body.nexus-m52 .m49-source-metrics .m48-key-card span{
+  color:#9ed2ff!important;
+  -webkit-text-fill-color:#9ed2ff!important;
+}
+
+body.nexus-m52 .m39-key-specs .m48-key-card strong,
+body.nexus-m52 .m39-key-specs .m39-spec-card b,
+body.nexus-m52 .m39-key-specs .apex-data-card b,
+body.nexus-m52 .m51-dashboard .m48-key-card strong,
+body.nexus-m52 .m49-source-metrics .m48-key-card strong{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+/* CTA: high-contrast, clearly separated actions */
+body.nexus-m52 .apex-cta-inner{
+  background:linear-gradient(135deg,#061522,#0b3155)!important;
+}
+
+body.nexus-m52 .apex-cta-inner .nexus-button-primary,
+body.nexus-m52 .apex-cta-inner .apex-button-primary{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  background:#2160a6!important;
+  border-color:#5b9ed5!important;
+}
+
+body.nexus-m52 .apex-cta-inner .nexus-button-ghost,
+body.nexus-m52 .apex-cta-inner .apex-button-ghost{
+  color:#061d36!important;
+  -webkit-text-fill-color:#061d36!important;
+  background:#fff!important;
+  border-color:#fff!important;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT CARDS INSIDE DARK TECHNICAL SECTIONS
+   -------------------------------------------------------------------------- */
+
+body.nexus-m52 .m51-dossier-shell,
+body.nexus-m52 .m51-panel,
+body.nexus-m52 .m51-brief-card,
+body.nexus-m52 .m51-spec-card,
+body.nexus-m52 .m51-data-drawer,
+body.nexus-m52 .m48-spec-card,
+body.nexus-m52 .m48-data-block,
+body.nexus-m52 .m49-data-drawer,
+body.nexus-m52 .m49-source-summary,
+body.nexus-m52 .premium-faq-item,
+body.nexus-m52 .qa-card,
+body.nexus-m52 .apex-overview-card,
+body.nexus-m52 .info-card,
+body.nexus-m52 .m42-gallery-card,
+body.nexus-m52 .apex-mosaic-item,
+body.nexus-m52 .spec-block,
+body.nexus-m52 .apex-spec-block{
+  color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .m51-dossier-shell{
+  background:#f5f9fc!important;
+}
+
+body.nexus-m52 .m51-panel h2,
+body.nexus-m52 .m51-panel h3,
+body.nexus-m52 .m51-panel h4,
+body.nexus-m52 .m51-panel strong,
+body.nexus-m52 .m51-panel b,
+body.nexus-m52 .m51-brief-card h3,
+body.nexus-m52 .m51-spec-card h3,
+body.nexus-m52 .m51-data-drawer strong,
+body.nexus-m52 .m48-spec-card h3,
+body.nexus-m52 .m48-data-block h3,
+body.nexus-m52 .m49-data-drawer strong,
+body.nexus-m52 .m49-source-summary h3,
+body.nexus-m52 .m49-source-summary h4,
+body.nexus-m52 .premium-faq-item summary,
+body.nexus-m52 .qa-card h3,
+body.nexus-m52 .apex-overview-card h3,
+body.nexus-m52 .info-card h3,
+body.nexus-m52 .m42-gallery-card h3,
+body.nexus-m52 .apex-mosaic-item h3,
+body.nexus-m52 .spec-block h3,
+body.nexus-m52 .apex-spec-block h3{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+  text-shadow:none!important;
+}
+
+body.nexus-m52 .m51-panel p,
+body.nexus-m52 .m51-panel li,
+body.nexus-m52 .m51-brief-card p,
+body.nexus-m52 .m51-spec-card dt,
+body.nexus-m52 .m51-spec-card dd,
+body.nexus-m52 .m51-data-drawer p,
+body.nexus-m52 .m48-spec-card dt,
+body.nexus-m52 .m48-spec-card dd,
+body.nexus-m52 .m48-data-block p,
+body.nexus-m52 .m49-data-drawer p,
+body.nexus-m52 .m49-source-summary p,
+body.nexus-m52 .premium-faq-item p,
+body.nexus-m52 .qa-card p,
+body.nexus-m52 .apex-overview-card p,
+body.nexus-m52 .info-card p,
+body.nexus-m52 .m42-gallery-card p,
+body.nexus-m52 .apex-mosaic-item p,
+body.nexus-m52 .spec-block p,
+body.nexus-m52 .spec-block .spec-row span,
+body.nexus-m52 .apex-spec-block p{
+  color:var(--m52-copy)!important;
+  -webkit-text-fill-color:var(--m52-copy)!important;
+  text-shadow:none!important;
+}
+
+/* Source-data summary cards are explicitly light, never white-on-white. */
+body.nexus-m52 .m49-source-summary{
+  border-color:#d2e1ec!important;
+  background:#edf5fa!important;
+  box-shadow:0 16px 44px rgba(7,29,54,.08)!important;
+}
+
+body.nexus-m52 .m49-summary-card{
+  border:1px solid #d2e1ec!important;
+  background:#fff!important;
+}
+
+body.nexus-m52 .m49-summary-card h4{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .m49-summary-card p{
+  color:var(--m52-copy)!important;
+  -webkit-text-fill-color:var(--m52-copy)!important;
+}
+
+body.nexus-m52 .m49-subsection-head:not(.m49-on-dark) h3,
+body.nexus-m52 .m49-subsection-head:not(.m49-on-dark) p{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 .m49-subsection-head:not(.m49-on-dark) p{
+  color:var(--m52-copy)!important;
+  -webkit-text-fill-color:var(--m52-copy)!important;
+}
+
+/* FAQ rebuilt as clear high-contrast cards. */
+body.nexus-m52 .faq-premium-grid{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:12px!important;
+  max-width:1040px;
+  border:0!important;
+}
+
+body.nexus-m52 .premium-faq-item,
+body.nexus-m52 .premium-faq-item:nth-child(odd),
+body.nexus-m52 .premium-faq-item:nth-child(even){
+  padding:0!important;
+  overflow:hidden;
+  border:1px solid #d4e2ed!important;
+  border-radius:16px!important;
+  background:#fff!important;
+  box-shadow:0 12px 32px rgba(7,29,54,.06)!important;
+}
+
+body.nexus-m52 .premium-faq-item summary,
+body.nexus-m52 .premium-faq-item:nth-child(even) summary{
+  padding:21px 22px!important;
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+  background:#fff!important;
+  font-size:16px!important;
+  font-weight:800!important;
+}
+
+body.nexus-m52 .premium-faq-item p,
+body.nexus-m52 .premium-faq-item:nth-child(even) p{
+  margin:0!important;
+  padding:0 22px 22px!important;
+  color:var(--m52-copy)!important;
+  -webkit-text-fill-color:var(--m52-copy)!important;
+  line-height:1.72!important;
+}
+
+/* Tables: explicit dark headers, dark text on white rows. */
+body.nexus-m52 table{
+  color:var(--m52-ink);
+}
+
+body.nexus-m52 table th,
+body.nexus-m52 .m48-data-table th,
+body.nexus-m52 .spec-table th{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  background:#082b4b!important;
+}
+
+body.nexus-m52 table td,
+body.nexus-m52 .m48-data-table td,
+body.nexus-m52 .spec-table td{
+  color:#274761!important;
+  -webkit-text-fill-color:#274761!important;
+  background:#fff;
+}
+
+body.nexus-m52 table tbody tr:nth-child(even) td{
+  background:#f4f9fc!important;
+}
+
+/* Header, launcher and footer remain readable. */
+body.nexus-m52 .nexus-header-inner,
+body.nexus-m52 .nexus-launcher-shell,
+body.nexus-m52 .nexus-footer{
+  background:#061522!important;
+}
+
+body.nexus-m52 .nexus-nav a,
+body.nexus-m52 .nexus-launcher-open,
+body.nexus-m52 .nexus-launcher-item,
+body.nexus-m52 .nexus-launcher-item b,
+body.nexus-m52 .nexus-launcher-head span,
+body.nexus-m52 .nexus-footer-col a{
+  color:#d3e1ec!important;
+  -webkit-text-fill-color:#d3e1ec!important;
+}
+
+body.nexus-m52 .nexus-nav a:hover,
+body.nexus-m52 .nexus-launcher-open:hover,
+body.nexus-m52 .nexus-launcher-item:hover b,
+body.nexus-m52 .nexus-footer-col a:hover{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+
+/* Form controls must always show entered text and labels. */
+body.nexus-m52 label{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+}
+
+body.nexus-m52 input,
+body.nexus-m52 select,
+body.nexus-m52 textarea{
+  color:var(--m52-ink)!important;
+  -webkit-text-fill-color:var(--m52-ink)!important;
+  background:#fff!important;
+}
+
+body.nexus-m52 input::placeholder,
+body.nexus-m52 textarea::placeholder{
+  color:#7890a5!important;
+  -webkit-text-fill-color:#7890a5!important;
+  opacity:1!important;
+}
+
+/* Accessibility: visible keyboard focus and no hidden selected text. */
+body.nexus-m52 a:focus-visible,
+body.nexus-m52 button:focus-visible,
+body.nexus-m52 summary:focus-visible,
+body.nexus-m52 input:focus-visible,
+body.nexus-m52 select:focus-visible,
+body.nexus-m52 textarea:focus-visible{
+  outline:3px solid rgba(60,151,222,.55)!important;
+  outline-offset:3px!important;
+}
+
+/* Small-screen text remains readable and never collapses into narrow columns. */
+@media(max-width:760px){
+  body.nexus-m52 .nexus-atlas-head,
+  body.nexus-m52 .nexus-stack-grid,
+  body.nexus-m52 .apex-section-heading,
+  body.nexus-m52 .sec-head{
+    grid-template-columns:1fr!important;
+  }
+
+  body.nexus-m52 .nexus-atlas-head h2,
+  body.nexus-m52 .nexus-stack-copy h2,
+  body.nexus-m52 .apex-cta-inner h2,
+  body.nexus-m52 .m39-key-specs .sec-title{
+    font-size:clamp(34px,10vw,48px)!important;
+    line-height:1.04!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.nexus-m52 *,
+  body.nexus-m52 *::before,
+  body.nexus-m52 *::after{
+    animation:none!important;
+    transition:none!important;
+  }
+}

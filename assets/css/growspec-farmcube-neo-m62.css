@@ -1,0 +1,58 @@
+
+/* GROWSPEC M62 — FarmCube Neo commercial microgreens page */
+.neo62-page{--neo62-navy:#06182d;--neo62-blue:#2160a6;--neo62-sky:#87b2d9;--neo62-pink:#d5327f;--neo62-ink:#102a43;--neo62-soft:#f3f8fc;--neo62-line:#d7e6f1;background:#fff;color:var(--neo62-ink)}
+.neo62-page .neo62-hero .nexus-hero-copy h1{max-width:760px;font-size:clamp(42px,5.6vw,82px);line-height:.98;letter-spacing:-.055em}
+.neo62-page .neo62-product-name{margin:0 0 16px!important;color:#8fc4ef!important;font-weight:800!important;letter-spacing:.02em}
+.neo62-page .neo62-hero .nexus-hero-copy>p:not(.neo62-product-name){max-width:700px}
+.neo62-page .neo62-hero .nexus-viewport{min-height:610px}
+.neo62-page .neo62-hero .nexus-viewport img{object-fit:cover;object-position:center}
+.neo62-page .nexus-chapter-links{overflow-x:auto;scrollbar-width:none}.neo62-page .nexus-chapter-links::-webkit-scrollbar{display:none}
+.neo62-section{padding:104px 28px;position:relative;isolation:isolate}
+.neo62-wrap{width:min(1320px,100%);margin:0 auto}
+.neo62-section-light{background:#fff}.neo62-section-soft{background:linear-gradient(180deg,#f7fbfe,#eef6fb)}
+.neo62-section-ink{background:radial-gradient(circle at 85% 5%,rgba(33,96,166,.22),transparent 34%),linear-gradient(145deg,#051326,#082443);color:#fff}
+.neo62-heading{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:70px;align-items:end;margin-bottom:48px}
+.neo62-heading span,.neo62-kicker{display:block;margin-bottom:13px;color:var(--neo62-pink);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.neo62-heading h2,.neo62-video-grid h2{margin:0;color:#071f3e;font-family:Sora,Manrope,sans-serif;font-size:clamp(34px,4.2vw,60px);line-height:1.04;letter-spacing:-.045em}
+.neo62-heading p,.neo62-video-grid p{margin:0;color:#5d748b;font-size:17px;line-height:1.75}
+.neo62-heading-inverse h2{color:#fff}.neo62-heading-inverse p{color:#bdd1e4}
+.neo62-benefit-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.neo62-benefit-grid article{min-height:250px;padding:28px;border:1px solid var(--neo62-line);border-radius:24px;background:linear-gradient(180deg,#fff,#f7fbfe);box-shadow:0 18px 45px rgba(8,38,72,.06)}
+.neo62-benefit-grid b,.neo62-crop-grid span,.neo62-install-grid span{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:12px;background:#eaf4fc;color:var(--neo62-blue);font-size:12px}
+.neo62-benefit-grid h3,.neo62-crop-grid h3,.neo62-install-grid h3{margin:24px 0 10px;color:#09213f;font-size:20px;line-height:1.2}
+.neo62-benefit-grid p,.neo62-crop-grid p,.neo62-install-grid p{margin:0;color:#60778d;font-size:14px;line-height:1.68}
+.neo62-output-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(330px,.9fr);gap:18px}
+.neo62-output-card,.neo62-cost-card{padding:34px;border:1px solid rgba(135,178,217,.26);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.neo62-output-card>span,.neo62-cost-card>span{color:#8fc4ef;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.neo62-output-card h3,.neo62-cost-card h3{margin:8px 0 20px;color:#fff;font-size:28px}
+.neo62-output-card>strong{display:block;color:#fff;font-size:72px;line-height:.9;letter-spacing:-.06em}.neo62-output-card>em{display:block;margin-top:8px;color:#9eb8cf;font-style:normal}
+.neo62-output-card dl{margin:28px 0 0}.neo62-output-card dl div{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid rgba(255,255,255,.1)}
+.neo62-output-card dt{color:#9eb8cf}.neo62-output-card dd{margin:0;color:#fff;font-weight:800;text-align:right}
+.neo62-cost-card ul{margin:0;padding:0;list-style:none}.neo62-cost-card li{padding:13px 0;border-top:1px solid rgba(255,255,255,.1);color:#bdd1e4;line-height:1.5}.neo62-cost-card li b{color:#fff}.neo62-cost-card a{display:inline-flex;margin-top:24px;color:#fff;font-weight:800;text-decoration:none}
+.neo62-note{margin:24px 0 0;color:#8ea8bf;font-size:12px;line-height:1.65}
+.neo62-crop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.neo62-crop-grid article{padding:25px;border:1px solid var(--neo62-line);border-radius:22px;background:#fff;box-shadow:0 14px 38px rgba(8,38,72,.05)}
+.neo62-crop-grid h3{margin-top:18px}
+.neo62-application-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.neo62-application-grid article{position:relative;min-height:370px;overflow:hidden;border-radius:25px;background:#06182d;box-shadow:0 20px 50px rgba(5,27,51,.14)}
+.neo62-application-grid img{width:100%;height:100%;min-height:370px;object-fit:cover;transition:transform .55s ease}
+.neo62-application-grid article:hover img{transform:scale(1.035)}
+.neo62-application-grid article:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(3,19,36,.92))}
+.neo62-application-grid article>div{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:#fff}.neo62-application-grid h3{margin:0 0 8px;font-size:25px}.neo62-application-grid p{margin:0;color:#d5e4f0;line-height:1.55}
+.neo62-table-shell{overflow:auto;border:1px solid var(--neo62-line);border-radius:26px;box-shadow:0 16px 45px rgba(8,38,72,.06)}
+.neo62-table-shell table{width:100%;min-width:850px;border-collapse:collapse;background:#fff}.neo62-table-shell th,.neo62-table-shell td{padding:20px 22px;text-align:left;border-bottom:1px solid #e5eef5;vertical-align:top}.neo62-table-shell th{background:#071f3e;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.neo62-table-shell td:first-child{font-weight:850;color:#0a2b50}.neo62-table-shell td{color:#567087;line-height:1.55}.neo62-table-shell tr:last-child td{border-bottom:0}
+.neo62-install-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.neo62-install-grid article{padding:28px;border:1px solid rgba(135,178,217,.23);border-radius:22px;background:rgba(255,255,255,.055)}.neo62-install-grid h3{color:#fff}.neo62-install-grid p{color:#b9cde0}.neo62-install-grid span{background:rgba(135,178,217,.14);color:#9dd0f4}
+.neo62-utility-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:18px;overflow:hidden;border:1px solid rgba(135,178,217,.24);border-radius:22px;background:rgba(135,178,217,.22)}.neo62-utility-strip div{padding:22px;background:#08213d}.neo62-utility-strip b,.neo62-utility-strip span{display:block}.neo62-utility-strip b{color:#9db9cf;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.neo62-utility-strip span{margin-top:8px;color:#fff;font-weight:800}
+.neo62-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.neo62-guide-grid>a{overflow:hidden;border:1px solid var(--neo62-line);border-radius:25px;background:#fff;color:inherit;text-decoration:none;box-shadow:0 18px 45px rgba(8,38,72,.08);transition:transform .25s ease,box-shadow .25s ease}.neo62-guide-grid>a:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(8,38,72,.14)}.neo62-guide-grid img{width:100%;height:240px;object-fit:cover}.neo62-guide-grid a>div{padding:24px}.neo62-guide-grid span{color:var(--neo62-pink);font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.neo62-guide-grid h3{margin:10px 0;color:#082442;font-size:24px;line-height:1.18}.neo62-guide-grid p{color:#60778d;line-height:1.6}.neo62-guide-grid b{color:var(--neo62-blue)}
+.neo62-video-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(420px,1.2fr);gap:60px;align-items:center}.neo62-video-card{position:relative;display:block;overflow:hidden;max-height:600px;border-radius:30px;background:#06182d;box-shadow:0 28px 70px rgba(8,38,72,.18)}.neo62-video-card img{width:100%;height:600px;object-fit:cover;object-position:center 30%;filter:saturate(.9)}.neo62-video-card:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,24,45,.08),rgba(6,24,45,.4))}.neo62-video-card span{position:absolute;z-index:2;left:50%;top:50%;display:flex;width:82px;height:82px;align-items:center;justify-content:center;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.58);border-radius:50%;background:rgba(6,24,45,.75);color:#fff;font-size:27px;box-shadow:0 18px 45px rgba(0,0,0,.24)}.neo62-text-link{display:inline-flex;margin-top:26px;color:var(--neo62-blue);font-weight:850;text-decoration:none}
+.neo62-page .neo62-faq .faq-premium-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.neo62-page .neo62-faq .premium-faq-item{background:#fff}
+.neo62-page #model-comparison,.neo62-page #workflow,.neo62-page #technical-data,.neo62-page #faq{padding-top:104px;padding-bottom:104px}
+.neo62-page #model-comparison .wrap,.neo62-page #workflow .wrap,.neo62-page #technical-data .wrap,.neo62-page #faq .wrap{width:min(1320px,calc(100% - 56px));max-width:none}
+.neo62-page #model-comparison{background:#f6fafc}.neo62-page #workflow{background:#fff}.neo62-page #technical-data{background:#edf5fa}.neo62-page #faq{background:#f7fbfe}
+.neo62-page #technical-data .m51-dossier-shell{box-shadow:0 24px 70px rgba(8,38,72,.1)}
+.neo62-page .neo-model-card img{height:430px}.neo62-page .neo-balanced-grid{gap:20px}
+@media(max-width:1100px){.neo62-benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.neo62-output-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.neo62-cost-card{grid-column:1/-1}.neo62-application-grid,.neo62-install-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.neo62-video-grid{grid-template-columns:1fr}.neo62-video-card{max-height:520px}.neo62-video-card img{height:520px}}
+@media(max-width:760px){.neo62-page .neo62-hero .nexus-hero-copy h1{font-size:clamp(38px,12vw,60px)}.neo62-page .neo62-hero .nexus-viewport{min-height:400px}.neo62-section{padding:72px 18px}.neo62-heading{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.neo62-benefit-grid,.neo62-output-grid,.neo62-crop-grid,.neo62-application-grid,.neo62-install-grid,.neo62-guide-grid,.neo62-utility-strip,.neo62-page .neo62-faq .faq-premium-grid{grid-template-columns:1fr}.neo62-benefit-grid article{min-height:0}.neo62-output-card>strong{font-size:60px}.neo62-application-grid article,.neo62-application-grid img{min-height:330px}.neo62-guide-grid img{height:220px}.neo62-video-card,.neo62-video-card img{height:430px}.neo62-page #model-comparison .wrap,.neo62-page #workflow .wrap,.neo62-page #technical-data .wrap,.neo62-page #faq .wrap{width:min(100% - 36px,1320px)}.neo62-page .neo-model-card img{height:300px}.neo62-page .nexus-chapter-nav{position:relative;top:auto}.neo62-page .nexus-chapter-links{padding-bottom:4px}}
+@media(prefers-reduced-motion:reduce){.neo62-application-grid img,.neo62-guide-grid>a{transition:none}}
+
+.neo62-guide-page .neo62-guide-hero .nexus-viewport{min-height:570px}.neo62-guide-page .neo62-guide-hero .nexus-viewport img{object-fit:cover}.neo62-guide-page .neo62-guide-steps{grid-template-columns:repeat(4,minmax(0,1fr))}.neo62-guide-page .neo62-guide-steps article{min-height:280px}@media(max-width:1000px){.neo62-guide-page .neo62-guide-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.neo62-guide-page .neo62-guide-steps{grid-template-columns:1fr}.neo62-guide-page .neo62-guide-hero .nexus-viewport{min-height:380px}}
