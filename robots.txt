@@ -1,0 +1,5 @@
+# Updated 2026-08-01 to refresh the GitHub Pages deployment.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.growspecbio.com/sitemap.xml
