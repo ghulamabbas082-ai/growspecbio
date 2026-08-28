@@ -1,0 +1,87 @@
+name: Final technical SEO repair
+
+on:
+  push:
+    paths:
+      - .github/workflows/seo-repair-main.yml
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply targeted SEO fixes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          def replace_exact(path, old, new, expected=None):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              if expected is not None and count != expected:
+                  raise SystemExit(f'{path}: expected {expected} matches, found {count}: {old[:100]}')
+              if count == 0:
+                  raise SystemExit(f'{path}: text not found: {old[:100]}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+              print(f'{path}: replaced {count} occurrence(s)')
+
+          # BioCube Modular: remove invalid Product rich-result eligibility when no verified public offer exists.
+          modular_old = '<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "BioCube Modular", "description": "BioCube Modular is a scalable commercial vertical farm platform integrating aeroponics, LED lighting, climate control, fertigation and farm automation.", "brand": {"@type": "Brand", "name": "GROWSPEC"}, "category": "Controlled Environment Agriculture System", "image": ["https://www.growspecbio.com/images/products/biocube-modular/biocube-modular-leafy-green-commercial-vertical-farm-aisle.webp"], "url": "https://www.growspecbio.com/products/biocube-modular/", "manufacturer": {"@type": "Organization", "name": "GROWSPEC Bio", "email": "abbas@growspecbio.com", "telephone": "+86 187 1839 6182"}}</script>'
+          modular_new = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"BioCube Modular Commercial Vertical Farm | GROWSPEC","url":"https://www.growspecbio.com/products/biocube-modular/","description":"BioCube Modular is a scalable commercial vertical farm platform integrating aeroponics, LED lighting, climate control, fertigation and farm automation.","primaryImageOfPage":{"@type":"ImageObject","url":"https://www.growspecbio.com/images/products/biocube-modular/biocube-modular-leafy-green-commercial-vertical-farm-aisle.webp"},"about":["modular vertical farming","controlled environment agriculture","commercial indoor farming"]}</script>'
+          replace_exact('products/biocube-modular/index.html', modular_old, modular_new, 1)
+
+          # FarmCube Nano: remove standalone Product rich-result markup without a verified public/global offer.
+          nano_old = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"FarmCube Nano Microgreens Grow Cabinet for Restaurants","description":"FarmCube Nano supports restaurant microgreens farming with four aeroponic tiers for fresh microgreens, herbs and leafy greens in restaurants, hotels and cafés.","brand":{"@type":"Brand","name":"GROWSPEC"},"manufacturer":{"@type":"Organization","name":"GROWSPEC Bio","email":"abbas@growspecbio.com","telephone":"+86 187 1839 6182"},"category":"Restaurant Microgreens and Aeroponic Indoor Grow Cabinet","url":"https://www.growspecbio.com/products/farmcube-nano/","image":["https://www.growspecbio.com/images/products/farmcube-nano/applications/farmcube-nano-indoor-grow-cabinet-restaurant-open-kitchen-1440.webp","https://www.growspecbio.com/images/products/farmcube-nano/applications/farmcube-nano-aeroponic-grow-cabinet-cafe-coffee-shop-1440.webp","https://www.growspecbio.com/images/products/farmcube-nano/applications/farmcube-nano-indoor-farming-cabinet-airport-lounge-restaurant-1440.webp","https://www.growspecbio.com/images/products/farmcube-nano/applications/farmcube-nano-fresh-produce-grow-cabinet-supermarket-retail-1440.webp","https://www.growspecbio.com/images/products/farmcube-nano/applications/farmcube-nano-indoor-grow-cabinet-premium-home-kitchen-1440.webp"],"audience":{"@type":"Audience","audienceType":"Restaurants, hotels, cafés, airport lounges, supermarkets and premium homes planning microgreens farming, herbs and leafy greens"},"additionalProperty":[{"@type":"PropertyValue","name":"Growing tiers","value":"4"},{"@type":"PropertyValue","name":"Equipment dimensions","value":"1,500 × 687 × 2,080 mm"},{"@type":"PropertyValue","name":"Peak power","value":"988 W"},{"@type":"PropertyValue","name":"Reservoir","value":"80 L"},{"@type":"PropertyValue","name":"Growing method","value":"Recirculating aeroponics"},{"@type":"PropertyValue","name":"Supported crops","value":"Microgreens, culinary herbs and leafy greens"}],"keywords":["microgreens","microgreens farming","restaurant microgreens","restaurant microgreens farming","microgreens grow cabinet","FarmCube Nano"]}</script>'
+          replace_exact('products/farmcube-nano/index.html', nano_old, '', 1)
+          replace_exact('products/farmcube-nano/index.html', '"about":{"@type":"Product","name":"FarmCube Nano"}', '"about":{"@type":"Thing","name":"FarmCube Nano"}', 1)
+
+          # ROI calculator: align structured-data URLs with the trailing-slash canonical.
+          replace_exact('roi-calculator/index.html', '"url":"https://www.growspecbio.com/roi-calculator"', '"url":"https://www.growspecbio.com/roi-calculator/"', 1)
+          replace_exact('roi-calculator/index.html', '"item":"https://www.growspecbio.com/roi-calculator"', '"item":"https://www.growspecbio.com/roi-calculator/"', 1)
+
+          # Differentiate GROWSPEC Bio product intent from the primary commercial domain: make Bio pages technical dossiers.
+          neo_title_old = 'Commercial Microgreens Growing System for Restaurants | FarmCube Neo'
+          neo_title_new = 'FarmCube Neo Technical Specifications & Crop Output | GROWSPEC'
+          replace_exact('products/farmcube-neo/index.html', neo_title_old, neo_title_new, 3)
+          neo_desc_old = 'Grow fresh microgreens and culinary herbs on site with FarmCube Neo, an automated commercial growing system for restaurants, hotels, cafes and food retail. Available in compact 2-tier and 5-tier models.'
+          neo_desc_new = 'Review FarmCube Neo technical specifications, 2T/5T capacity, crop output, aeroponic irrigation, power, airflow and operating data for project planning.'
+          replace_exact('products/farmcube-neo/index.html', neo_desc_old, neo_desc_new, 3)
+          replace_exact('products/farmcube-neo/index.html', '<span class="nexus-eyebrow">Automated Indoor Growing System</span>', '<span class="nexus-eyebrow">Technical Product Dossier</span>', 1)
+          replace_exact('products/farmcube-neo/index.html', '<h1>Commercial Microgreens Growing System for Restaurants</h1>', '<h1>FarmCube Neo Technical Specifications &amp; Crop Output</h1>', 1)
+
+          container_title_old = 'BioCube Container 40ft Vertical Farm System | GROWSPEC'
+          container_title_new = 'BioCube Container Technical Specifications & Crop Systems | GROWSPEC'
+          replace_exact('products/biocube-container/index.html', container_title_old, container_title_new, 3)
+          container_desc_old = 'BioCube Container is a 40ft controlled environment vertical farm system for leafy greens, microgreens, strawberries, herbs and specialty crops.'
+          container_desc_new = 'Review BioCube Container technical specifications, crop systems, power, cooling, lighting, fertigation and 40ft CEA planning data for commercial projects.'
+          replace_exact('products/biocube-container/index.html', container_desc_old, container_desc_new, 4)
+          replace_exact('products/biocube-container/index.html', '<h1>BioCube Container 40ft Vertical Farm System</h1>', '<h1>BioCube Container Technical Specifications &amp; Crop Systems</h1>', 1)
+
+          # Remove this one-time workflow from the final repository state.
+          wf = Path('.github/workflows/seo-repair-main.yml')
+          if wf.exists():
+              wf.unlink()
+          PY
+
+      - name: Commit targeted fixes
+        shell: bash
+        run: |
+          git config user.name "GROWSPEC SEO Repair"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Finish technical SEO cleanup"
+          git push origin HEAD:main
