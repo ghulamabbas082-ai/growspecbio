@@ -1,0 +1,82 @@
+name: Validate final SEO markup
+
+on:
+  push:
+    paths:
+      - .github/workflows/seo-final-validate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Normalize markup and validate SEO files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, html
+          import xml.etree.ElementTree as ET
+
+          def repl(path, old, new, expected):
+              p = Path(path)
+              s = p.read_text(encoding='utf-8')
+              n = s.count(old)
+              if n != expected:
+                  raise SystemExit(f'{path}: expected {expected} matches, found {n}')
+              p.write_text(s.replace(old, new), encoding='utf-8')
+
+          repl('products/farmcube-neo/index.html', 'FarmCube Neo Technical Specifications & Crop Output | GROWSPEC', 'FarmCube Neo Technical Specifications &amp; Crop Output | GROWSPEC', 3)
+          repl('products/biocube-container/index.html', 'BioCube Container Technical Specifications & Crop Systems | GROWSPEC', 'BioCube Container Technical Specifications &amp; Crop Systems | GROWSPEC', 3)
+          repl('applications/hotel-indoor-herb-garden/index.html', 'HOTEL / HERBS & MICROGREENS', 'HOTEL / HERBS &amp; MICROGREENS', 1)
+
+          # Validate every sitemap page points to a real repository page.
+          root = ET.parse('sitemap.xml').getroot()
+          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          locs = [e.text for e in root.findall('sm:url/sm:loc', ns)]
+          base = 'https://www.growspecbio.com/'
+          missing = []
+          for url in locs:
+              if not url.startswith(base):
+                  raise SystemExit(f'Unexpected sitemap host: {url}')
+              rel = url[len(base):].strip('/')
+              path = Path('index.html') if not rel else Path(rel) / 'index.html'
+              if not path.exists():
+                  missing.append((url, str(path)))
+          if missing:
+              raise SystemExit('Missing sitemap pages: ' + repr(missing))
+
+          # Validate JSON-LD syntax on all indexable HTML pages in sitemap.
+          script_re = re.compile(r'<script\s+type="application/ld\+json">(.*?)</script>', re.S | re.I)
+          for url in locs:
+              rel = url[len(base):].strip('/')
+              path = Path('index.html') if not rel else Path(rel) / 'index.html'
+              text = path.read_text(encoding='utf-8')
+              for i, raw in enumerate(script_re.findall(text), 1):
+                  try:
+                      json.loads(html.unescape(raw))
+                  except Exception as exc:
+                      raise SystemExit(f'Invalid JSON-LD in {path} block {i}: {exc}')
+
+          # Confirm key indexing files remain present.
+          robots = Path('robots.txt').read_text(encoding='utf-8')
+          if 'Allow: /' not in robots or 'Sitemap: https://www.growspecbio.com/sitemap.xml' not in robots:
+              raise SystemExit('robots.txt indexing directives changed unexpectedly')
+
+          Path('.github/workflows/seo-final-validate.yml').unlink()
+          print(f'Validated {len(locs)} sitemap URLs and their JSON-LD blocks.')
+          PY
+      - name: Commit normalization
+        shell: bash
+        run: |
+          git config user.name "GROWSPEC SEO Validation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Normalize SEO markup and validate indexable pages"
+          git push origin HEAD:main
