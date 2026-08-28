@@ -114,6 +114,36 @@
   </url>
 
   <url>
+    <loc>https://www.growspecbio.com/applications/restaurant-microgreens-growing-system/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-neo/farmcube-neo-5t-professional-chef-kitchen.webp</image:loc>
+      <image:title>Restaurant Microgreens Growing System Planning Guide</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.growspecbio.com/applications/hotel-indoor-herb-garden/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-neo/farmcube-neo-5t-hotel-wine-cellar-installation.webp</image:loc>
+      <image:title>Hotel Indoor Herb Garden Planning Guide</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.growspecbio.com/applications/premium-retail-microgreens-cabinet/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/farmcube-neo/farmcube-neo-5t-retail-produce-display.webp</image:loc>
+      <image:title>Microgreens Cabinet for Premium Retail Planning Guide</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://www.growspecbio.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
