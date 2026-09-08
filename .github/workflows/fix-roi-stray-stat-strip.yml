@@ -1,0 +1,50 @@
+name: Fix stray ROI stat strip
+
+on:
+  push:
+    paths:
+      - .github/workflows/fix-roi-stray-stat-strip.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Remove legacy stat strip outside main
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('roi-calculator/index.html')
+          s = p.read_text(encoding='utf-8')
+          pattern = re.compile(
+              r'\n<!-- NAV -->\n<!-- Mobile Menu -->\n<!-- BREADCRUMB -->\n<!-- HERO -->\n<!-- STAT STRIP -->\n'
+              r'<div class="stat-strip">.*?</div>\n<!-- LEAD GATE -->\n<!-- CALCULATOR -->\n<!-- TIMELINE CHART -->\n<!-- PRODUCTS -->',
+              re.S,
+          )
+          new, count = pattern.subn('', s, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected one legacy stat strip block, removed {count}')
+          if 'class="stat-strip"' in new or '15+</div><div class="stat-lbl">Countries' in new:
+              raise SystemExit('Legacy stat strip still present')
+          p.write_text(new, encoding='utf-8')
+
+          # Remove this one-shot workflow from the final tree.
+          Path('.github/workflows/fix-roi-stray-stat-strip.yml').unlink()
+          PY
+      - name: Commit fix
+        shell: bash
+        run: |
+          git config user.name "GROWSPEC Site Fix"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Remove stray legacy ROI statistics block"
+          git push origin HEAD:main
