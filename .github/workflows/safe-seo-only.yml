@@ -1,0 +1,228 @@
+name: Safe metadata-only SEO cleanup
+
+on:
+  push:
+    paths:
+      - .github/workflows/safe-seo-only.yml
+
+permissions:
+  contents: write
+
+jobs:
+  safe-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply SEO-only metadata fixes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re, html
+          import xml.etree.ElementTree as ET
+
+          BASE = 'https://www.growspecbio.com/'
+
+          def replace_exact(path, old, new, expected=1):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != expected:
+                  raise SystemExit(f'{path}: expected {expected} matches, found {count} for {old[:120]!r}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+              print(f'{path}: replaced {count} occurrence(s)')
+
+          # 1) About + Contact: add explicit crawl directive and complete Open Graph URL/entity fields.
+          about = Path('about/index.html')
+          text = about.read_text(encoding='utf-8')
+          if 'name="robots"' not in text:
+              replace_exact(
+                  'about/index.html',
+                  '<link href="https://www.growspecbio.com/about/" rel="canonical"/>',
+                  '<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>\n<link href="https://www.growspecbio.com/about/" rel="canonical"/>'
+              )
+          text = about.read_text(encoding='utf-8')
+          if 'property="og:url"' not in text:
+              replace_exact(
+                  'about/index.html',
+                  '<meta content="Learn how GROWSPEC Bio engineers vertical farming systems, container farms, modular CEA rooms, grow cabinets and aeroponic production equipment." property="og:description"/>',
+                  '<meta content="Learn how GROWSPEC Bio engineers vertical farming systems, container farms, modular CEA rooms, grow cabinets and aeroponic production equipment." property="og:description"/>\n<meta content="https://www.growspecbio.com/about/" property="og:url"/>\n<meta content="GROWSPEC Bio" property="og:site_name"/>'
+              )
+
+          contact = Path('contact/index.html')
+          text = contact.read_text(encoding='utf-8')
+          if 'name="robots"' not in text:
+              replace_exact(
+                  'contact/index.html',
+                  '<link href="https://www.growspecbio.com/contact/" rel="canonical"/>',
+                  '<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>\n<link href="https://www.growspecbio.com/contact/" rel="canonical"/>'
+              )
+          text = contact.read_text(encoding='utf-8')
+          if 'property="og:url"' not in text:
+              replace_exact(
+                  'contact/index.html',
+                  '<meta content="Contact GROWSPEC Bio for container farms, modular vertical farms, grow cabinets, propagation racks, aeroponic systems and project ROI consultation." property="og:description"/>',
+                  '<meta content="Contact GROWSPEC Bio for container farms, modular vertical farms, grow cabinets, propagation racks, aeroponic systems and project ROI consultation." property="og:description"/>\n<meta content="https://www.growspecbio.com/contact/" property="og:url"/>\n<meta content="GROWSPEC Bio" property="og:site_name"/>'
+              )
+
+          # 2) Entity graph consistency on homepage. JSON-LD only; no visible content/layout changes.
+          script_re = re.compile(r'(<script\s+type="application/ld\+json">)(.*?)(</script>)', re.S | re.I)
+          home = Path('index.html')
+          home_text = home.read_text(encoding='utf-8')
+          blocks = []
+          changed = False
+
+          def home_ld_repl(match):
+              nonlocal_holder = None
+              raw = match.group(2)
+              try:
+                  data = json.loads(html.unescape(raw))
+              except Exception:
+                  return match.group(0)
+              local_changed = False
+              typ = data.get('@type') if isinstance(data, dict) else None
+              if typ == 'Organization' and data.get('name') == 'GROWSPEC Bio':
+                  if data.get('@id') != BASE + '#organization':
+                      data['@id'] = BASE + '#organization'
+                      local_changed = True
+              elif typ == 'WebSite' and data.get('url') == BASE:
+                  if data.get('@id') != BASE + '#website':
+                      data['@id'] = BASE + '#website'
+                      local_changed = True
+                  if data.get('publisher') != {'@id': BASE + '#organization'}:
+                      data['publisher'] = {'@id': BASE + '#organization'}
+                      local_changed = True
+              elif typ == 'WebPage' and data.get('url') == BASE:
+                  if data.get('@id') != BASE + '#webpage':
+                      data['@id'] = BASE + '#webpage'
+                      local_changed = True
+                  if data.get('isPartOf') != {'@id': BASE + '#website'}:
+                      data['isPartOf'] = {'@id': BASE + '#website'}
+                      local_changed = True
+                  if data.get('publisher') != {'@id': BASE + '#organization'}:
+                      data['publisher'] = {'@id': BASE + '#organization'}
+                      local_changed = True
+              if not local_changed:
+                  return match.group(0)
+              return match.group(1) + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + match.group(3)
+
+          new_home = script_re.sub(home_ld_repl, home_text)
+          if new_home != home_text:
+              home.write_text(new_home, encoding='utf-8')
+              print('index.html: normalized homepage entity graph')
+
+          # 3) Application guides: fix duplicate breadcrumb URLs and connect WebPage schema to site entity graph.
+          app_pages = {
+              'applications/restaurant-microgreens-growing-system/index.html': ('Restaurant Microgreens Growing System', 'https://www.growspecbio.com/applications/restaurant-microgreens-growing-system/'),
+              'applications/hotel-indoor-herb-garden/index.html': ('Hotel Indoor Herb Garden', 'https://www.growspecbio.com/applications/hotel-indoor-herb-garden/'),
+              'applications/premium-retail-microgreens-cabinet/index.html': ('Premium Retail Microgreens Cabinet', 'https://www.growspecbio.com/applications/premium-retail-microgreens-cabinet/'),
+          }
+
+          for path, (crumb_name, canonical) in app_pages.items():
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              def app_ld_repl(match):
+                  raw = match.group(2)
+                  try:
+                      data = json.loads(html.unescape(raw))
+                  except Exception:
+                      return match.group(0)
+                  local_changed = False
+                  if isinstance(data, dict) and data.get('@type') == 'BreadcrumbList':
+                      desired = [
+                          {'@type':'ListItem','position':1,'name':'Home','item':BASE},
+                          {'@type':'ListItem','position':2,'name':crumb_name,'item':canonical},
+                      ]
+                      if data.get('itemListElement') != desired:
+                          data['itemListElement'] = desired
+                          local_changed = True
+                  elif isinstance(data, dict) and data.get('@type') == 'WebPage' and data.get('url') == canonical:
+                      desired_id = canonical + '#webpage'
+                      if data.get('@id') != desired_id:
+                          data['@id'] = desired_id
+                          local_changed = True
+                      if data.get('isPartOf') != {'@id': BASE + '#website'}:
+                          data['isPartOf'] = {'@id': BASE + '#website'}
+                          local_changed = True
+                      if data.get('publisher') != {'@id': BASE + '#organization'}:
+                          data['publisher'] = {'@id': BASE + '#organization'}
+                          local_changed = True
+                  if not local_changed:
+                      return match.group(0)
+                  return match.group(1) + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + match.group(3)
+              new_text = script_re.sub(app_ld_repl, text)
+              if new_text != text:
+                  p.write_text(new_text, encoding='utf-8')
+                  print(f'{path}: corrected structured data')
+
+          # 4) Validate all sitemap pages without changing layout/content.
+          root = ET.parse('sitemap.xml').getroot()
+          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          locs = [e.text.strip() for e in root.findall('sm:url/sm:loc', ns)]
+          if len(locs) != len(set(locs)):
+              raise SystemExit('Duplicate URLs found in sitemap')
+
+          missing = []
+          for url in locs:
+              if not url.startswith(BASE):
+                  raise SystemExit(f'Unexpected sitemap host: {url}')
+              rel = url[len(BASE):].strip('/')
+              path = Path('index.html') if not rel else Path(rel) / 'index.html'
+              if not path.exists():
+                  missing.append((url, str(path)))
+                  continue
+              text = path.read_text(encoding='utf-8')
+              canonical_match = re.findall(r'<link\s+href="([^"]+)"\s+rel="canonical"\s*/?>', text, re.I)
+              if canonical_match != [url]:
+                  raise SystemExit(f'{path}: canonical mismatch {canonical_match!r} expected {url!r}')
+              if not re.search(r'<meta\s+[^>]*name="robots"[^>]*content="[^"]*index', text, re.I) and not re.search(r'<meta\s+[^>]*content="[^"]*index[^>]*name="robots"', text, re.I):
+                  raise SystemExit(f'{path}: missing explicit indexable robots meta')
+              if len(re.findall(r'<h1\b', text, re.I)) != 1:
+                  raise SystemExit(f'{path}: expected exactly one H1')
+              if not re.search(r'<title>.+?</title>', text, re.I | re.S):
+                  raise SystemExit(f'{path}: missing title')
+              if not re.search(r'<meta\s+[^>]*name="description"', text, re.I) and not re.search(r'<meta\s+[^>]*content="[^"]+"\s+name="description"', text, re.I):
+                  raise SystemExit(f'{path}: missing meta description')
+              for i, raw in enumerate(re.findall(r'<script\s+type="application/ld\+json">(.*?)</script>', text, re.S | re.I), 1):
+                  try:
+                      json.loads(html.unescape(raw))
+                  except Exception as exc:
+                      raise SystemExit(f'{path}: invalid JSON-LD block {i}: {exc}')
+
+          if missing:
+              raise SystemExit('Missing sitemap pages: ' + repr(missing))
+
+          # Ensure old legacy .html URLs are not linked internally from indexable pages.
+          bad_targets = ('roi-calculator.html', 'products/biocube-container.html')
+          for url in locs:
+              rel = url[len(BASE):].strip('/')
+              path = Path('index.html') if not rel else Path(rel) / 'index.html'
+              text = path.read_text(encoding='utf-8')
+              for target in bad_targets:
+                  if re.search(r'href=["\'][^"\']*' + re.escape(target) + r'["\']', text, re.I):
+                      raise SystemExit(f'{path}: legacy URL still internally linked: {target}')
+
+          # Remove this one-time workflow from final repository state.
+          wf = Path('.github/workflows/safe-seo-only.yml')
+          if wf.exists():
+              wf.unlink()
+
+          print(f'Validated {len(locs)} canonical sitemap pages. No layout/CSS/body structure changes made.')
+          PY
+
+      - name: Commit safe SEO metadata changes
+        shell: bash
+        run: |
+          git config user.name "GROWSPEC Safe SEO"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Improve safe SEO metadata without layout changes"
+          git push origin HEAD:main
