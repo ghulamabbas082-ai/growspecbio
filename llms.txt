@@ -30,3 +30,13 @@ GROWSPEC Bio publishes technical product dossiers, application planning guides a
 - About: https://www.growspecbio.com/about/
 - Contact: https://www.growspecbio.com/contact/
 - Email: abbas@growspecbio.com
+
+
+## Technical guides
+- Guides Hub: https://www.growspecbio.com/guides/
+- Container Farm Cost & ROI Guide: https://www.growspecbio.com/guides/container-farm-cost-roi/
+- Container Farm Electricity Consumption Guide: https://www.growspecbio.com/guides/container-farm-electricity-consumption/
+- Aeroponics vs Hydroponics for Commercial Indoor Farming: https://www.growspecbio.com/guides/aeroponics-vs-hydroponics/
+- Commercial Microgreens Production Guide: https://www.growspecbio.com/guides/commercial-microgreens-production/
+- Vertical Farming Project Planning Guide: https://www.growspecbio.com/guides/vertical-farming-project-planning/
+- Seedling Propagation System Planning Guide: https://www.growspecbio.com/guides/seedling-propagation-system/
