@@ -13,6 +13,16 @@
   </url>
 
   <url>
+    <loc>https://www.growspecbio.com/equipment/vertical-farming-equipment/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.growspecbio.com/images/products/biocube-modular/biocube-modular-leafy-green-commercial-vertical-farm-aisle.webp</image:loc>
+      <image:title>Commercial Vertical Farming Equipment | GROWSPEC</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://www.growspecbio.com/products/biocube-container/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
