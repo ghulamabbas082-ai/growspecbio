@@ -7,6 +7,15 @@
   const copyButton = form.querySelector('[data-m54-copy]');
   const recipient = 'abbas@growspecbio.com';
 
+  // Preserve product context from links such as /contact/?system=BioCube%20Container#project-enquiry.
+  const params = new URLSearchParams(window.location.search);
+  const requestedSystem = params.get('system');
+  const systemSelect = form.elements.namedItem('system');
+  if (requestedSystem && systemSelect) {
+    const option = Array.from(systemSelect.options).find(item => item.value.toLowerCase() === requestedSystem.toLowerCase());
+    if (option) systemSelect.value = option.value;
+  }
+
   const field = (name) => {
     const element = form.elements.namedItem(name);
     return element ? String(element.value || '').trim() : '';
