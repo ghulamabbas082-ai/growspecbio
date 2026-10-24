@@ -1,36 +1,46 @@
-# GROWSPEC Website — Direct Enquiry Delivery Activation
+# GROWSPEC contact form — live Formspree endpoint and verification
 
-The website contact form is prepared for Formspree, but **online submission is NOT enabled** until a verified Formspree endpoint is added. Until then, the form opens an email draft and offers prefilled WhatsApp. Do not describe direct form delivery as live before testing.
+Status: **Website source connected to Formspree; real-world delivery verification pending.**
 
-## One-time setup (business owner)
+**Endpoint provided by business owner:** `https://formspree.io/f/mnppnngj`
+**Notification email to verify inside Formspree dashboard:** `abbas@growspecbio.com`
+**Website:** `https://www.growspecbio.com/contact/`
 
-1. Sign up or sign in at https://formspree.io/ with **abbas@growspecbio.com**. Verify the account.
-2. Create a new form named **GROWSPEC Project Enquiries**.
-3. Set and verify **abbas@growspecbio.com** as its target notification email. Enable email notifications.
-4. In the form's **Integration** tab, copy the actual HTTPS endpoint, usually in the format `https://formspree.io/f/XXXXXXXX`.
-5. In `contact/index.html`, replace the empty `data-formspree-endpoint=""` value on the existing form with the verified endpoint. **Never place account passwords, dashboard tokens, SMTP credentials or API secret keys in the HTML/JavaScript.** The public form endpoint alone is safe to embed.
-6. In Formspree settings, enable **Restrict to Domain** for `www.growspecbio.com` (and `growspecbio.com` if applicable). Keep spam filtering enabled. Our form also sends Formspree's `_gotcha` honeypot.
-7. Wait for GitHub Pages to publish the change and test from the live website URL.
+## What is implemented
 
-## Required acceptance tests
+- `contact/index.html`: form uses `method="POST"`, `action="https://formspree.io/f/mnppnngj"`, and `data-formspree-endpoint="https://formspree.io/f/mnppnngj"`.
+- Native HTML POST remains available if website JavaScript fails to load.
+- `assets/js/growspec-contact-form-m54.js`: FormData AJAX POST with `Accept: application/json`, in-page success or failure messages, duplicate-submit prevention, and `generate_lead` event on accepted submissions.
+- Customer email field uses `name="email"` so Formspree can set Reply-To to the customer's email address.
+- Sales WhatsApp `+86 187 1839 6182` and direct `mailto:abbas@growspecbio.com` links remain available.
+- Product inquiry links include `?system=...` to preselect product interest.
+- Consent and basic honeypot protection are present; Formspree spam filters must also be enabled in the dashboard.
 
-- Open `https://www.growspecbio.com/contact/` in desktop and mobile browsers. With a configured endpoint, the primary button should read **Send Project Enquiry**. Without one it should read **Prepare Email Enquiry**.
-- From `/products/biocube-container/`, use a quotation button. Confirm the contact form preselects **BioCube Container**. Repeat for the other products.
-- Submit one clearly labeled test enquiry. It must: (1) show the on-page success message, (2) appear in Formspree's **Submissions** dashboard, and (3) arrive at **abbas@growspecbio.com**. Check the email junk folder as well. **All three** must pass before declaring email delivery live.
-- Check required-field validation, malformed email, duplicate-click prevention, and that a network failure never displays a success message.
-- Test the direct WhatsApp link and the form's **Send via WhatsApp** option. The visitor must still press Send in WhatsApp.
-- Make sure the consent wording and form-provider disclosure fit GROWSPEC's privacy policy and legal obligations.
+## Owner account settings (must verify)
 
-## Code and behavior
+1. Sign into **https://formspree.io/** under the company-controlled account.
+2. Verify the form ID `mnppnngj` belongs to GROWSPEC Project Enquiries.
+3. Verify email notifications are enabled and addressed to `abbas@growspecbio.com`. Check that the mailbox is verified if the provider requires confirmation.
+4. In your Formspree Project Settings, set **Restrict to Domain** to `growspecbio.com` (without `www`). This covers both the root domain and `www` and protects against submissions from unrelated websites.
+5. Keep the provider's spam filtering active. Review any CAPTCHA setting for compatibility with this on-page AJAX form, particularly when submitting from mobile browsers.
+6. Do not share account passwords or secret API keys, or put them in website HTML. The form endpoint is public and designed for browser submissions.
 
-- Form markup + endpoint: `contact/index.html`.
-- Submission logic: `assets/js/growspec-contact-form-m54.js`. Versioned script URL `?v=m65` avoids old-browser caching.
-- Direct mode: FormData POST to the verified Formspree endpoint with `Accept: application/json`; show success only for a successful server response. On failure, preserve entered data and show safe fallback guidance.
-- Unconfigured mode: prepare an email draft via `mailto:`; no claim of direct web delivery.
-- The product-interest query parameter `?system=...` prefills the form.
-- Track `generate_lead` only after a confirmed server-accepted form submission; don't equate a WhatsApp click with a sent message.
-- Free Formspree plan currently allows 50 submissions per month and retains 30 days of submission history. Review plan limits if lead volume rises.
+## Required end-to-end acceptance test (live)
 
-## Operational checks
+1. Open `https://www.growspecbio.com/contact/` in a private browser window after GitHub Pages finishes deploying. The primary form button should say **Send Project Enquiry**.
+2. Fill out a test enquiry with a real reachable email address. Put **TEST — GROWSPEC form integration** in the project details.
+3. Click **Send Project Enquiry** once. Expect a success message only if Formspree accepts the submission.
+4. **In Formspree dashboard** confirm the submission is in the correct form (not its Spam section).
+5. **In abbas@growspecbio.com mailbox**, confirm the notification arrived. Check Spam/Junk and the reply-to address. If the dashboard lists it but the email is missing, correct email notification settings or spam filters before claiming complete delivery.
+6. In a second browser test, submit an intentionally invalid email and verify client-side validation. Test a temporary offline scenario; it must not claim successful submission.
+7. Test a quotation link from `/products/biocube-container/` — contact form should automatically select **BioCube Container**.
+8. Test both WhatsApp methods: direct button and form-generated prefilled project enquiry. The visitor must press Send in WhatsApp to deliver.
 
-Review Formspree submissions and mailbox regularly; missed notifications can be recovered from the dashboard during its retention period. Use an official company-controlled account. Do not publish customer enquiry data or share dashboard credentials.
+**Do not claim customer enquiries reach the mailbox until both the Formspree dashboard and inbox check succeed.** A successful GitHub commit, a simulated success response, or an endpoint URL is not equivalent to verified email delivery.
+
+## Operational considerations
+
+- Free Formspree plan is suitable for initial GROWSPEC traffic subject to its monthly submission limit and storage retention.
+- Review the submission dashboard regularly so an undelivered email notification does not permanently hide a potential sales lead.
+- Never submit invented real customer information as a test.
+- Use the company-controlled Formspree account and keep data-processing disclosures accurate.
