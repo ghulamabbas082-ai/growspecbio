@@ -66,6 +66,24 @@
       `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 
+  const whatsappButton = form.querySelector('[data-m54-whatsapp]');
+  if (whatsappButton) {
+    whatsappButton.addEventListener('click', () => {
+      if (field('website')) return;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        setStatus('Please add your name, email, country and interested system.');
+        return;
+      }
+      const brief = buildBrief();
+      const message = ['Hello GROWSPEC, I would like to request a quotation or project consultation.', '', brief].join('\n');
+      const url = 'https://wa.me/8618718396182?text=' + encodeURIComponent(message);
+      const tab = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!tab) window.location.href = url;
+      setStatus('WhatsApp is opening with your project brief. Please press Send in WhatsApp to deliver your enquiry.');
+    });
+  }
+
   if (copyButton) {
     copyButton.addEventListener('click', async () => {
       const brief = buildBrief();
