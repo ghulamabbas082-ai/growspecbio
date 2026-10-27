@@ -82,6 +82,130 @@
 .eq-smallprint{font-size:12px;line-height:1.8;color:#6a7c8d;margin:23px 0 0}
 @media(max-width:900px){.eq-hero-grid,.eq-split{grid-template-columns:1fr}.eq-grid,.eq-path-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.eq-hero-figure img{min-height:270px}}
 @media(max-width:620px){.eq-grid,.eq-path-grid{grid-template-columns:1fr}.eq-card,.eq-path{padding:23px}.eq-hero{padding:62px 0}.eq-hero h1{font-size:36px}.eq-actions a{width:100%}.eq-breadcrumb{flex-wrap:wrap;margin-bottom:27px}}
+
+/* Equipment page contrast correction — v2. Scoped to this landing page only.
+   The older sitewide nexus-m48 heading/body selectors outrank the v1 styles. */
+body.eq-page.nexus-m48{
+  background:#f5f8fb;
+  color:#173451;
+}
+body.eq-page.nexus-m48 main{background:#f5f8fb}
+body.eq-page.nexus-m48 .eq-hero{
+  color:#fff;
+  background:linear-gradient(115deg,#06182d 12%,#102e48 70%,#16516b);
+}
+body.eq-page.nexus-m48 .eq-hero h1,
+body.eq-page.nexus-m48 .eq-cta h2{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  text-shadow:none;
+}
+body.eq-page.nexus-m48 .eq-hero .eq-lead,
+body.eq-page.nexus-m48 .eq-cta p{
+  color:#d7e7f2!important;
+  -webkit-text-fill-color:#d7e7f2!important;
+  line-height:1.8;
+  font-size:clamp(15px,1.3vw,18px);
+}
+body.eq-page.nexus-m48 .eq-hero .eq-eyebrow,
+body.eq-page.nexus-m48 .eq-cta .eq-eyebrow{
+  color:#65ddca!important;
+  -webkit-text-fill-color:#65ddca!important;
+}
+body.eq-page.nexus-m48 .eq-breadcrumb,
+body.eq-page.nexus-m48 .eq-breadcrumb span{
+  color:#d6e7f1!important;
+  -webkit-text-fill-color:#d6e7f1!important;
+}
+body.eq-page.nexus-m48 .eq-breadcrumb a{
+  color:#f0f7fc!important;
+  -webkit-text-fill-color:#f0f7fc!important;
+}
+body.eq-page.nexus-m48 .eq-tags span{
+  color:#e1eff7!important;
+  -webkit-text-fill-color:#e1eff7!important;
+}
+body.eq-page.nexus-m48 .eq-hero-figure figcaption{
+  color:#f7fbff!important;
+  -webkit-text-fill-color:#f7fbff!important;
+  background:linear-gradient(0deg,rgba(5,21,35,.95),rgba(5,21,35,.18));
+}
+body.eq-page.nexus-m48 .eq-hero .eq-btn-primary,
+body.eq-page.nexus-m48 .eq-cta .eq-btn-primary,
+body.eq-page.nexus-m48 .eq-card .eq-btn-primary{
+  color:#073046!important;
+  -webkit-text-fill-color:#073046!important;
+  background:#4cdbc4;
+  border-color:#4cdbc4;
+}
+body.eq-page.nexus-m48 .eq-hero .eq-btn-ghost,
+body.eq-page.nexus-m48 .eq-cta .eq-btn-ghost{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  border-color:#9cb5c9;
+  background:rgba(255,255,255,.035);
+}
+body.eq-page.nexus-m48 .eq-hero .eq-btn-ghost:hover,
+body.eq-page.nexus-m48 .eq-cta .eq-btn-ghost:hover{
+  background:rgba(255,255,255,.12);
+}
+body.eq-page.nexus-m48 .eq-section{background:#f5f8fb;color:#173451}
+body.eq-page.nexus-m48 .eq-section.eq-section-white{background:#fff}
+body.eq-page.nexus-m48 .eq-section .eq-head h2,
+body.eq-page.nexus-m48 .eq-section .eq-path h3,
+body.eq-page.nexus-m48 .eq-section .eq-card h3,
+body.eq-page.nexus-m48 .eq-section .eq-question h3{
+  color:#102e49!important;
+  -webkit-text-fill-color:#102e49!important;
+}
+body.eq-page.nexus-m48 .eq-section .eq-head p,
+body.eq-page.nexus-m48 .eq-section .eq-card p,
+body.eq-page.nexus-m48 .eq-section .eq-path p,
+body.eq-page.nexus-m48 .eq-section .eq-question p{
+  color:#405b72!important;
+  -webkit-text-fill-color:#405b72!important;
+  font-size:14px;
+  line-height:1.8;
+}
+body.eq-page.nexus-m48 .eq-section .eq-checklist li{
+  color:#405b72!important;
+  -webkit-text-fill-color:#405b72!important;
+}
+body.eq-page.nexus-m48 .eq-section .eq-card-num,
+body.eq-page.nexus-m48 .eq-section .eq-card small{
+  color:#006f67!important;
+  -webkit-text-fill-color:#006f67!important;
+}
+body.eq-page.nexus-m48 .eq-section .eq-eyebrow{
+  color:#006f67!important;
+  -webkit-text-fill-color:#006f67!important;
+}
+body.eq-page.nexus-m48 .eq-section .eq-path a{
+  color:#00646b!important;
+  -webkit-text-fill-color:#00646b!important;
+}
+body.eq-page.nexus-m48 .eq-section .eq-smallprint{
+  color:#536b7d!important;
+  -webkit-text-fill-color:#536b7d!important;
+}
+body.eq-page.nexus-m48 .eq-cta{
+  background:#091f35;
+  color:#fff;
+}
+body.eq-page.nexus-m48 .eq-btn:focus-visible,
+body.eq-page.nexus-m48 .eq-breadcrumb a:focus-visible,
+body.eq-page.nexus-m48 .eq-path a:focus-visible{
+  outline:3px solid #ee66aa;
+  outline-offset:3px;
+}
+@media(max-width:620px){
+  body.eq-page.nexus-m48 .eq-hero h1{line-height:1.15}
+  body.eq-page.nexus-m48 .eq-section .eq-head p,
+  body.eq-page.nexus-m48 .eq-section .eq-card p,
+  body.eq-page.nexus-m48 .eq-section .eq-path p,
+  body.eq-page.nexus-m48 .eq-section .eq-question p{font-size:14px}
+}
+
 </style>
 </head>
 <body class="m39-unified vanguard-m45 nexus-m46 nexus-m47 nexus-m48 nexus-m52 nexus-m53 eq-page" data-page="equipment">
