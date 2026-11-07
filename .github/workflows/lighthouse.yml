@@ -46,12 +46,14 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p lighthouse-results
-          for page in home about equipment container contact; do
+          for page in home about equipment container microgreens strawberries contact; do
             case "$page" in
               home) url="https://www.growspecbio.com/" ;;
               about) url="https://www.growspecbio.com/about/" ;;
               equipment) url="https://www.growspecbio.com/equipment/vertical-farming-equipment/" ;;
               container) url="https://www.growspecbio.com/products/biocube-container/" ;;
+              microgreens) url="https://www.growspecbio.com/products/microgreens-container-farm/" ;;
+              strawberries) url="https://www.growspecbio.com/products/strawberry-container-farm/" ;;
               contact) url="https://www.growspecbio.com/contact/" ;;
             esac
             for viewport in mobile desktop; do
