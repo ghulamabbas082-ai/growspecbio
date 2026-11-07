@@ -1,0 +1,49 @@
+name: Website availability and DNS diagnostics
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/site-availability.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Test DNS, HTTP, HTTPS and critical URLs from an external runner
+        shell: bash
+        run: |
+          echo "=== DNS lookup ==="
+          for host in www.growspecbio.com growspecbio.com ghulamabbas082-ai.github.io; do
+            echo "--- ${host} ---"
+            getent ahostsv4 "$host" | head -n 5 || true
+            if command -v dig >/dev/null; then
+              dig +time=4 +tries=1 "$host" A +short || true
+              dig +time=4 +tries=1 "$host" CNAME +short || true
+            fi
+          done
+          echo "=== Live website checks ==="
+          for url in \
+            "https://www.growspecbio.com/" \
+            "https://www.growspecbio.com/about/" \
+            "https://www.growspecbio.com/products/microgreens-container-farm/" \
+            "https://www.growspecbio.com/products/strawberry-container-farm/" \
+            "https://www.growspecbio.com/contact/" \
+            "https://www.growspecbio.com/robots.txt" \
+            "https://growspecbio.com/" \
+            "https://ghulamabbas082-ai.github.io/growspecbio/"; do
+            echo "--- $url ---"
+            curl --location --max-time 15 --connect-timeout 8 --silent --show-error \
+              --output /tmp/growspec-response \
+              --write-out "http=%{http_code} dns=%{time_namelookup} connect=%{time_connect} tls=%{time_appconnect} ttfb=%{time_starttransfer} total=%{time_total} final=%{url_effective} bytes=%{size_download}\n" "$url" || true
+            if [ -f /tmp/growspec-response ]; then
+              head -c 120 /tmp/growspec-response | tr '\n' ' ' || true
+              echo ""
+              rm -f /tmp/growspec-response
+            fi
+          done
