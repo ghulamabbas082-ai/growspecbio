@@ -13,6 +13,8 @@ GROWSPEC Bio publishes technical product dossiers, application planning guides a
 
 ## Technical product pages
 - BioCube Container: https://www.growspecbio.com/products/biocube-container/ — technical specifications, crop systems, power, cooling, lighting, fertigation and 40ft CEA planning data.
+- Microgreens Container Farm: https://www.growspecbio.com/products/microgreens-container-farm/ — 40ft crop-specific microgreens planning, 225 stainless-steel mesh trays, aeroponic irrigation, commercial harvest and quotation workflow.
+- Strawberry Container Farm: https://www.growspecbio.com/products/strawberry-container-farm/ — 40ft indoor fruiting crop configuration, planting layouts, pollination, HVAC and harvest economics.
 - BioCube Modular: https://www.growspecbio.com/products/biocube-modular/ — scalable modular indoor farm architecture and commercial crop-room technical data.
 - Commercial Vertical Farming Equipment: https://www.growspecbio.com/equipment/vertical-farming-equipment/ — growing racks, horticultural LED lights, aeroponic and drip irrigation, fertigation, climate equipment, automation and equipment quotation requirements.
 - FarmCube Nano: https://www.growspecbio.com/products/farmcube-nano/ — four-tier aeroponic grow cabinet specifications and application data for microgreens, herbs and leafy greens.
