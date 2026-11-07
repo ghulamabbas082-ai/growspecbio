@@ -1,0 +1,58 @@
+name: Publish optimized GROWSPEC crop photos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'GROWSPEC_Crop_Pages_Optimized_WebP.zip'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crop-photos-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Verify and install crop photos
+        run: python3 .github/scripts/install_crop_images.py
+
+      - name: Validate no accidental non-image changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          for p in \
+            products/strawberry-container-farm/index.html \
+            products/microgreens-container-farm/index.html; do
+            test "$(grep -c 'id="crop-gallery"' "$p")" -eq 1
+            test "$(grep -c 'name="description"' "$p")" -eq 1
+            test "$(grep -c 'rel="canonical"' "$p")" -eq 1
+          done
+          test "$(find images/crop-pages -name '*.webp' -type f | wc -l)" -eq 7
+
+      - name: Commit image assets and page updates
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/crop-pages \
+            products/strawberry-container-farm/index.html \
+            products/microgreens-container-farm/index.html \
+            assets/css/growspec-crop-pages.css
+          if git diff --cached --quiet; then
+            echo "No image changes to publish."
+            exit 0
+          fi
+          git commit -m "Publish optimized strawberry and microgreens container photography"
+          git push origin HEAD:main
