@@ -1,0 +1,53 @@
+name: IndexNow — updated GROWSPEC pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '**/index.html'
+      - 'sitemap.xml'
+      - '.github/workflows/indexnow.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout latest website sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Confirm live domain verification file
+        shell: bash
+        env:
+          INDEXNOW_KEY: aec3026e4e3ee1d50f58eaf5e9d3c6d6
+        run: |
+          set -euo pipefail
+          key_url="https://www.growspecbio.com/${INDEXNOW_KEY}.txt"
+          for attempt in $(seq 1 18); do
+            published="$(curl --fail --silent --show-error --location --max-time 12 "$key_url" || true)"
+            if [ "$published" = "$INDEXNOW_KEY" ]; then
+              echo "Verified live IndexNow ownership file."
+              exit 0
+            fi
+            echo "Waiting for GitHub Pages to publish verification file (attempt ${attempt}/18)"
+            sleep 10
+          done
+          echo "IndexNow key is not available on the public website; not sending URLs."
+          exit 1
+
+      - name: Notify search engines about updated canonical pages
+        shell: bash
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+        run: python3 .github/scripts/notify_indexnow.py
