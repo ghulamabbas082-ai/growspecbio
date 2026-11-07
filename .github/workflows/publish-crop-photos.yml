@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: crop-photos-publish
@@ -56,3 +57,16 @@ jobs:
           fi
           git commit -m "Publish optimized strawberry and microgreens container photography"
           git push origin HEAD:main
+
+      - name: Request a GitHub Pages rebuild for the image commit
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          # Pushes made with the GitHub Actions token do not automatically
+          # trigger another workflow; explicitly request the Pages build.
+          gh api -X POST "repos/${GH_REPO}/pages/builds" || {
+            echo "::warning::Pages build API request was not accepted; check the Pages deployment settings."
+          }
