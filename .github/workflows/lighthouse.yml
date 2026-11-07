@@ -6,6 +6,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/lighthouse.yml'
+      - 'assets/css/growspec-crop-pages.css'
+      - 'products/microgreens-container-farm/index.html'
+      - 'products/strawberry-container-farm/index.html'
   schedule:
     - cron: '30 4 * * 1'
 
