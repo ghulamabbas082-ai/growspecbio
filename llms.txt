@@ -14,6 +14,7 @@ GROWSPEC Bio publishes technical product dossiers, application planning guides a
 ## Technical product pages
 - BioCube Container: https://www.growspecbio.com/products/biocube-container/ — technical specifications, crop systems, power, cooling, lighting, fertigation and 40ft CEA planning data.
 - BioCube Modular: https://www.growspecbio.com/products/biocube-modular/ — scalable modular indoor farm architecture and commercial crop-room technical data.
+- Commercial Vertical Farming Equipment: https://www.growspecbio.com/equipment/vertical-farming-equipment/ — growing racks, horticultural LED lights, aeroponic and drip irrigation, fertigation, climate equipment, automation and equipment quotation requirements.
 - FarmCube Nano: https://www.growspecbio.com/products/farmcube-nano/ — four-tier aeroponic grow cabinet specifications and application data for microgreens, herbs and leafy greens.
 - FarmCube Ultra: https://www.growspecbio.com/products/farmcube-ultra/ — aeroponic research chamber for crop trials, education and biotech research.
 - FarmCube Neo: https://www.growspecbio.com/products/farmcube-neo/ — Neo-2T and Neo-5T technical specifications, crop output, aeroponic irrigation, power, airflow and operating data.
@@ -28,8 +29,10 @@ GROWSPEC Bio publishes technical product dossiers, application planning guides a
 
 ## Company and contact
 - About: https://www.growspecbio.com/about/
+- Factory and Manufacturing Photographs: https://www.growspecbio.com/about/#manufacturing — factory exterior and manufacturing-related images; compliance evidence is model-specific and must be verified.
 - Contact: https://www.growspecbio.com/contact/
 - Email: abbas@growspecbio.com
+- WhatsApp: https://wa.me/8618718396182
 
 
 ## Technical guides
