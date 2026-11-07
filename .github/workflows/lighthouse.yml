@@ -1,0 +1,105 @@
+name: Website speed and accessibility audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/lighthouse.yml'
+  schedule:
+    - cron: '30 4 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: growspec-lighthouse
+  cancel-in-progress: false
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Prepare Node and Lighthouse
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Lighthouse on the runner (never on the website)
+        run: npm install --no-save --no-package-lock --no-audit --no-fund lighthouse@12
+
+      - name: Verify browser availability
+        shell: bash
+        run: |
+          set -euo pipefail
+          chrome="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)"
+          if [ -z "$chrome" ]; then
+            echo "No Chrome or Chromium browser is available on this runner."
+            exit 1
+          fi
+          echo "CHROME_PATH=$chrome" >> "$GITHUB_ENV"
+          echo "Auditing with $chrome"
+
+      - name: Lighthouse mobile and desktop checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p lighthouse-results
+          for page in home about equipment container contact; do
+            case "$page" in
+              home) url="https://www.growspecbio.com/" ;;
+              about) url="https://www.growspecbio.com/about/" ;;
+              equipment) url="https://www.growspecbio.com/equipment/vertical-farming-equipment/" ;;
+              container) url="https://www.growspecbio.com/products/biocube-container/" ;;
+              contact) url="https://www.growspecbio.com/contact/" ;;
+            esac
+            for viewport in mobile desktop; do
+              echo "Auditing $page ($viewport)"
+              args=()
+              if [ "$viewport" = "desktop" ]; then
+                args+=(--preset=desktop)
+              fi
+              npx lighthouse "$url" \
+                --quiet \
+                --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
+                --only-categories=performance,accessibility,seo \
+                --output=json \
+                --output-path="lighthouse-results/${page}-${viewport}.json" \
+                "${args[@]}"
+            done
+          done
+
+      - name: Summarize performance, accessibility and image weight
+        shell: bash
+        run: |
+          node <<'JS'
+          const fs=require('fs'),path=require('path');
+          const dir='lighthouse-results';
+          const files=fs.readdirSync(dir).filter(s=>s.endsWith('.json')).sort();
+          const lines=['| Page | Mode | Performance | Accessibility | SEO | LCP (s) | CLS | Total transfer (KB) |',
+                       '|---|---|---:|---:|---:|---:|---:|---:|'];
+          for(const file of files){
+            const report=JSON.parse(fs.readFileSync(path.join(dir,file),'utf8'));
+            const cats=report.categories;
+            const score=k=>Math.round((cats[k]?.score||0)*100);
+            const audit=k=>report.audits[k]?.numericValue;
+            const lcp=(audit('largest-contentful-paint')/1000).toFixed(2);
+            const cls=Number(audit('cumulative-layout-shift')).toFixed(3);
+            const kb=Math.round(audit('total-byte-weight')/1024);
+            const label=file.replace('.json','').split('-');
+            lines.push('| '+[label[0],label[1],score('performance'),score('accessibility'),score('seo'),lcp,cls,kb].join(' | ')+' |');
+          }
+          const summary='## GROWSPEC website Lighthouse lab audit\n\n'+lines.join('\n')+'\n\nThese are simulated lab measurements, not field Core Web Vitals.\n';
+          fs.writeFileSync(path.join(dir,'SUMMARY.md'),summary);
+          console.log(summary);
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,summary);
+          JS
+
+      - name: Save audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: growspec-lighthouse-reports
+          path: lighthouse-results/
+          retention-days: 30
