@@ -57,3 +57,18 @@ body.crop-landing-page .crop-section-deep a:not(.crop-button){color:#81e7db!impo
 body.crop-landing-page .crop-smallprint{font-size:12px!important;color:#536e80!important;margin-top:14px!important;line-height:1.8!important}
 @media(max-width:950px){body.crop-landing-page .crop-hero-grid,body.crop-landing-page .crop-two{grid-template-columns:1fr}body.crop-landing-page .crop-cards{grid-template-columns:repeat(2,minmax(0,1fr))}body.crop-landing-page .crop-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){body.crop-landing-page .crop-wrap{width:calc(100% - 36px)}body.crop-landing-page .crop-hero{padding:60px 0}body.crop-landing-page .crop-hero h1{font-size:35px}body.crop-landing-page .crop-cards,body.crop-landing-page .crop-steps{grid-template-columns:1fr}body.crop-landing-page .crop-actions{flex-direction:column}body.crop-landing-page .crop-button{width:100%}body.crop-landing-page .crop-card{padding:22px}}
+
+/* crop-accessibility-v2: contrast and link affordance from Lighthouse audit */
+body.crop-landing-page.nexus-m52 .nexus-footer .nexus-footer-bottom span{
+ color:#c7d9e8!important;
+ -webkit-text-fill-color:#c7d9e8!important;
+ font-size:11px;
+}
+body.crop-landing-page.nexus-m52 .crop-section-deep p a[href^="mailto:"]{
+ color:#94f0dc!important;
+ -webkit-text-fill-color:#94f0dc!important;
+ text-decoration:underline!important;
+ text-decoration-thickness:1.5px!important;
+ text-underline-offset:3px;
+ font-weight:800;
+}
