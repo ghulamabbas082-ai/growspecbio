@@ -26,6 +26,14 @@
   };
   selectRequestedSystem();
 
+  // Crop-specific product links carry the crop into the enquiry, without
+  // adding any tracking script or changing how the existing form submits.
+  const requestedCrop = params.get('crop');
+  const cropField = form.elements.namedItem('crop');
+  if (requestedCrop && cropField && !cropField.value) {
+    cropField.value = requestedCrop.trim().slice(0, 120);
+  }
+
   const field = (name) => {
     const element = form.elements.namedItem(name);
     return element ? String(element.value || '').trim() : '';
