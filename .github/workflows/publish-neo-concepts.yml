@@ -1,0 +1,77 @@
+name: Publish approved FarmCube Neo placement concepts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'GROWSPEC_FarmCube_Neo_2T_5T_Placement_Concepts_WebP.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: neo-concepts-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Verify and install six approved WebP concepts
+        run: python3 .github/scripts/install_neo_concepts.py
+
+      - name: Check page references and prevent accidental SEO changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          path=Path('products/farmcube-neo/index.html')
+          html=path.read_text(encoding='utf-8')
+          assert html.count('class="neo-vision-card"')==6
+          assert html.count('id="applications"')==1
+          assert len(re.findall(r'<h1\b',html))==1
+          assert 'rel="canonical"' in html
+          assert '<script type="application/ld+json">' in html
+          assert 'Illustrative design concepts' in html
+          imagepaths=re.findall(r'src="(../../images/products/farmcube-neo/concepts/[^"]+)"',html)
+          assert len(imagepaths)==6
+          for ref in imagepaths:
+              assert (path.parent/ref).is_file(),f'Missing asset: {ref}'
+          print('Verified six concept photos, descriptions, valid links and unchanged SEO skeleton')
+          PY
+
+      - name: Commit the optimized images and updated Neo page
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/products/farmcube-neo/concepts/ \
+            products/farmcube-neo/index.html
+          if git diff --cached --quiet; then
+            echo "Neo concepts already published"
+            exit 0
+          fi
+          git commit -m "Publish approved FarmCube Neo 2T and 5T installation concept WebP gallery"
+          git push origin HEAD:main
+
+      - name: Request Pages rebuild for uploaded images
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          gh api -X POST "repos/${GH_REPO}/pages/builds" || \
+            echo "::warning::Check GitHub Pages: rebuild API was not accepted."
